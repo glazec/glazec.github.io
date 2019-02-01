@@ -228,7 +228,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Inevitable">
-    <meta name="msapplication-starturl" content="https://glazec.github.io/2019/01/01/MessageEncrypt/">
+    <meta name="msapplication-starturl" content="https://blog.inevitable.tech/2019/01/01/MessageEncrypt/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Inevitable">
@@ -247,7 +247,7 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://glazec.github.io/2019/01/01/MessageEncrypt/">
+    <meta property="og:url" content="https://blog.inevitable.tech/2019/01/01/MessageEncrypt/">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="Android App-MessageEncrypt | Inevitable">
     <meta property="og:image" content="/img/favicon-min.png">
@@ -264,7 +264,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://glazec.github.io/2019/01/01/MessageEncrypt/index.html">
+        <link rel="canonical" href="https://blog.inevitable.tech/2019/01/01/MessageEncrypt/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -276,7 +276,7 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "https://glazec.github.io/2019/01/01/MessageEncrypt/index.html",
+    "mainEntityOfPage": "https://blog.inevitable.tech/2019/01/01/MessageEncrypt/index.html",
     "headline": "Android App-MessageEncrypt",
     "datePublished": "Wed Jan 02 2019 00:00:00 GMT+0800",
     "dateModified": "Thu Jan 03 2019 10:24:30 GMT-0800",
@@ -427,7 +427,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="https://pan.baidu.com/share/qrcode?w=246&h=246&url=https://glazec.github.io/2019/01/01/MessageEncrypt/">
+        <img src="https://pan.baidu.com/share/qrcode?w=246&h=246&url=https://blog.inevitable.tech/2019/01/01/MessageEncrypt/">
     
 </ul>
 
@@ -458,7 +458,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Android App-MessageEncrypt&url=https://glazec.github.io/2019/01/01/MessageEncrypt/index.html&pic=https://glazec.github.io/img/favicon-min.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Android App-MessageEncrypt&url=https://blog.inevitable.tech/2019/01/01/MessageEncrypt/index.html&pic=https://blog.inevitable.tech/img/favicon-min.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -467,7 +467,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Android App-MessageEncrypt&url=https://glazec.github.io/2019/01/01/MessageEncrypt/index.html&via=琉璃" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Android App-MessageEncrypt&url=https://blog.inevitable.tech/2019/01/01/MessageEncrypt/index.html&via=琉璃" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -498,7 +498,7 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>第一个Android App。<br><a id="more"></a><br>前段时间他问我PGP的事情。的确安卓上没有适合并且适用的PGP加密软件，那就自己写一个呗。于是我开始了我的第一个Android开发。</p>
+        <p>第一个Android App。<br><a id="more"></a><br>前段时间他问我PGP的事情。的确安卓上没有适合并且适用的PGP加密软件，那就自己写一个呗。于是我开始了我的第一个Android开发。</p>
 <p>我还特意没有选Java作为开发语言，我选择了kotlin。kotlin的可读性的确要比java强一些，除去它的各种令人头疼的特殊符号。虽然前几年Google宣布kotlin成为了Android开发的官方语言，但真的去仔细翻一翻官方文档，很多范例仍旧是Java的。那就只能看其他人写的类似程序片段，或者再github搜索相关api，看看其他人的做法。但是有些人的范例特别老，Api版本跟你不一样，这时候就要注意了。或者有的时候一个相同的功能有多种调用api实现的方法，虽然有的是错的或者有坑。</p>
 <p>kotlin官方是宣称自己和java是百分之百的兼容。自己也提供了可以把java代码转为kotlin的工具。有的时候还是比较好用的，比如说匿名函数的生成。我对kotlin的匿名函数把握的很差劲，这个官方工具就帮了我不少的忙。但是它经常会犯一些低级错误。变量的声明每次都会错。而且初始化方面和java的变量也不同。我遇到最麻烦的事情就是kotlin的变量作用域。if里面的变量就只能再if中有效，catch也是。匿名函数的闭包也很强，对于新手来说，如何传导数值就成为了一个问题。解决方案便是以参数的方式传入，或者在class的开头，function的外面声明几个变量。这个几个变量的作用域还是挺大的，基本涵盖了整个class。</p>
 <p>不得不吐槽的是，我百分之八十的时间都花在了研究如何使用api上，程序逻辑倒是不怎么花时间。感觉Android开发对于新手来说就是查字典。</p>
@@ -517,7 +517,7 @@
                             This blog is under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 3.0 Unported License</a>
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="https://glazec.github.io/2019/01/01/MessageEncrypt/">https://glazec.github.io/2019/01/01/MessageEncrypt/</a>
+                        <strong>本文链接：</strong><a href="https://blog.inevitable.tech/2019/01/01/MessageEncrypt/">https://blog.inevitable.tech/2019/01/01/MessageEncrypt/</a>
                     </p>
                 </blockquote>
         
