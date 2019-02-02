@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.inevitable.tech/"/>
-  <updated>2019-01-31T18:56:02.891Z</updated>
+  <updated>2019-01-31T18:55:56.864Z</updated>
   <id>https://blog.inevitable.tech/</id>
   
   <author>
@@ -15,26 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>过去壹(Beta)</title>
-    <link href="https://blog.inevitable.tech/2019/01/09/memory1/"/>
-    <id>https://blog.inevitable.tech/2019/01/09/memory1/</id>
-    <published>2019-01-09T16:00:00.000Z</published>
-    <updated>2019-01-31T18:56:02.891Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;第一段回忆&lt;br&gt;
-    
-    </summary>
-    
-      <category term="回忆" scheme="https://blog.inevitable.tech/categories/%E5%9B%9E%E5%BF%86/"/>
-    
-    
-      <category term="回忆" scheme="https://blog.inevitable.tech/tags/%E5%9B%9E%E5%BF%86/"/>
-    
-  </entry>
   
   <entry>
     <title>过去贰(Beta)</title>
@@ -46,6 +26,26 @@
     <summary type="html">
     
       &lt;p&gt;这是第二段回忆&lt;br&gt;
+    
+    </summary>
+    
+      <category term="回忆" scheme="https://blog.inevitable.tech/categories/%E5%9B%9E%E5%BF%86/"/>
+    
+    
+      <category term="回忆" scheme="https://blog.inevitable.tech/tags/%E5%9B%9E%E5%BF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>过去壹(Beta)</title>
+    <link href="https://blog.inevitable.tech/2019/01/09/memory1/"/>
+    <id>https://blog.inevitable.tech/2019/01/09/memory1/</id>
+    <published>2019-01-09T16:00:00.000Z</published>
+    <updated>2019-01-31T18:56:02.891Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;第一段回忆&lt;br&gt;
     
     </summary>
     
