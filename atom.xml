@@ -5,9 +5,9 @@
   <subtitle>没有侥幸这回事，最偶然的意外，似乎也都是事有必然的。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://blog.inevitable.tech/"/>
+  <link href="https://www.inevitable.tech/"/>
   <updated>2019-02-08T03:48:02.467Z</updated>
-  <id>https://blog.inevitable.tech/</id>
+  <id>https://www.inevitable.tech/</id>
   
   <author>
     <name>琉璃</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Vscode 插件开发-HexoHead</title>
-    <link href="https://blog.inevitable.tech/2019/02/05/vscode/"/>
-    <id>https://blog.inevitable.tech/2019/02/05/vscode/</id>
+    <link href="https://www.inevitable.tech/2019/02/05/vscode/"/>
+    <id>https://www.inevitable.tech/2019/02/05/vscode/</id>
     <published>2019-02-05T16:00:00.000Z</published>
     <updated>2019-02-08T03:48:02.467Z</updated>
     
@@ -29,19 +29,19 @@
     
     </summary>
     
-      <category term="Tech" scheme="https://blog.inevitable.tech/categories/Tech/"/>
+      <category term="Tech" scheme="https://www.inevitable.tech/categories/Tech/"/>
     
     
-      <category term="Program" scheme="https://blog.inevitable.tech/tags/Program/"/>
+      <category term="Program" scheme="https://www.inevitable.tech/tags/Program/"/>
     
-      <category term="VsCode" scheme="https://blog.inevitable.tech/tags/VsCode/"/>
+      <category term="VsCode" scheme="https://www.inevitable.tech/tags/VsCode/"/>
     
   </entry>
   
   <entry>
     <title>过去壹(Beta)</title>
-    <link href="https://blog.inevitable.tech/2019/01/09/memory1/"/>
-    <id>https://blog.inevitable.tech/2019/01/09/memory1/</id>
+    <link href="https://www.inevitable.tech/2019/01/09/memory1/"/>
+    <id>https://www.inevitable.tech/2019/01/09/memory1/</id>
     <published>2019-01-09T16:00:00.000Z</published>
     <updated>2019-02-02T03:04:59.539Z</updated>
     
@@ -51,17 +51,17 @@
     
     </summary>
     
-      <category term="回忆" scheme="https://blog.inevitable.tech/categories/%E5%9B%9E%E5%BF%86/"/>
+      <category term="回忆" scheme="https://www.inevitable.tech/categories/%E5%9B%9E%E5%BF%86/"/>
     
     
-      <category term="回忆" scheme="https://blog.inevitable.tech/tags/%E5%9B%9E%E5%BF%86/"/>
+      <category term="回忆" scheme="https://www.inevitable.tech/tags/%E5%9B%9E%E5%BF%86/"/>
     
   </entry>
   
   <entry>
     <title>过去贰(Beta)</title>
-    <link href="https://blog.inevitable.tech/2019/01/09/memory2/"/>
-    <id>https://blog.inevitable.tech/2019/01/09/memory2/</id>
+    <link href="https://www.inevitable.tech/2019/01/09/memory2/"/>
+    <id>https://www.inevitable.tech/2019/01/09/memory2/</id>
     <published>2019-01-09T16:00:00.000Z</published>
     <updated>2019-01-31T18:55:56.864Z</updated>
     
@@ -71,10 +71,10 @@
     
     </summary>
     
-      <category term="回忆" scheme="https://blog.inevitable.tech/categories/%E5%9B%9E%E5%BF%86/"/>
+      <category term="回忆" scheme="https://www.inevitable.tech/categories/%E5%9B%9E%E5%BF%86/"/>
     
     
-      <category term="回忆" scheme="https://blog.inevitable.tech/tags/%E5%9B%9E%E5%BF%86/"/>
+      <category term="回忆" scheme="https://www.inevitable.tech/tags/%E5%9B%9E%E5%BF%86/"/>
     
   </entry>
   
