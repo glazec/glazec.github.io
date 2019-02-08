@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Inevitable</title>
+  
+  <subtitle>没有侥幸这回事，最偶然的意外，似乎也都是事有必然的。</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://blog.inevitable.tech/"/>
+  <updated>2019-02-08T03:48:02.467Z</updated>
+  <id>https://blog.inevitable.tech/</id>
+  
+  <author>
+    <name>琉璃</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vscode 插件开发-HexoHead</title>
+    <link href="https://blog.inevitable.tech/2019/02/05/vscode/"/>
+    <id>https://blog.inevitable.tech/2019/02/05/vscode/</id>
+    <published>2019-02-05T16:00:00.000Z</published>
+    <updated>2019-02-08T03:48:02.467Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Vscode还是挺好用的，但是开发经历却。。。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Tech" scheme="https://blog.inevitable.tech/categories/Tech/"/>
+    
+    
+      <category term="Program" scheme="https://blog.inevitable.tech/tags/Program/"/>
+    
+      <category term="VsCode" scheme="https://blog.inevitable.tech/tags/VsCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>过去壹(Beta)</title>
+    <link href="https://blog.inevitable.tech/2019/01/09/memory1/"/>
+    <id>https://blog.inevitable.tech/2019/01/09/memory1/</id>
+    <published>2019-01-09T16:00:00.000Z</published>
+    <updated>2019-02-02T03:04:59.539Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;第一段回忆&lt;br&gt;
+    
+    </summary>
+    
+      <category term="回忆" scheme="https://blog.inevitable.tech/categories/%E5%9B%9E%E5%BF%86/"/>
+    
+    
+      <category term="回忆" scheme="https://blog.inevitable.tech/tags/%E5%9B%9E%E5%BF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>过去贰(Beta)</title>
+    <link href="https://blog.inevitable.tech/2019/01/09/memory2/"/>
+    <id>https://blog.inevitable.tech/2019/01/09/memory2/</id>
+    <published>2019-01-09T16:00:00.000Z</published>
+    <updated>2019-01-31T18:55:56.864Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这是第二段回忆&lt;br&gt;
+    
+    </summary>
+    
+      <category term="回忆" scheme="https://blog.inevitable.tech/categories/%E5%9B%9E%E5%BF%86/"/>
+    
+    
+      <category term="回忆" scheme="https://blog.inevitable.tech/tags/%E5%9B%9E%E5%BF%86/"/>
+    
+  </entry>
+  
+</feed>

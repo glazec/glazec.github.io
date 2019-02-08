@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+    <link rel="dns-prefetch" href="https://cdn1.lncld.net">
+
+
+
+
+    <link rel="dns-prefetch" href="https://cdn1.lncld.net">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.proxy.ustclug.org">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            对于Galame的一些想法 | 
+        
+        Inevitable
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon-min.png">
+    <link rel="icon" href="/img/favicon-min.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content="近几年Galgame越来越像视觉小说，并且相比小说它还拥有背景音乐，选项，配音，还有全彩cg。sugarfull tempering是我打通的第一款galgame，但我感觉到了一些缺陷。">
+    <meta name="keywords" content=",Galgame">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.proxy.ustclug.org/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Inevitable">
+    <meta name="msapplication-starturl" content="https://blog.inevitable.tech/2018/01/27/galinsight/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Inevitable">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon-min.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+        
+            <link rel="alternate" type="application/atom+xml" href="atom.xml">
+        
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://blog.inevitable.tech/2018/01/27/galinsight/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="对于Galame的一些想法 | Inevitable">
+    <meta property="og:image" content="/img/favicon-min.png">
+    <meta property="og:description" content="近几年Galgame越来越像视觉小说，并且相比小说它还拥有背景音乐，选项，配音，还有全彩cg。sugarfull tempering是我打通的第一款galgame，但我感觉到了一些缺陷。">
+    <meta property="og:article:tag" content="Galgame"> 
+
+    
+        <meta property="article:published_time" content="Sun Jan 28 2018 00:00:00 GMT+0800">
+        <meta property="article:modified_time" content="Sun Jul 29 2018 00:05:04 GMT-0700">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://blog.inevitable.tech/2018/01/27/galinsight/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://blog.inevitable.tech/2018/01/27/galinsight/index.html",
+    "headline": "对于Galame的一些想法",
+    "datePublished": "Sun Jan 28 2018 00:00:00 GMT+0800",
+    "dateModified": "Sun Jul 29 2018 00:05:04 GMT-0700",
+    "author": {
+        "@type": "Person",
+        "name": "琉璃",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.min.png"
+        },
+        "description": "文字所表现出来的美丽、恐惧。。还有率真之类的东西，我觉得在其他事物中还是很难寻得的。"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Inevitable",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon-min.png"
+        }
+    },
+    "keywords": ",Galgame",
+    "description": "近几年Galgame越来越像视觉小说，并且相比小说它还拥有背景音乐，选项，配音，还有全彩cg。sugarfull tempering是我打通的第一款galgame，但我感觉到了一些缺陷。",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x01-代入感"><span class="post-toc-number">1.</span> <span class="post-toc-text">0x01 代入感</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x02"><span class="post-toc-number">2.</span> <span class="post-toc-text">0x02</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 18 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                对于Galame的一些想法
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.min.png" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>琉璃</strong>
+        <span>1月 28, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="https://pan.baidu.com/share/qrcode?w=246&h=246&url=https://blog.inevitable.tech/2018/01/27/galinsight/">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Galgame/">Galgame</a>
+    </li></ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=对于Galame的一些想法&url=https://blog.inevitable.tech/2018/01/27/galinsight/index.html&pic=https://blog.inevitable.tech/img/favicon-min.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=对于Galame的一些想法&url=https://blog.inevitable.tech/2018/01/27/galinsight/index.html&via=琉璃" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>近几年Galgame越来越像视觉小说，并且相比小说它还拥有背景音乐，选项，配音，还有全彩cg。<a href="https://blog.inevitable.tech/2018/01/27/sugarfull_tempring/">sugarfull tempering</a>是我打通的第一款galgame，但我感觉到了一些缺陷。<br><a id="more"></a><br>
+        <div id="aplayer-HUNwAczL" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-HUNwAczL"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "葬仙",
+              author: "叶里，苑舍",
+              url: "/static/audio/葬仙.mp3",
+              pic: "",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script></p>
+<h1 id="0x01-代入感"><a href="#0x01-代入感" class="headerlink" title="0x01 代入感"></a>0x01 代入感</h1><p>Galgame有一种奇特的代入感。叙事是第一人称，视角大部分时间也是第一人称。但有些时候会诡异的切换成上帝视角，例如突然展示其他人物的内心活动，突然切换到一个没有主角的场景。这样使得整个故事的叙事角度变得异常的奇怪，一会儿第一人称，一会儿上帝视角。</p>
+<p>我个人更加喜欢第三人称，从一个旁观者的角度去看一个故事。虽然第一人称的代入感是最强的，但也是最会拉低你的智商的。你会不由自主的把你的思维与Galgame男主的思维同步。这样Galgame打多了，会变得中二。并且Galgame里的故事始终不是真实故事，如果日常讲话带有Galgame的风格,那基本上是逃脱不了死宅的标签了。那么对于我这样喜欢看故事，又希望降低故事对我的影响的人来说，第三人称-从代入感弱一些的角度来看故事是最好的。</p>
+<h1 id="0x02"><a href="#0x02" class="headerlink" title="0x02"></a>0x02</h1><p><strong>以下为18禁内容</strong></p>
+<p>它的黄色脚本写的是真的菜，我不得不c过所有HCG。我总觉得脚本师黄色情节都是复制黏贴。整个游戏之只要写一段，剩下的复制黏贴就好了。这些脚本里还有不少的拟声词。CV就比较辛苦了，这些拟声词的音调都比较高，不容易啊。记得有声优配完黄油瘦了一圈。以下是我从游戏中截取的一段：</p>
+<blockquote>
+<p>等我回过神来，发现她那小巧的身体已经翻转过来，她将腰身固定在我的腰上方。<br>“顺滑的头发切开空气”–她的动作是如此的果断。<br>在黑暗中，浮现出白色的大腿中间，对准我的东西，缓缓向下<br>冰织：我，我知道的，男女。。。。。是<br>冰织：像这样。。。。<br>–咕滋<br>九郎：等。。冰织小。。。<br>冰织：嗯嗯嗯<br>我觉得那是非常勉强的尺寸差，但冰织小姐还是毫不在意的继续向下。<br>狭窄的穴肉，惊人般柔软、令人陶醉，里面充满着炙热的汁液，<br>即使如此，她还是太过幼小，无法将阴茎吞没，只有一种湿润柔软的触感包含着前段而已<br>冰织：嗯。。。呼，咕<br>九郎：那个。。。<br>那个。。。大概<br>在这个时候，我认为我是可以拒绝的。<br>九郎：。。。。。<br>不过终于没有拒绝是因为，作为男人感到责任了吧。<br>—咕滋<br>冰织：嗯啊！<br>九郎：咕<br>再一次被使上力的龟头，像是滑进去般掰开一层层粘膜，向前进。<br>冰织：咕哈。。。。。呼啊，啊。。。。哈啊<br>有种甚至像是要产生淤血的压迫感，将前端紧紧勒住。<br>与冰织小姐痛苦的表情对照。<br>冰织：。。。。哈啊，哈啊啊，哈啊<br>冰织：。。。。。<br>冰织：和，和九郎先生。。。。在做呢，我<br>她十分感慨般低语道<br>嗯嗯嗯<br>然后将腰降下来。<br>咕噜，咕噜地，钻过柔软的粘膜向着狭窄腔道的深处，再深处。<br>九郎：呜。。。。<br>肉壁再阴茎表面裹动着。。。。。有种触电般的快感。<br>虽、虽说好像有点晚，这样子真的可以吗？<br>虽然我是顺着她的想法来到了这步，不过仔细想想，好像还有伦理之类，各种各样要考虑的事。<br>冰织：呜。。。嗯，嗯嗯嗯<br>但是她那边并没有踌躇。<br>—咕滋<br>她强行将腰沉了下来。<br>刚才摸了个遍的白瓷般的山丘，碰到了这边的腰，弹了起来。<br>冰织：哈啊啊，哈啊啊啊啊。进，进去了<br>她露出像是有种责任感般的，像是完成了什么一定要完成的事情般充满达成感的表情说道。<br>冰织：哈啊。。。哈啊<br>冰织：九郎先生。。。。我，我做到了，啊哈<br>九郎：啊，是<br>为什么要做这种事？虽然这一疑问还是没有解开，<br>但总之冰织小姐因为达成感而喜笑颜开。<br>那我就不能说什么了。<br>冰织：嗯哈。。。呼。。。哈啊，哈，哈<br>粘稠的穴肉将整个阴茎包裹住，紧紧的吮吸。<br>内部虽然已经有所缓解，但是—-<br>虽然几乎只是一条缝，将坚硬，膨胀起来的那个插进幼小的秘肉中，这光景与其说色情，不如说让人心疼。<br>冰织：嗯，嗯呜<br>九郎：痛吗。。。。<br>冰织：有，有一点，不，非常<br>冰织：但是。。。嘿嘿，我没事<br>比起痛楚，达成感占了上风吗。她对我露出笑容。<br>冰织：九郎先生呢？不痛吗？<br>九郎：哪有可能，这边可是—-<br>冰织：呀。。。<br>不管是那么年幼的粘膜，其柔软跟大人的那个比起毫不逊色。<br>不如说充满着小孩子那种弹性，有种像是舔舐着整个阴茎般的黏着感，非常的舒服。<br>使阴茎不禁产生反应。<br>冰织：嗯，嗯，呜<br>九郎：对不起，不由自主地<br>冰织：没，没事<br>冰织：请再多感受一下吧，九郎先生能高兴的话。。。。我也很开心。<br>咕滋，咕滋<br>冰织小姐不顾自己的疼痛，拼命地收缩狭窄的蜜穴，<br>冰织：嗯，嗯<br>可爱的屁股不断地摇晃。<br>冰织：九郎。。。先生，九郎先生。。。<br>她闭上眼，像是有点高兴地一边接受体内被搅动的痛楚，<br>冰织：嗯嗯，嗯呼，咕。。。。呜呼<br>一边让纤细的腰部左右摆动，上下回旋。<br>冰织：哈，呼啊，啊啊，啊，啊，啊<br>苦闷的悲鸣，在变轻的同时开始带上了节奏。<br>看来她也开始习惯了疼痛。<br>冰织：哈啊，嗯，哈，嗯，嗯<br>—滋噜，滋噜，滋，滋。<br>冰织：嗯。。。呼。。。<br>是润滑油增加了吗。感觉动作也渐渐变得流畅。<br>冰织：九，九郎。。。。先生，好硬，非常的大<br>九郎：嗯。。。。<br>冰织：啊呜呜呜，好热。。。。。<br>像是困惑，又像是高兴般，捉摸不透的语气。<br>我的东西则是顺从快感，进一步将她逼向绝路。<br>冰织:嗯嗯，啊嗯，啊嗯，嗯，嗯，咕<br>冰织小姐的腰没有停下。<br>冰织：哈，啊啊，哈啊，呜，呼。。。。。嗯嗯嗯<br>九郎：还疼吗？<br>冰织：习惯了。。。。嗯，嗯嗯<br>冰织：我，喜欢，这痛楚。。。。哈啊，咕，嗯嗯，嗯呼<br>冰织：嗯嗯嗯，嗯，嗯，嗯，嗯<br>看来是真的习惯了吧，腰的节奏也变得熟练。<br>摩擦阴茎的黏肉的节奏，越来越快。<br>九郎：！<br>冰织：哈。。。啊啊，九郎先生，舒服吗？<br>九郎：。。。。。。。~<br>这是在有点羞人，不过我还是用苦笑表示肯定。<br>这边从一开始就只有快感，而且那快感还不断地增加，现在已经变得非常强烈<br>冰织：。。。。。呵<br>是明白了这些吧，冰织小姐露出满足的笑，<br>冰织：啊，啊，啊，嗯呼啊。。。<br>然后更加激烈地摇动躯体。<br>骑在我身上的是未成熟的孩子的身体，交姌的姿态也让人感受到一丝恶作剧的色彩<br>但是产生的快感，却和成人一样——<br>九郎：呜啊。。。。咕<br>冰织：啊哈。。。。。哈，哈啊。。。。。<br>九郎：—-！<br>咕。。。。。！<br>冰织：呼啊。。。。<br>糟糕了。<br>还没给我思考的时间，我在她在有节奏的摆动的腰的动作中迷失了。<br>我喘着气，将精子释放。<br>冰织小姐没有抽开腰，让全部精液都流向了她的内部。<br>这是不是很妙的事情啊。。。。<br>虽然我有这种想法，但在这之前上的，将她内部填满的喜悦不断地涌上。<br>冰织：呼啊啊，啊啊，啊。。好暖<br>冰织：啊哈。。。。哈哈<br>冰织：。。。。好开心<br>她好像和我一样。<br>。。。。。。<br>—–沙<br>就像是断了线一样，冰织小姐就是那样无力的躺下。<br>幸好有棉被，能让她睡<br>略。。。。。。。。。。</p>
+</blockquote>
+<p>真是打的我累死了，而且还把前戏贴上去。真的是好长。。。将近两千个字，足够水一章了。但不得不说它写的很色情，一点都不情色。换个名字，换一下句子顺序，改一改比喻，又写好一段了，就像是工厂流水线上出来的产品。</p>
+<p>渡边纯一曾经这么说：</p>
+<blockquote>
+<p>关键在于，你是以一种非常拙劣的文字去渲染性爱，挑逗读者，还是以一种比较高雅的文字去冷静地描写人物的心理变化，这有本质的区别。</p>
+</blockquote>
+<p>写人物的心理变化是很有难度。经过抄写一次某一段gal中的黄色情节，我感觉写起来没有特别大的难度。经过一些锻炼，我也是可以写出来这么水的剧情的，实在字数不够，那就多塞点拟声词。</p>
+<p>那么我引用一段《失乐园》中的描写（读者可以感受一下其中的心理活动）：</p>
+<blockquote>
+<p>这回，久木从凛子身后悄悄挨近，手放到胸前逗弄着她的乳头。可能是经历高潮后身体更加敏感的缘故，稍加刺激就让凛子扭动起身体，做出了敏锐的反应。<br>　　“手给我看看！”<br>　　凛子一时不明白他是什么意思，正要回头问的当口，久木一下子把她的左手拉到背后，接着又拉过来右手。<br>　　“你要干什么？”<br>　　“这手太坏……”<br>　　刚才每回触及到她的乳房，凛子都像搔痒难耐般扭动，同时又想用双手护胸，久木觉得有必要惩罚这双捣蛋的手。久木把凛子的双手拉到背后，拿起床边的睡衣带子绑住。<br>　　“你别乱来啊！”<br>　　女人终于明白了男人的意图，慌忙想把手抽回来，但是她的双手已经呈十字交叉被牢牢绑在腰后。<br>　　“你怎么能这样……”<br>　　她两手揉扯挣扎，但绳结牢不可动。<br>　　手真的被绑住了，凛子突然不安起来，更激烈地搓着手腕，扭动上身，想办法挣脱束缚，可是不断的挣扎，只会让身上的被单滑落，暴露出全裸的躯体。<br>　　“帮我解开……”自己挣脱不了，只有哀求，可惜变成鬼的男人不为所动，非但如此，还进一步向她宣告更苛刻的惩罚。<br>　　“还是开灯吧！”<br>　　凛子猛然转过脸，拼命摇头。<br>　　“不要，千万不要……”<br>　　此时男人占据绝对优势，可以为所欲为，他不会放过这千载难逢的机会。他从浴室拿出毛巾，罩在女人额前。<br>　　“你要干吗？”恐惧至极的女人对一切都反应敏感，男人以行动宣告自己是主宰者。<br>　　“把眼睛蒙起来。”<br>　　“不要……”她激烈反抗，但眼睛还是被蒙上了，她一下子陷入黑暗之中。<br>　　“我怕……”<br>　　她发出一声惨叫，但是鬼男人是不会为她解开束缚的。看到女人继续表示抗拒，鬼男人得意地宣布了最后一项措施：“现在我要开灯了！”<br>　　“救命！”<br>　　她用软弱无力的声音哀求，鬼男人无动于衷，扭转开关，瞬间，所有灯火大亮，照亮了整个房间。<br>　　房中央是张很大的双人床，一个全裸的女人被扔在床中央。女人眼睛被蒙住，双手被反绑于背后，完全失去了反抗的能力。尽管如此，仿佛仍欲遮掩起身体中羞涩的那个部分，身体弯成弓形躺在床上。从圆润的肩头可以窥视她胸前的隆起，纤细收紧的腰肢前方则是光滑的白色半球状肥臀。<br>　　女人的身体真是不可思议的生物体。<br>　　美丽的胴体展现在眼前，能够感觉到很美，是顺理成章的事。而如果在这美丽的胴体上再稍微加上那么一点儿修饰的话，就可以使其愈加美丽。比方说在裸露的身体上只用内衣和连裤袜象征性地遮住一部分，就会使其更具女人味，更能够使男人情绪高涨。<br>　　现在凛子全裸的身上只有一条和服带子和一条毛巾。只是用这与美丽无缘的带子和毛巾把女人的身体捆绑住的一瞬间，女人的躯体就迸发出无限的妩媚与妖冶，似在向男人发起了挑战。单纯的裸体并没有那么强大的诱惑力，可为什么只是简单地予以束缚，女人的身体就会变得如此刺激呢？或许是因为这其中潜藏着可以唤醒妄想的毒素，会令看到她的人充满想像的缘故吧。　<br>　　双手被反绑，眼睛被蒙住的全裸女人被扔在床上。她这种姿态会使男人想像到女人的美丽与悲哀，进而由其悲剧性的背景透视出她由于羞耻而不断颤动的内心世界。正因为如此，男人才感到亢奋，以致发情。<br>　　面对她泰山压顶的魅力，就算是鬼男人也无以抵抗。<br>　　久木审视着凛子，体内的欲火情不自禁地升腾起来，接下来就如同被点燃了导火索一般扑到床上，抱紧凛子。就是在这一刻，魔鬼行刑者已经放弃了自己的职责，堕落为一介好色而淫荡的凡人。<br>　　尽管如此，鬼男人还没有完全丧失作为统治者的地位。他现在令躺在床上被绑缚着的女人把圆润肥硕的屁股撅起来，正从各个角度欣赏着她淫荡而美丽的姿态。同时，他也没有忘记用语言进行挑逗，不断在女人的耳边轻轻诉说着她屁股的大小以及乳头的颜色等等。<br>　　“你看连这里都溢出了蜜糖。”<br>　　听到自己被比喻成水果，女人真想掩住自己的耳朵可是又做不到，她现在只希望能够尽快与男人结合，可是男人却不肯轻易靠近。男人会输给女人最大的原因可能就是忍耐力不够强。如果再稍微忍耐一会儿就可以建立起绝对的优势，可是却往往无法忍受，不由自主地伸出手去投降。<br>　　久木现在也已经到了忍耐的极限。<br>　　好不容易才把凛子捆上，可以尽情地欣赏，可以不断用言语刺激对方，可是他自己却再也无法抗拒体内喷涌而出的欲念，躺倒在圆润的屁股后面。虽然仍对观赏美景心存迷恋，但终究压抑不住自己的欲念，于是下决心侵入到那已经红胀至极的花园中去。就在他探入的一刹那，凛子猛地发出一声悲鸣，向后挺起上身，但她很快就切实感觉到自己紧紧衔住了男人，开始缓缓移动起腰肢。从后面结合，即背后位结合的姿态，无疑会刺激到女人前面最为敏感的部位，而且女人越是向后挺身，结合的越是密切。<br>　　<br>　　最初男人还将自己的阳物深深插入，随即开始放缓速度，改前突为后带，反复刺激挑逗着，最后拉起绑缚女人双手的绳结，就像骑马一样前后晃动起来。<br>　　而久木能够保住其征服者的地位也就到此刻为止了。<br>　　被蒙住双眼的凛子似乎感觉更高度集中，开始的时候还只是有些害羞地回应着缓急相间的刺激，但很快就由被动变主动，最后变成疯狂不羁的马儿独自狂奔起来。<br>　　而男人就这样被女人鼓动着、骚扰着、诱惑着，直至忘记了自己的主导地位，在女体中彻底释放出来。<br>　　其实在做羞耻事这点上，男人女人都一样，也正因为刚才被逼入羞耻至极的状态，一旦豁出去后，女人反能彻底抛开羞耻心和迷惘。虽说一开始是男人要侵犯女人，但彼此都达到高潮后，才发现被吸干榨尽的总是男人，在性事后男人就会像尸体般躺在床上。</p>
+</blockquote>
+<p>读者们可以自行比较一下区别。</p>
+<p><hr><br><a href="https://t.co/fKfoyRmtXl" target="_blank" rel="noopener"><br><img border="0" src="/static/images/galinsight-gift.png"><br></a></p>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            This blog is under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 3.0 Unported License</a>
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="https://blog.inevitable.tech/2018/01/27/galinsight/">https://blog.inevitable.tech/2018/01/27/galinsight/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <div id="comment" style="padding:10px;" class="vcomment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+    });
+    var notify = 'false' === 'true';
+    var verify = 'false' === 'true';
+    new Valine({
+        el: '.vcomment',
+        notify: notify,
+        verify: verify,
+        appId: "4h5SYcsd7q5SV1HJXHe43Vsu-MdYXbMMI",
+        appKey: "gecurcq4AfQgDFik3siEf0Jx",
+        placeholder: "你好吗？我很好。",
+        pageSize:'10',
+        avatar:'identicon',
+        lang:'zh-cn',
+        guest_info: guest_info
+    });
+</script>
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2018/01/27/sugarfull_tempring/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/01/08/Hexo-config/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.min.png" alt="琉璃's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        i@inevitable.tech
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: i@inevitable.tech#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/02/">二月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">十月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">3</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Book/">Book<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Reflection/">Reflection<span class="sidebar_archives-count">28</span></a></li><li><a class="sidebar_archives-link" href="/categories/Reflection/life/">life<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Tech/">Tech<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/Turorial/">Turorial<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/人文修养/">人文修养<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/回忆/">回忆<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/序/">序<span class="sidebar_archives-count">2</span></a>
+            </li></ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="timeline">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                timeline
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/tags" title="tagcloud">
+                
+                    <i class="material-icons sidebar-material-icons">label</i>
+                
+                tagcloud
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">45</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/kismet-cruz" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year=""></span>&nbsp;Inevitable
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2017;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
