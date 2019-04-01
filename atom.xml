@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.inevitable.tech/"/>
-  <updated>2019-02-08T03:48:02.467Z</updated>
+  <updated>2019-03-21T22:04:36.961Z</updated>
   <id>https://www.inevitable.tech/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Azure服务以及Azure Function试用</title>
+    <link href="https://www.inevitable.tech/posts/b67da85e/"/>
+    <id>https://www.inevitable.tech/posts/b67da85e/</id>
+    <published>2019-02-21T16:00:00.000Z</published>
+    <updated>2019-03-21T22:04:36.961Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前几天学校来了一个微软Azure的头来做讲座，听他吹的把Azure吹的是棒的不要不要的。我真想试试看呢。再之，Vscode对于Azure的支持也很棒，那我就来试一试吧。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Tech" scheme="https://www.inevitable.tech/categories/Tech/"/>
+    
+    
+      <category term="Tech" scheme="https://www.inevitable.tech/tags/Tech/"/>
+    
+      <category term="Cloud" scheme="https://www.inevitable.tech/tags/Cloud/"/>
+    
+      <category term="Azure" scheme="https://www.inevitable.tech/tags/Azure/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Vscode 插件开发-HexoHead</title>
     <link href="https://www.inevitable.tech/posts/3fef5fe0/"/>
     <id>https://www.inevitable.tech/posts/3fef5fe0/</id>
     <published>2019-02-05T16:00:00.000Z</published>
-    <updated>2019-02-08T03:48:02.467Z</updated>
+    <updated>2019-02-08T05:04:40.532Z</updated>
     
     <summary type="html">
     
@@ -43,31 +67,11 @@
     <link href="https://www.inevitable.tech/posts/7d6afb85/"/>
     <id>https://www.inevitable.tech/posts/7d6afb85/</id>
     <published>2019-01-09T16:00:00.000Z</published>
-    <updated>2019-02-02T03:04:59.539Z</updated>
+    <updated>2019-02-08T05:04:40.523Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;第一段回忆&lt;br&gt;
-    
-    </summary>
-    
-      <category term="回忆" scheme="https://www.inevitable.tech/categories/%E5%9B%9E%E5%BF%86/"/>
-    
-    
-      <category term="回忆" scheme="https://www.inevitable.tech/tags/%E5%9B%9E%E5%BF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>过去贰(Beta)</title>
-    <link href="https://www.inevitable.tech/posts/6fc36133/"/>
-    <id>https://www.inevitable.tech/posts/6fc36133/</id>
-    <published>2019-01-09T16:00:00.000Z</published>
-    <updated>2019-01-31T18:55:56.864Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这是第二段回忆&lt;br&gt;
     
     </summary>
     
