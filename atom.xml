@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Inevitable</title>
+  
+  <subtitle>没有侥幸这回事，最偶然的意外，似乎也都是事有必然的。</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://www.inevitable.tech/"/>
+  <updated>2019-10-28T05:35:14.594Z</updated>
+  <id>https://www.inevitable.tech/</id>
+  
+  <author>
+    <name>琉璃</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自动化制作字幕</title>
+    <link href="https://www.inevitable.tech/posts/291d2d4a/"/>
+    <id>https://www.inevitable.tech/posts/291d2d4a/</id>
+    <published>2019-10-26T16:00:00.000Z</published>
+    <updated>2019-10-28T05:35:14.594Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Technology" scheme="https://www.inevitable.tech/categories/Technology/"/>
+    
+    
+      <category term="Subtitle" scheme="https://www.inevitable.tech/tags/Subtitle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Static Site Generator</title>
+    <link href="https://www.inevitable.tech/posts/c54975aa/"/>
+    <id>https://www.inevitable.tech/posts/c54975aa/</id>
+    <published>2019-10-02T16:00:00.000Z</published>
+    <updated>2019-10-04T23:23:20.976Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天看了看几个静态网站生成器的区别。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Technology" scheme="https://www.inevitable.tech/categories/Technology/"/>
+    
+    
+      <category term="SSG" scheme="https://www.inevitable.tech/tags/SSG/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Netflix 美国工厂</title>
+    <link href="https://www.inevitable.tech/posts/d77c7ef8/"/>
+    <id>https://www.inevitable.tech/posts/d77c7ef8/</id>
+    <published>2019-09-05T16:00:00.000Z</published>
+    <updated>2019-09-06T20:35:33.340Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;由Netflix出品，奥巴马参与制作的纪录片美国工厂我花了一个多小时看完了。看了一眼它在网上的评论，中文评论区基本上都是好评，英文也是好评居多，但是美国媒体却有着自己独特的看法。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Film" scheme="https://www.inevitable.tech/categories/Film/"/>
+    
+    
+      <category term="Film" scheme="https://www.inevitable.tech/tags/Film/"/>
+    
+  </entry>
+  
+</feed>

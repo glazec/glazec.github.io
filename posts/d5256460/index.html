@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.9.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+    <link rel="dns-prefetch" href="https://cdn1.lncld.net">
+
+
+
+
+    <link rel="dns-prefetch" href="https://cdn1.lncld.net">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+
+
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.proxy.ustclug.org">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Hexo翻修 | 
+        
+        Inevitable
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon-min.png">
+    <link rel="icon" href="/img/favicon-min.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content="全面翻修个人站点，并添加功能。">
+    <meta name="keywords" content=",Server,Aria2,Sync,Media server">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?bM4hL6xqR1N3kjj/uppajQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.proxy.ustclug.org/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","https://cdn.bootcss.com/jquery/2.2.0/jquery.js", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Inevitable">
+    <meta name="msapplication-starturl" content="https://www.inevitable.tech/posts/d5256460/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Inevitable">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon-min.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+        
+            <link rel="alternate" type="application/atom+xml" href="atom.xml">
+        
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://www.inevitable.tech/posts/d5256460/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Hexo翻修 | Inevitable">
+    <meta property="og:image" content="/img/favicon-min.png">
+    <meta property="og:description" content="全面翻修个人站点，并添加功能。">
+    <meta property="og:article:tag" content="Server"> <meta property="og:article:tag" content="Aria2"> <meta property="og:article:tag" content="Sync"> <meta property="og:article:tag" content="Media server"> 
+
+    
+        <meta property="article:published_time" content="Tue Jan 09 2018 07:09:09 GMT+0800">
+        <meta property="article:modified_time" content="Fri May 17 2019 14:33:09 GMT-0700">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://www.inevitable.tech/posts/d5256460/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://www.inevitable.tech/posts/d5256460/index.html",
+    "headline": "Hexo翻修",
+    "datePublished": "Tue Jan 09 2018 07:09:09 GMT+0800",
+    "dateModified": "Fri May 17 2019 14:33:09 GMT-0700",
+    "author": {
+        "@type": "Person",
+        "name": "琉璃",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.min.png"
+        },
+        "description": "文字所表现出来的美丽、恐惧。。还有率真之类的东西，我觉得在其他事物中还是很难寻得的。"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Inevitable",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon-min.png"
+        }
+    },
+    "keywords": ",Server,Aria2,Sync,Media server",
+    "description": "全面翻修个人站点，并添加功能。",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+        <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-151344741-1', 'auto');ga('send', 'pageview');
+</script>
+    
+    
+    
+
+    <!-- Custom Head --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+
+<link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x01-Introduction"><span class="post-toc-number">1.</span> <span class="post-toc-text">0x01 Introduction</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x02-Hexo-edit"><span class="post-toc-number">2.</span> <span class="post-toc-text">0x02 Hexo-edit</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x001-introduction"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">0x001 introduction</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x002-Installation"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">0x002 Installation</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x03-Aria2-and-WebUI"><span class="post-toc-number">3.</span> <span class="post-toc-text">0x03 Aria2 and WebUI</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x001-Introduction"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">0x001 Introduction</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x002-Installation-for-Aria2"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">0x002 Installation for Aria2</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x003-Configuration-for-Aria2"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">0x003 Configuration for Aria2</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x003-Starting-Aria2"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">0x003 Starting Aria2</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x004-Webui-aria2"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">0x004 Webui-aria2</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x005-browse-the-service"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">0x005 browse the service</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x04-Syncthing"><span class="post-toc-number">4.</span> <span class="post-toc-text">0x04 Syncthing</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x001-Introduction-1"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">0x001 Introduction</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x002-Installation-1"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">0x002 Installation</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x05-Resilio-Sync"><span class="post-toc-number">5.</span> <span class="post-toc-text">0x05 Resilio Sync</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x001-Introduction-2"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">0x001 Introduction</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x002-Installation-2"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">0x002 Installation</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x06-Plex"><span class="post-toc-number">6.</span> <span class="post-toc-text">0x06 Plex</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x001-Introduction-3"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">0x001 Introduction</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x002-Installation-3"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">0x002 Installation</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x003-Configuration"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">0x003 Configuration</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x07-Mount-digital-space"><span class="post-toc-number">7.</span> <span class="post-toc-text">0x07 Mount digital space</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x001-Introduction-4"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">0x001 Introduction</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x002-Installation-4"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">0x002 Installation</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x002-Configuration"><span class="post-toc-number">7.3.</span> <span class="post-toc-text">0x002 Configuration</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x09-域名设置"><span class="post-toc-number">8.</span> <span class="post-toc-text">0x09 域名设置</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x09-参考"><span class="post-toc-number">9.</span> <span class="post-toc-text">0x09 参考</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 18 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Hexo翻修
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.min.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>琉璃</strong>
+        <span>1月 09, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Aria2/">Aria2</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Media-server/">Media server</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Server/">Server</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Sync/">Sync</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Hexo翻修&url=https://www.inevitable.tech/posts/d5256460/index.html&pic=https://www.inevitable.tech/img/favicon-min.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Hexo翻修&url=https://www.inevitable.tech/posts/d5256460/index.html&via=琉璃" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>全面翻修个人站点，并添加功能。<br><a id="more"></a></p>
+
+        <div id="aplayer-hdlCXmbw" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-hdlCXmbw"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "拼凑的断音（Cover Miku)",
+              author: "玖肆仟",
+              url: "/static/audio/拼凑的断音.mp3",
+              pic: "",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+<h1 id="0x01-Introduction"><a href="#0x01-Introduction" class="headerlink" title="0x01 Introduction"></a>0x01 Introduction</h1><p>我的服务器到现在为止就只运行了一个博客，而且还是hexo这样的静态博客。所有的资源全是静态的。视频和照片放在了网站目录下，设置了755的权限。这样有些浪费资源，我这样想。应该增加点什么功能。</p>
+<p>不知道各位用过没有离线下载，有没有感受过国内下载国外的种子有多慢。离线下载的本质便是先把你需要下载的文件下载到服务器上，再在需要的时候把资源取回本地。离线下载的优势来自于服务器更高的带宽，强大的稳定性(自从升级到window inside，崩溃已成为家常便饭。)<br><img src="/static/images/hexo-config0.5.png" alt="windows inside"><br><img src="/static/images/hexo-config1.png" alt="aria高速下载"></p>
+<p>那么怎么取回本地呢? 用同步软件！<br>什么东西是可以不用取回本地呢？ 视频啊！我们可以直接在线播放视频，这样可以节省不少时间。<br>为了方便连接这些服务，为每一个服务都设置一个子域名，并且加上https。</p>
+<p><strong>我的系统是Ubuntu。</strong></p>
+<h1 id="0x02-Hexo-edit"><a href="#0x02-Hexo-edit" class="headerlink" title="0x02 Hexo-edit"></a>0x02 Hexo-edit</h1><h2 id="0x001-introduction"><a href="#0x001-introduction" class="headerlink" title="0x001 introduction"></a>0x001 introduction</h2><p><img src="/static/images/hexo-config2.png" alt="Hexo-editor"><br>我第一个部署的服务是Hexo-edit(<a href="https://github.com/tajpure/hexo-editor" target="_blank" rel="noopener">传送门</a>)。Hexo-editor为编辑Hexo博客提供了一个在线的可视化的界面。以前，我通常是在本地写博客，写完后用github同步到Hexo上。Hexo-editor提供了一键publish和一键deploy。这对于把博客托管在github上的非常有用。但是对于我，把博客直接搭在vps上的人，deploy并不能实现我博客的更新。我需要修改一下程序来实现我想要的功能。并且编辑的时候，左边的可选项太少了。只有tag，time等选项。并没有comment等选项。</p>
+<p><img src="/static/images/hexo-config3.png" alt="Hexo-editor"></p>
+<p>Hexo-editor支持插入图片，并且可以帮助你上传图片到Hexo-editor指定的目录，我需要自定义这个目录，例如我就把图片统一放在/static里。</p>
+<p><em>注意：</em>请不要在heox-blog的根目录下建立一个media的文件夹，来存放所有的媒体文件：音乐，视频等。在你执行<code>hexo generate</code>的时候，会出现<code>kill</code>。原因是media目录太大，渲染失败。Hexo的渲染器对于目录大小有限制，大约在5-10M。</p>
+<p>我把所有媒体文件都放在了<code>/var/www/hexo/static</code>中。注意设置权限。<code>sudo chown -R $USER:$USER /var/www/hexo/static sudo</code>,<code>chmod -R 755 /var/www/hexo</code>。</p>
+<h2 id="0x002-Installation"><a href="#0x002-Installation" class="headerlink" title="0x002 Installation"></a>0x002 Installation</h2><pre><code class="bash">git clone https://github.com/tajpure/hexo-editor.git
+cd hexo-editor
+npm install --production
+npm start
+</code></pre>
+<p>非常简单的安装.</p>
+<p>如果想要改变端口，配置文件是<code>hexo-editor/_config.yml</code>。最后请不要忘记打开端口。以端口32400为例 <code>sudo iptables -A INPUT -p tcp --dport 32400 -j ACCEPT</code></p>
+<h1 id="0x03-Aria2-and-WebUI"><a href="#0x03-Aria2-and-WebUI" class="headerlink" title="0x03 Aria2 and WebUI"></a>0x03 Aria2 and WebUI</h1><h2 id="0x001-Introduction"><a href="#0x001-Introduction" class="headerlink" title="0x001 Introduction"></a>0x001 Introduction</h2><p>Aria2(<a href="https://github.com/aria2/aria2" target="_blank" rel="noopener">传送门</a>)是一款命令行下载工具。虽然只能用命令行使用Aria2,AriaNG(<a href="https://github.com/mayswind/AriaNg" target="_blank" rel="noopener">传送门</a>)，但是它的功能的确很强大，比迅雷强大的多。Aria支持种子，磁力链接，链接，metalink。可以手动设置每个服务器的最大连接数，可以设置多线程下载是区块的大小。也可以手动导入tracker server等。例如我们可以加入国内的一些节点，这样即使服务器在国外，也可以高速下载国内的种子。</p>
+<p>虽然没有官方的GUI，但是第三方的GUI也是不错的。例如webui-aria2(<a href="https://github.com/ziahamza/webui-aria2" target="_blank" rel="noopener">传送门</a>),AriaNG(<a href="https://github.com/mayswind/AriaNg" target="_blank" rel="noopener">传送门</a>)。AriaNG是一个新上线的项目,star并不如webui-aria2多。 由于我第一个接触到的是webui-aria2，再加上webui-aria2和AriaNG在功能上没有特别大的差距，我就没有尝试AriaNG。<br><img src="/static/images/hexo-config4.png" alt="webui"></p>
+<h2 id="0x002-Installation-for-Aria2"><a href="#0x002-Installation-for-Aria2" class="headerlink" title="0x002 Installation for Aria2"></a>0x002 Installation for Aria2</h2><p>我们先安装Aria2，在安装它的GUI webui-aria2。<br>简单一些，对于Ubuntu的同学来说可以直接<code>apt-get install aria2</code> 这样做非常的快捷，只是版本比较老，为2015年发布的1.19。<br>关于编译请参考这篇文章(<a href="https://npchk.info/debian-aria2-install/" target="_blank" rel="noopener">传送门</a>)</p>
+<p>从官方仓库直接下载旧版Aria2<code>apt-get install aria2</code></p>
+<h2 id="0x003-Configuration-for-Aria2"><a href="#0x003-Configuration-for-Aria2" class="headerlink" title="0x003 Configuration for Aria2"></a>0x003 Configuration for Aria2</h2><pre><code class="bash">#创建配置文件夹并进入
+mkdir ~/.aria2 &amp;&amp; cd ~/.aria2
+#下载配置文件
+wget http://cloud.vccvps.com/aria2/aria2.conf
+#用来发现DHT节点，解决国外下载国内种子没有速度
+wget http://cloud.vccvps.com/aria2/dht.dat
+#创建一个空的 Aria2 下载任务保存文件
+echo &#39;&#39; &gt; /root/.aria2/aria2.session
+</code></pre>
+<p>由于有中文注释，所以aria2.conf打开可能会出现乱码。</p>
+<p>添加了DHT节点后，我们可以继续添加Tracker Server。<br>这儿推荐一个自动更新的Tracker列表——&gt;<a href="https://github.com/ngosang/trackerslist" target="_blank" rel="noopener">传送门</a><br>添加前20的节点到aria2.conf。<br>例如：</p>
+<pre><code class="json">bt-tracker=udp://tracker.skyts.net:6969/announce,udp://tracker.safe.moe:6969/announce,udp://tracker.piratepublic.com:1337/announce,udp://tracker.pirateparty.gr:6969/announce,udp://tracker.coppersurfer.tk:6969/announce,udp://tracker.leechers-paradise.org:6969/announce,udp://allesanddro.de:1337/announce,udp://9.rarbg.com:2710/announce,http://p4p.arenabg.com:1337/announce,udp://p4p.arenabg.com:1337/announce,udp://tracker.opentrackr.org:1337/announce,http://tracker.opentrackr.org:1337/announce,udp://public.popcorn-tracker.org:6969/announce,udp://tracker2.christianbro.pw:6969/announce,udp://tracker1.xku.tv:6969/announce,udp://tracker1.wasabii.com.tw:6969/announce,udp://tracker.zer0day.to:1337/announce,udp://tracker.mg64.net:6969/announce,udp://peerfect.org:6969/announce,udp://open.facedatabg.net:6969/announce
+#抗DMCA的服务器设置如下选项
+enable-dht=true
+bt-enable-lpd=true
+enable-peer-exchange=true
+</code></pre>
+<p>如果想要开启token认证，在aria.conf写入：</p>
+<pre><code class="json">rcp-secure=true
+rcp-secret=your-secret-token
+</code></pre>
+<p>如果使用用户名和密码，在aria.conf写入：</p>
+<pre><code class="json">rcp-secure=true
+rpc-user=yourusername
+rpc-passwd=yourpasswd
+</code></pre>
+<p>如果设置SSL，在aria.conf写入：</p>
+<pre><code class="bash">#关于如何用let&#39;s encrypt免费生成证书，将在之后 0x06 域名设置 中提到。
+rpc-certificate=/etc/letsencrypt/live/yourdomain.com/fullchain.pem
+rpc-private-key=/etc/letsencrypt/live/yourdomain.com/privkey.pem
+</code></pre>
+<p><em>附Aria2 参数翻译，请见文末</em></p>
+<h2 id="0x003-Starting-Aria2"><a href="#0x003-Starting-Aria2" class="headerlink" title="0x003 Starting Aria2"></a>0x003 Starting Aria2</h2><p>我们需要建立一个下载目录，例如 <code>~/aria2-download</code>。<br>启动Aria2 <code>aria2c --enable-rpc --rpc-listen-all</code> <em>可用<a href="http://blog.jobbole.com/87278/" target="_blank" rel="noopener">tmux</a>来管理窗口，或者防止关闭ssh窗口，服务自动结束</em></p>
+<p><strong>注意</strong>打开端口<code>sudo iptables -A INPUT -p tcp --dport 32400 -j ACCEPT</code>。<br><strong>注意</strong>下载目录的权限。<br>如果出现端口冲突，执行<code>lsof -i :端口</code>。然后杀死占用端口的进程<code>kill -9 进程ID</code></p>
+<h2 id="0x004-Webui-aria2"><a href="#0x004-Webui-aria2" class="headerlink" title="0x004 Webui-aria2"></a>0x004 Webui-aria2</h2><pre><code class="bash">#下载源码
+git clone https://github.com/ziahamza/webui-aria2.git
+#编辑配置文件
+vim configuration.js
+</code></pre>
+<p>请注意配置encrypt(若为true，则意味着启用了SSL)。<br>auth的配置需要和aria2.conf中一致。<br>启动服务器<code>node node-server.js</code><br>请注意打开端口<code>sudo iptables -A INPUT -p tcp --dport 6800 -j ACCEPT</code></p>
+<h2 id="0x005-browse-the-service"><a href="#0x005-browse-the-service" class="headerlink" title="0x005 browse the service"></a>0x005 browse the service</h2><p>访问youserverip:6800<br>左侧max-connection-per-server可以设置的最大值为16。<br>如果<code>configuration.js</code>中的<code>encrypt</code>设置为了`true，需要勾选<strong>启用 SSL/TLS 加密</strong>。<br><img src="/static/images/hexo-config5.png"></p>
+<h1 id="0x04-Syncthing"><a href="#0x04-Syncthing" class="headerlink" title="0x04 Syncthing"></a>0x04 Syncthing</h1><h2 id="0x001-Introduction-1"><a href="#0x001-Introduction-1" class="headerlink" title="0x001 Introduction"></a>0x001 Introduction</h2><p>资源下完了接下来就是同步。开源的Syncthing更加适合用于服务器与服务器之间备份，它支持像github一样基于版本的更新及备份。但是它的速度并没有Resilio Sync快。并且它并没有苹果客户端。它拥有官方包以及社区封装的安装包。</p>
+<h2 id="0x002-Installation-1"><a href="#0x002-Installation-1" class="headerlink" title="0x002 Installation"></a>0x002 Installation</h2><p>安装syncthing官方版本。</p>
+<pre><code class="bash">sudo apt-get install apt-transport-https
+curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
+echo &quot;deb https://apt.syncthing.net/ syncthing stable&quot; | sudo tee /etc/apt/sources.list.d/syncthing.list
+sudo apt-get update
+sudo apt-get install syncthing
+</code></pre>
+<p>修改syncthing本地监听为公网监听。<br>修改/root/.config/syncthing/config.xml 中27行</p>
+<pre><code class="bash">&lt;address&gt;127.0.0.1:8384&lt;/address&gt;
+//修改为
+&lt;address&gt;0.0.0.0:8384&lt;/address&gt;
+</code></pre>
+<p>注意打开端口。<br>登陆 yourIP:8384<br><img src="/static/images/hexo-config6.png"><br>Syncthing支持KCP加速–&gt;<a href="https://forum.syncthing.net/t/connections-over-udp/9382" target="_blank" rel="noopener">传送门</a></p>
+<h1 id="0x05-Resilio-Sync"><a href="#0x05-Resilio-Sync" class="headerlink" title="0x05 Resilio Sync"></a>0x05 Resilio Sync</h1><h2 id="0x001-Introduction-2"><a href="#0x001-Introduction-2" class="headerlink" title="0x001 Introduction"></a>0x001 Introduction</h2><p>Resilio Sync是一个跨平台支持P2P下载，节点越多下载速度越快的分布式网盘。即使单个节点向本地机器备份，速度也很快。然而它并不是开源的，pro版本支持<strong>选择性同步</strong>,支持加密后同步到第三方服务器。支持公网上相互同步，也支持内网中相互同步。文件大小没有限制，文件数量没有限制。Resilio Sync 在2.2x版本之前，Resilio Sync支持DHT，但是现在只支持官方Tracker Server。然而在中国Tracker Server被墙了。不走全局代理是没有办法连上Tracker Server的。</p>
+<p>Resilio Sync 解决Tracker Server被屏蔽—&gt;<a href="https://medium.com/@dawnray/resilio-sync%E7%BF%BB%E5%A2%99%E6%96%B9%E6%A1%88-d6f0551fec48" target="_blank" rel="noopener">传送门</a></p>
+<p>或者使用拥有DHT功能的旧版本Resilio Sync(又名BT Sync)—&gt;下载地址来自官网：<a href="2.0.124/windows64/BitTorrent-Sync_x64.exe">windows 7 or later</a></p>
+<h2 id="0x002-Installation-2"><a href="#0x002-Installation-2" class="headerlink" title="0x002 Installation"></a>0x002 Installation</h2><pre><code class="bash">echo &quot;deb http://linux-packages.resilio.com/resilio-sync/deb resilio-sync non-free&quot; | sudo tee /etc/apt/sources.list.d/resilio-sync.list
+wget -qO - https://linux-packages.resilio.com/resilio-sync/key.asc | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install resilio-sync
+</code></pre>
+<p>启动</p>
+<pre><code class="bash">sudo service resilio-sync start|stop
+</code></pre>
+<p>开机自动启动</p>
+<pre><code class="bash">update-rc.d resilio-sync enable
+</code></pre>
+<p>修改配置文件/etc/resilio-sync/config.json，修改成0.0.0.0，公网监听。</p>
+<pre><code class="json">&quot;webui&quot;:
+{
+&quot;listen&quot; : &quot;0.0.0.0:8888&quot;
+}
+</code></pre>
+<p><strong>注意</strong>开启端口<br><strong>注意</strong>端口冲突</p>
+<p>重启Resili Sync,访问<code>yourip:8888</code>。<br>同步时注意文件夹权限。<br>使用chown -R rslsync:rslsync /path/to/folder 来更改所有者</p>
+<h1 id="0x06-Plex"><a href="#0x06-Plex" class="headerlink" title="0x06 Plex"></a>0x06 Plex</h1><h2 id="0x001-Introduction-3"><a href="#0x001-Introduction-3" class="headerlink" title="0x001 Introduction"></a>0x001 Introduction</h2><p>Plex是一个多媒体管理软件。它可以帮助你管理视频，音乐，电影。它也可以帮助你进行转码，以流媒体的方式在线播放。例如你可以用离线下载，高速下载小姐姐，然后在线观看超清的小姐姐。想想是不是就很激动呢。</p>
+<h2 id="0x002-Installation-3"><a href="#0x002-Installation-3" class="headerlink" title="0x002 Installation"></a>0x002 Installation</h2><p>在plex注册，并下载最新的Ubuntu安装包。—&gt;(<a href="https://www.plex.tv/" target="_blank" rel="noopener">官网</a>)<br>使用<code>dpkg -i pelxmeida.deb</code>进行安装。</p>
+<h2 id="0x003-Configuration"><a href="#0x003-Configuration" class="headerlink" title="0x003 Configuration"></a>0x003 Configuration</h2><p>启动Plex <code>service plexmediaserver start</code><br><strong>注意</strong>打开端口。<br>因为Plex只支持本地访问并配置，所以我们使用ssh隧道进行连接并且配置。<br>在这里我使用的是putty。首先正确配置putty，保证可以连接到服务器。<br>配置SSH Tunnels。<br><img src="/static/images/hexo-config7.png"><br>打开浏览器，访问<code>http://localhost:8888/web</code>。<br>按着指示配置下去就好了。<br><strong>注意</strong>媒体文件夹的权限<br><strong>注意</strong>实时转码非常的慢。1080P实时转码一直卡，即使使用八核的vps。<br>我们可以先优化，先进行转码，转完码再看。这样我们只需要一个速度快一点的网。根据我自己的测试，一集23分钟的番533.8MB转码后的大小为2个G。也就是说你需要1.5M/s的实际网速才可以流畅播放1080P视频。<br><img src="/static/images/hexo-config8.png"></p>
+<h1 id="0x07-Mount-digital-space"><a href="#0x07-Mount-digital-space" class="headerlink" title="0x07 Mount digital space"></a>0x07 Mount digital space</h1><h2 id="0x001-Introduction-4"><a href="#0x001-Introduction-4" class="headerlink" title="0x001 Introduction"></a>0x001 Introduction</h2><p>我们可以在vps上放这么多东西，20GB的空间怎么够？vps的空间也的确是贵。但是我们可以用云盘-Digitalocean space（$5 250G）。我们可以将space挂载到vps上。</p>
+<h2 id="0x002-Installation-4"><a href="#0x002-Installation-4" class="headerlink" title="0x002 Installation"></a>0x002 Installation</h2><p>我们借助s3fs-fuse来进行挂载。</p>
+<pre><code class="bash">#下载编译工具
+sudo apt-get install automake autotools-dev fuse g++ git libcurl4-gnutls-dev libfuse-dev libssl-dev libxml2-dev make pkg-config
+#下载源码
+git clone https://github.com/s3fs-fuse/s3fs-fuse.git
+#编译
+cd s3fs-fuse
+./autogen.sh
+./configure
+make
+sudo make install
+</code></pre>
+<h2 id="0x002-Configuration"><a href="#0x002-Configuration" class="headerlink" title="0x002 Configuration"></a>0x002 Configuration</h2><p>我们要拥有一个spaces，拥有API Spaces access keys的key和secret。由于secret刷新一次页面就会隐藏掉，所以我们要Generate new keys。记下key和secret。</p>
+<pre><code class="bash">#编辑配置文件
+echo &#39;your-spaces-name:your-key:your-secret&#39; &gt; ~/.passwd-s3fs
+#设置权限
+chmod 0600 ~/.passwd-s3fs
+#挂载
+s3fs your-space-name /mount-directory -ourl=https://yourendpoint.com -o allow_other -o no_check_certificate
+</code></pre>
+<p>由于程序的不稳定，会遇到<code>fail to connect</code>。可以先<code>umount</code>在重新进行挂载<code>s3fs your-space-name /mount-directory -ourl=https://yourendpoint.com -o allow_other -o no_check_certificate</code>。</p>
+<p>#0x08 HTTPS<br>我们使用let’s encrypt来生成SSL证书</p>
+<pre><code class="bash">#安装certbot
+apt-get install certbot
+#为微服务，没有根目录的服务生成证书。注意停止nginx，因为生成证书需要占用443端口。
+certbot certonly --standalone -d yourdomain.com
+</code></pre>
+<p>证书生成在<code>/etc/letsencrypt/live/</code> 下对应的域名文件中。<br>证书的有效期为90天，所以我们将其设置为自动更新。<br>新建一个文件<code>certbot-auto-renew-cron</code></p>
+<pre><code class="bash">15 2 * */2 * certbot renew --pre-hook &quot;service nginx stop&quot; --post-hook &quot;service nginx start&quot;
+</code></pre>
+<p>每隔 两个月的 凌晨 2:15 执行 更新操作<br>最后加载脚本<code>crontab certbot-auto-renew-cron</code>。</p>
+<h1 id="0x09-域名设置"><a href="#0x09-域名设置" class="headerlink" title="0x09 域名设置"></a>0x09 域名设置</h1><p>首先添加A记录，设置子域名。<br>编辑nginx配置<code>/etc/nginx/sites-available/default</code><br>以plex服务作为例子。Plex的端口是32400.<br>我们使用端口转发。</p>
+<pre><code class="json">server{
+ listen 80;
+ listen 443 ssl;
+ssl_certificate /etc/letsencrypt/live/subdomain.yourdomain.com/fullchain.pem;
+ssl_certificate_key /etc/letsencrypt/live/subdomain.yourdomain.com/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+ server_name yourdomain.com;
+  location /{
+ proxy_redirect off;
+ proxy_pass http://127.0.0.1:32400;
+}
+}
+</code></pre>
+<p>重启nginx，就可以访问我们的子域名了。</p>
+<h1 id="0x09-参考"><a href="#0x09-参考" class="headerlink" title="0x09 参考"></a>0x09 参考</h1><p><a href="http://www.senra.me/aria2-conf-file-parameters-translation-and-explanation/" target="_blank" rel="noopener">Aria 参数翻译</a></p>
+<p><hr><br><img src="/static/images/hexo-gift.jpg" alt=""></p>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            This blog is under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 3.0 Unported License</a>
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="https://www.inevitable.tech/posts/d5256460/">https://www.inevitable.tech/posts/d5256460/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <div id="comment" style='padding:10px;' class="vcomment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+    });
+    var notify = 'false' === 'true';
+    var verify = 'false' === 'true';
+    new Valine({
+        el: '.vcomment',
+        notify: notify,
+        verify: verify,
+        appId: "4h5SYcsd7q5SV1HJXHe43Vsu-MdYXbMMI",
+        appKey: "gecurcq4AfQgDFik3siEf0Jx",
+        placeholder: "你好吗？我很好。",
+        pageSize:'10',
+        avatar:'identicon',
+        lang:'zh-cn',
+        guest_info: guest_info
+    });
+</script>
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/posts/7c805f6f/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/posts/bae29cb3/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.min.png" alt="琉璃's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        i@inevitable.tech
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: i@inevitable.tech#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/02/">二月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">十月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Book/">Book<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/Cook/">Cook<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Develop/">Develop<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/Film/">Film<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Game/">Game<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/Life/">Life<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/Security/">Security<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/Technology/">Technology<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/categories/Travel/">Travel<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/人文修养/">人文修养<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/序/">序<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="timeline">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                timeline
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/tags" title="tagcloud">
+                
+                    <i class="material-icons sidebar-material-icons">label</i>
+                
+                tagcloud
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">58</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/glazec" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Inevitable
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?wgjW/HuQG9JDgvPDPoRAng==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?LT4t6iE6m8TO1BLGGiNJqA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","https://cdn.bootcss.com/nprogress/0.2.0/nprogress.js", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2017;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+        </body>
+    
+</html>
