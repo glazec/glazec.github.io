@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Inevitable</title>
+  
+  <subtitle>没有侥幸这回事，最偶然的意外，似乎也都是事有必然的。</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://www.inevitable.tech/"/>
+  <updated>2020-02-01T06:43:06.594Z</updated>
+  <id>https://www.inevitable.tech/</id>
+  
+  <author>
+    <name>琉璃</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>掌控谈话</title>
+    <link href="https://www.inevitable.tech/posts/4aafd4f0/"/>
+    <id>https://www.inevitable.tech/posts/4aafd4f0/</id>
+    <published>2020-01-17T16:00:00.000Z</published>
+    <updated>2020-02-01T06:43:06.594Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;掌控谈话是一本非常容易读的书。它像很多讲述方法的畅销书一样，有清晰的标题，副标题，章节小节。每个章节中都有大量生动形象并且紧张刺激的谈判故事作为例子。在紧张刺激的谈判故事的帮助下，这本书的易读性要比专业书籍高上很多。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Book" scheme="https://www.inevitable.tech/categories/Book/"/>
+    
+    
+      <category term="Book" scheme="https://www.inevitable.tech/tags/Book/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2019|9102</title>
+    <link href="https://www.inevitable.tech/posts/cd5b0535/"/>
+    <id>https://www.inevitable.tech/posts/cd5b0535/</id>
+    <published>2020-01-01T16:00:00.000Z</published>
+    <updated>2020-02-01T06:43:06.650Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今年的总结总是比去年写的好些。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Life" scheme="https://www.inevitable.tech/categories/Life/"/>
+    
+    
+      <category term="Life" scheme="https://www.inevitable.tech/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo cheatsheets theme</title>
+    <link href="https://www.inevitable.tech/posts/59f1905d/"/>
+    <id>https://www.inevitable.tech/posts/59f1905d/</id>
+    <published>2019-12-02T16:00:00.000Z</published>
+    <updated>2020-02-01T06:43:06.820Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;以下就是&lt;a href=&quot;https://github.com/glazec/hexo-cheatsheets&quot; target=&quot;_blank&quot; rel=&quot;noopener external nofollow noreferrer&quot;&gt;这个主题&lt;/a&gt;出现的原因&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Develop" scheme="https://www.inevitable.tech/categories/Develop/"/>
+    
+    
+      <category term="Develop" scheme="https://www.inevitable.tech/tags/Develop/"/>
+    
+  </entry>
+  
+</feed>
