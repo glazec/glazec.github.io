@@ -301,7 +301,7 @@
 
     
         <meta property="article:published_time" content="Tue Jan 09 2018 07:09:09 GMT+0800">
-        <meta property="article:modified_time" content="Fri Jan 31 2020 22:43:06 GMT-0800">
+        <meta property="article:modified_time" content="Sun Feb 02 2020 21:16:10 GMT-0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -521,12 +521,12 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <div id="aplayer-GFULgjVw" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-JrXYXRpI" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-GFULgjVw"),
+            element: document.getElementById("aplayer-JrXYXRpI"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -595,7 +595,7 @@ git clone https://github.com/ziahamza/webui-aria2.git
 #编辑配置文件
 vim configuration.js</code></pre>
 <p>请注意配置encrypt(若为true，则意味着启用了SSL)。<br>auth的配置需要和aria2.conf中一致。<br>启动服务器<code>node node-server.js</code><br>请注意打开端口<code>sudo iptables -A INPUT -p tcp --dport 6800 -j ACCEPT</code></p>
-<h2 id="0x005-browse-the-service"><a href="#0x005-browse-the-service" class="headerlink" title="0x005 browse the service"></a>0x005 browse the service</h2><p>访问youserverip:6800<br>左侧max-connection-per-server可以设置的最大值为16。<br>如果<code>configuration.js</code>中的<code>encrypt</code>设置为了`true，需要勾选<strong>启用 SSL/TLS 加密</strong>。<br><img src="/static/images/hexo-config5.png"></p>
+<h2 id="0x005-browse-the-service"><a href="#0x005-browse-the-service" class="headerlink" title="0x005 browse the service"></a>0x005 browse the service</h2><p>访问youserverip:6800<br>左侧max-connection-per-server可以设置的最大值为16。<br>如果<code>configuration.js</code>中的<code>encrypt</code>设置为了`true，需要勾选<strong>启用 SSL/TLS 加密</strong>。<br>&lt;img class=”lazyload data-src=”/static/images/hexo-config5.png”&gt;</p>
 <h1 id="0x04-Syncthing"><a href="#0x04-Syncthing" class="headerlink" title="0x04 Syncthing"></a>0x04 Syncthing</h1><h2 id="0x001-Introduction-1"><a href="#0x001-Introduction-1" class="headerlink" title="0x001 Introduction"></a>0x001 Introduction</h2><p>资源下完了接下来就是同步。开源的Syncthing更加适合用于服务器与服务器之间备份，它支持像github一样基于版本的更新及备份。但是它的速度并没有Resilio Sync快。并且它并没有苹果客户端。它拥有官方包以及社区封装的安装包。</p>
 <h2 id="0x002-Installation-1"><a href="#0x002-Installation-1" class="headerlink" title="0x002 Installation"></a>0x002 Installation</h2><p>安装syncthing官方版本。</p>
 <pre><code class="bash">sudo apt-get install apt-transport-https
@@ -607,7 +607,7 @@ sudo apt-get install syncthing</code></pre>
 <pre><code class="bash">&lt;address&gt;127.0.0.1:8384&lt;/address&gt;
 //修改为
 &lt;address&gt;0.0.0.0:8384&lt;/address&gt;</code></pre>
-<p>注意打开端口。<br>登陆 yourIP:8384<br><img src="/static/images/hexo-config6.png"><br>Syncthing支持KCP加速–&gt;<a href="https://forum.syncthing.net/t/connections-over-udp/9382" target="_blank" rel="noopener external nofollow noreferrer">传送门</a></p>
+<p>注意打开端口。<br>登陆 yourIP:8384<br>&lt;img class=”lazyload data-src=”/static/images/hexo-config6.png”&gt;<br>Syncthing支持KCP加速–&gt;<a href="https://forum.syncthing.net/t/connections-over-udp/9382" target="_blank" rel="noopener external nofollow noreferrer">传送门</a></p>
 <h1 id="0x05-Resilio-Sync"><a href="#0x05-Resilio-Sync" class="headerlink" title="0x05 Resilio Sync"></a>0x05 Resilio Sync</h1><h2 id="0x001-Introduction-2"><a href="#0x001-Introduction-2" class="headerlink" title="0x001 Introduction"></a>0x001 Introduction</h2><p>Resilio Sync是一个跨平台支持P2P下载，节点越多下载速度越快的分布式网盘。即使单个节点向本地机器备份，速度也很快。然而它并不是开源的，pro版本支持<strong>选择性同步</strong>,支持加密后同步到第三方服务器。支持公网上相互同步，也支持内网中相互同步。文件大小没有限制，文件数量没有限制。Resilio Sync 在2.2x版本之前，Resilio Sync支持DHT，但是现在只支持官方Tracker Server。然而在中国Tracker Server被墙了。不走全局代理是没有办法连上Tracker Server的。</p>
 <p>Resilio Sync 解决Tracker Server被屏蔽—&gt;<a href="https://medium.com/@dawnray/resilio-sync%E7%BF%BB%E5%A2%99%E6%96%B9%E6%A1%88-d6f0551fec48" target="_blank" rel="noopener external nofollow noreferrer">传送门</a></p>
 <p>或者使用拥有DHT功能的旧版本Resilio Sync(又名BT Sync)—&gt;下载地址来自官网：<a href="2.0.124/windows64/BitTorrent-Sync_x64.exe">windows 7 or later</a></p>
@@ -628,7 +628,7 @@ sudo apt-get install resilio-sync</code></pre>
 <p>重启Resili Sync,访问<code>yourip:8888</code>。<br>同步时注意文件夹权限。<br>使用chown -R rslsync:rslsync /path/to/folder 来更改所有者</p>
 <h1 id="0x06-Plex"><a href="#0x06-Plex" class="headerlink" title="0x06 Plex"></a>0x06 Plex</h1><h2 id="0x001-Introduction-3"><a href="#0x001-Introduction-3" class="headerlink" title="0x001 Introduction"></a>0x001 Introduction</h2><p>Plex是一个多媒体管理软件。它可以帮助你管理视频，音乐，电影。它也可以帮助你进行转码，以流媒体的方式在线播放。例如你可以用离线下载，高速下载小姐姐，然后在线观看超清的小姐姐。想想是不是就很激动呢。</p>
 <h2 id="0x002-Installation-3"><a href="#0x002-Installation-3" class="headerlink" title="0x002 Installation"></a>0x002 Installation</h2><p>在plex注册，并下载最新的Ubuntu安装包。—&gt;(<a href="https://www.plex.tv/" target="_blank" rel="noopener external nofollow noreferrer">官网</a>)<br>使用<code>dpkg -i pelxmeida.deb</code>进行安装。</p>
-<h2 id="0x003-Configuration"><a href="#0x003-Configuration" class="headerlink" title="0x003 Configuration"></a>0x003 Configuration</h2><p>启动Plex <code>service plexmediaserver start</code><br><strong>注意</strong>打开端口。<br>因为Plex只支持本地访问并配置，所以我们使用ssh隧道进行连接并且配置。<br>在这里我使用的是putty。首先正确配置putty，保证可以连接到服务器。<br>配置SSH Tunnels。<br><img src="/static/images/hexo-config7.png"><br>打开浏览器，访问<code>http://localhost:8888/web</code>。<br>按着指示配置下去就好了。<br><strong>注意</strong>媒体文件夹的权限<br><strong>注意</strong>实时转码非常的慢。1080P实时转码一直卡，即使使用八核的vps。<br>我们可以先优化，先进行转码，转完码再看。这样我们只需要一个速度快一点的网。根据我自己的测试，一集23分钟的番533.8MB转码后的大小为2个G。也就是说你需要1.5M/s的实际网速才可以流畅播放1080P视频。<br><img src="/static/images/hexo-config8.png"></p>
+<h2 id="0x003-Configuration"><a href="#0x003-Configuration" class="headerlink" title="0x003 Configuration"></a>0x003 Configuration</h2><p>启动Plex <code>service plexmediaserver start</code><br><strong>注意</strong>打开端口。<br>因为Plex只支持本地访问并配置，所以我们使用ssh隧道进行连接并且配置。<br>在这里我使用的是putty。首先正确配置putty，保证可以连接到服务器。<br>配置SSH Tunnels。<br>&lt;img class=”lazyload data-src=”/static/images/hexo-config7.png”&gt;<br>打开浏览器，访问<code>http://localhost:8888/web</code>。<br>按着指示配置下去就好了。<br><strong>注意</strong>媒体文件夹的权限<br><strong>注意</strong>实时转码非常的慢。1080P实时转码一直卡，即使使用八核的vps。<br>我们可以先优化，先进行转码，转完码再看。这样我们只需要一个速度快一点的网。根据我自己的测试，一集23分钟的番533.8MB转码后的大小为2个G。也就是说你需要1.5M/s的实际网速才可以流畅播放1080P视频。<br>&lt;img class=”lazyload data-src=”/static/images/hexo-config8.png”&gt;</p>
 <h1 id="0x07-Mount-digital-space"><a href="#0x07-Mount-digital-space" class="headerlink" title="0x07 Mount digital space"></a>0x07 Mount digital space</h1><h2 id="0x001-Introduction-4"><a href="#0x001-Introduction-4" class="headerlink" title="0x001 Introduction"></a>0x001 Introduction</h2><p>我们可以在vps上放这么多东西，20GB的空间怎么够？vps的空间也的确是贵。但是我们可以用云盘-Digitalocean space（$5 250G）。我们可以将space挂载到vps上。</p>
 <h2 id="0x002-Installation-4"><a href="#0x002-Installation-4" class="headerlink" title="0x002 Installation"></a>0x002 Installation</h2><p>我们借助s3fs-fuse来进行挂载。</p>
 <pre><code class="bash">#下载编译工具
@@ -855,7 +855,7 @@ ssl_certificate_key /etc/letsencrypt/live/subdomain.yourdomain.com/privkey.pem;
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Book/">Book<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/categories/Cook/">Cook<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Develop/">Develop<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/Film/">Film<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Game/">Game<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/Life/">Life<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/Security/">Security<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/Technology/">Technology<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/Travel/">Travel<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E4%BA%BA%E6%96%87%E4%BF%AE%E5%85%BB/">人文修养<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%BA%8F/">序<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/Book/">Book<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/categories/Cook/">Cook<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Film/">Film<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Game/">Game<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/Technology/">Technology<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/Travel/">Travel<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E4%BA%BA%E6%96%87%E4%BF%AE%E5%85%BB/">人文修养<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%AE%89%E5%85%A8/">安全<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%BA%8F/">序<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%BC%80%E5%8F%91/">开发<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E6%83%B3/">生活随想<span class="sidebar_archives-count">9</span></a>
             </ul>
         </li>
         
@@ -1043,7 +1043,7 @@ It will not impact the appearance and can give developers a lot of support :)
         <div class="mdl-mini-footer--right-section">
             <div>
                 <div class="footer-develop-div">Powered by <a href="https://hexo.io" rel="external nofollow noreferrer" target="_blank" class="footer-develop-a">Hexo</a></div>
-                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" rel="external nofollow noreferrer" target="_blank" class="footer-develop-a">Material</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/glazec/hexo-theme-material" rel="external nofollow noreferrer" target="_blank" class="footer-develop-a">Material</a></div>
             </div>
         </div>
     

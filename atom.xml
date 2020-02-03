@@ -38,44 +38,50 @@
   </entry>
   
   <entry>
-    <title>2019|9102</title>
+    <title>2019年终小结</title>
     <link href="https://www.inevitable.tech/posts/cd5b0535/"/>
     <id>https://www.inevitable.tech/posts/cd5b0535/</id>
     <published>2020-01-01T16:00:00.000Z</published>
-    <updated>2020-02-01T06:43:06.650Z</updated>
+    <updated>2020-02-03T02:07:35.133Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;今年的总结总是比去年写的好些。&lt;/p&gt;
+      &lt;p&gt;一眨眼2019也过去了。来看看2019年我做了什么，2020年又要做什么。&lt;/p&gt;
     
     </summary>
     
     
-      <category term="Life" scheme="https://www.inevitable.tech/categories/Life/"/>
+      <category term="生活随想" scheme="https://www.inevitable.tech/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E6%83%B3/"/>
     
     
-      <category term="Life" scheme="https://www.inevitable.tech/tags/Life/"/>
+      <category term="生活随想" scheme="https://www.inevitable.tech/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E6%83%B3/"/>
+    
+      <category term="年终小结" scheme="https://www.inevitable.tech/tags/%E5%B9%B4%E7%BB%88%E5%B0%8F%E7%BB%93/"/>
     
   </entry>
   
   <entry>
-    <title>Hexo cheatsheets theme</title>
+    <title>Hexo Cheatsheets theme</title>
     <link href="https://www.inevitable.tech/posts/59f1905d/"/>
     <id>https://www.inevitable.tech/posts/59f1905d/</id>
     <published>2019-12-02T16:00:00.000Z</published>
-    <updated>2020-02-01T06:43:06.820Z</updated>
+    <updated>2020-02-03T06:59:37.866Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;以下就是&lt;a href=&quot;https://github.com/glazec/hexo-cheatsheets&quot; target=&quot;_blank&quot; rel=&quot;noopener external nofollow noreferrer&quot;&gt;这个主题&lt;/a&gt;出现的原因&lt;/p&gt;
+      &lt;p&gt;哪个男孩不想拥有属于自己的屠龙宝典呢？&lt;/p&gt;
     
     </summary>
     
     
-      <category term="Develop" scheme="https://www.inevitable.tech/categories/Develop/"/>
+      <category term="开发" scheme="https://www.inevitable.tech/categories/%E5%BC%80%E5%8F%91/"/>
     
     
-      <category term="Develop" scheme="https://www.inevitable.tech/tags/Develop/"/>
+      <category term="开发" scheme="https://www.inevitable.tech/tags/%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="前端" scheme="https://www.inevitable.tech/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Hexo" scheme="https://www.inevitable.tech/tags/Hexo/"/>
     
   </entry>
   
