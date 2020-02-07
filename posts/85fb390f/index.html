@@ -519,24 +519,31 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h2><p>微信小程序需要实名注册，如果以个人进行实名认证，小程序是不可以接入微信支付功能的。如果是企业认证，企业的资格认证必须和小程序的分类一样。例如，做电商的小程序，企业必须要有电商的资格认证。</p>
+        <h2 id="注册"><a class="header-anchor" href="#注册"></a>注册</h2>
+<p>微信小程序需要实名注册，如果以个人进行实名认证，小程序是不可以接入微信支付功能的。如果是企业认证，企业的资格认证必须和小程序的分类一样。例如，做电商的小程序，企业必须要有电商的资格认证。</p>
 <p>同一个人，可以实名5个小程序。但是操蛋的是，你必须给每个小程序都注册一个账号，然后每个小程序都进行一次实名认证。没错，管理小程序的平台上，账号是一个小程序一个账号，而不是一个开发者一个账号。我身边的朋友，写小程序已经写到没有邮箱进行注册了。</p>
-<h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><p>我用了京东的Taro框架。好处是可以一份代码，编译多个平台。一份代码，可以编译出H5，RN,微信小程序，支付宝小程序，抖音小程序等等。当然得在兼容上做一些处理。</p>
+<h2 id="框架"><a class="header-anchor" href="#框架"></a>框架</h2>
+<p>我用了京东的Taro框架。好处是可以一份代码，编译多个平台。一份代码，可以编译出H5，RN,微信小程序，支付宝小程序，抖音小程序等等。当然得在兼容上做一些处理。</p>
 <p>我一开始其实看中了它与React类似的特点。语法类似，整个思路也类似。当然用下来的感觉，实在是一般。</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>简单的<code>npm install</code>怎么可能出错呢。</p>
+<h3 id="安装"><a class="header-anchor" href="#安装"></a>安装</h3>
+<p>简单的<code>npm install</code>怎么可能出错呢。</p>
 <p>安装过程简直痛苦。先是一开始的权限不够（改用管理员运行Powershell即可）。接下来是安装<code>tarojs/sass</code>这个包的时候有一个<code>node-sass</code>的依赖，这个依赖需要编译<code>node header</code>。每次安装请求<code>node header</code>的源码时，都是<code>404</code>。</p>
 <p>仔细查了一查，在我安装<code>Taro</code>本体的时候，它创建了一个<code>.npmrc</code>。在这个文件里，写了上游路径，淘宝的NPM仓库。可能问题在于淘宝的NPM仓库没有<code>node header</code>。删了<code>.npmrc</code>，整个安装过程就没有问题了。</p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>文档实在是有点烂。就是单纯的列举API，Component。官方也没有一个Tutorial。</p>
+<h3 id="使用"><a class="header-anchor" href="#使用"></a>使用</h3>
+<p>文档实在是有点烂。就是单纯的列举API，Component。官方也没有一个Tutorial。</p>
 <p>很多时候都要在微信小程序的API文档和Taro的API文档进行切换。这之中会漏掉许多小细节，比如<code>cloud.init()</code>。</p>
 <p>支持NPM包管理。怎么想都是很强大的特点，毕竟JS的第三方库可是多到吓人。然而真的用起来，很多包都过不了编译环节。因为目前Taro的编译器不支持压缩ES6语法的node包。像什么Firebase那是没得用，乖乖去用微信云开发。</p>
 <p>对于单元测试什么的，官方也没有进行过多的解释。导致我项目根本没有写任何测试。</p>
-<h2 id="微信云开发"><a href="#微信云开发" class="headerlink" title="微信云开发"></a>微信云开发</h2><p>微信小程序可以很方便的连接到微信云开发上，其实也就是个云函数和数据库。要想访问云数据库，运行你的小程序，得用官方的微信小程序开发工具。</p>
+<h2 id="微信云开发"><a class="header-anchor" href="#微信云开发"></a>微信云开发</h2>
+<p>微信小程序可以很方便的连接到微信云开发上，其实也就是个云函数和数据库。要想访问云数据库，运行你的小程序，得用官方的微信小程序开发工具。</p>
 <p>这玩意真的是卡的不行，吃爆炸多的资源。功能还很弱。</p>
 <p>云数据库的刷新奇慢无比，云函数简陋的不行。云函数还不支持在线编辑，也没办法在微信小程序开发工具里看到云函数的代码。任何小问题都得在本地进行修改，再上传云端。</p>
 <p>Debug功能可以说是简陋，要啥没啥。跟隔壁的Flutter比起来，真的没法比。</p>
 <p>实际运行上，小程序的打开时间和渲染时间都不怎么理想。我也就从服务器抓取数据，再在ListView上进行显示，时间是10秒左右。</p>
-<h2 id="审核"><a href="#审核" class="headerlink" title="审核"></a>审核</h2><p>如果审核失败，想要知道详细的理由，或者辩解一下，根本没人回应。发帖进行咨询，审核人员也没有什么回复。审核没过就是没过，资质的审核还是较为严格的。</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>开发的时候如果想要调用外部资源，是要在微信平台上进行注册的。一个程序只允许从一个站点获取资源，并且这个站点必须有国内的备案。如果你想调用API，想都不用想。。。。除非加一个跳板。</p>
+<h2 id="审核"><a class="header-anchor" href="#审核"></a>审核</h2>
+<p>如果审核失败，想要知道详细的理由，或者辩解一下，根本没人回应。发帖进行咨询，审核人员也没有什么回复。审核没过就是没过，资质的审核还是较为严格的。</p>
+<h2 id="其他"><a class="header-anchor" href="#其他"></a>其他</h2>
+<p>开发的时候如果想要调用外部资源，是要在微信平台上进行注册的。一个程序只允许从一个站点获取资源，并且这个站点必须有国内的备案。如果你想调用API，想都不用想。。。。除非加一个跳板。</p>
 <p>这个坑有点坑，能不跳就不跳。社区，文档的支持也比较少。遇到很迷的问题很容易就在那卡很久。</p>
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -594,7 +601,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/posts/960bb9d2/" id="post_nav-newer" class="prev-content">
+        <a href="/posts/73a89d73/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -608,7 +615,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/posts/73a89d73/" id="post_nav-older" class="next-content">
+        <a href="/posts/82de8aa1/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -1051,11 +1058,11 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
 
                 </main>
             </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script async type="text/x-mathjax-config">
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config("");
 </script>
 
-<script async type="text/x-mathjax-config">
+<script type="text/x-mathjax-config">
   MathJax.Hub.Queue(function() {
     var all = MathJax.Hub.getAllJax(), i;
     for(i=0; i < all.length; i += 1) {
@@ -1064,7 +1071,7 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
   });
 </script>
 
-<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->

@@ -510,9 +510,12 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>我在VMware虚拟机中，加载iso启动后，发现无法上网。我的VMware的网络设置是Nat模式。<br>以下是解决方法。</p>
+        <p>我在VMware虚拟机中，加载iso启动后，发现无法上网。我的VMware的网络设置是Nat模式。<br>
+以下是解决方法。</p>
 <pre><code>systemctl enable dhcpcd@VMnet8.service 
-systemctl start dhcpcd@VMnet8.service</code></pre><p>问题应该在于Dhcpcd服务没有开启。因为是虚拟机，所以网卡并不是默认的网卡，而是Vmnet8的网卡。</p>
+systemctl start dhcpcd@VMnet8.service
+</code></pre>
+<p>问题应该在于Dhcpcd服务没有开启。因为是虚拟机，所以网卡并不是默认的网卡，而是Vmnet8的网卡。</p>
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
                     <p><strong>
@@ -1026,11 +1029,11 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
 
                 </main>
             </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script async type="text/x-mathjax-config">
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config("");
 </script>
 
-<script async type="text/x-mathjax-config">
+<script type="text/x-mathjax-config">
   MathJax.Hub.Queue(function() {
     var all = MathJax.Hub.getAllJax(), i;
     for(i=0; i < all.length; i += 1) {
@@ -1039,7 +1042,7 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
   });
 </script>
 
-<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->

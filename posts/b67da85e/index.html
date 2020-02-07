@@ -301,7 +301,7 @@
 
     
         <meta property="article:published_time" content="Fri Feb 22 2019 00:00:00 GMT+0800">
-        <meta property="article:modified_time" content="Sun Feb 02 2020 21:16:10 GMT-0800">
+        <meta property="article:modified_time" content="Thu Feb 06 2020 17:59:57 GMT-0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -512,9 +512,7 @@
     
         <p>我考虑了一下，决定写一个很简单的从Web读取和写入数据库。数据库我就用Azure的云数据库，读写数据库的逻辑用Azure function实现。这样数据库的用户名和密码不会在前端裸奔。</p>
 <p>我记得如果数据库读写较少的话，隔壁Google的Firebase是直接提供免费服务的，那Azure呢？刷新出Azure首页，复杂繁多的功能，各种不认识的术语密密麻麻地陈列在主页上。</p>
-<!-- <center><img class="lazyload data-src="/static/images/azure1.png"></center> -->
-
-
+<!-- <center><img class="lazyload" data-src="/static/images/azure1.png"></center> -->
 <p>嗯，这些术语好像都照过面，但是不熟啊。我只是想用一个最简单的SQL数据库。</p>
 <p>Azure的产品种类繁多，规模也从小到大。就拿SQL数据库为例子，从一个月几刀到几千刀不等。神奇的是，你想要使用SQL数据库，你先要开一个SQL server实例，紧接着再在实例下面创建数据库。看看隔壁LeanCloud，数据库上手直接用，哪有这么复杂。数据库的位置倒有很多的选择，这个不错。</p>
 <p>管理数据库可以用Azure的Web端的查询编辑器，也可以使用它的PC客户端。PC客户端又是一个不轻的东西，但它的功能的确要比Web端强上不少。支持一些预置脚本，比如查询前100条数据。支持GUI的方式创建和修改数据库。PC端的确比Web端强上不少。但是为什么PC端的功能不能再Web端实现呢？毕竟是云端数据库，不是本地数据库，都是靠使用API实现的。</p>
@@ -522,25 +520,25 @@
 <p>Azure Function的开发就较为简单了。 NPM直接安装官方的开发工具。对与Function的触发器，我选择了HTTP Trigger，也就是以HTTP请求作为触发器。除了HTTP，还有时间和数据库内容发生改变作为触发器。除了Trigger，还有一个比较重要的概念是Input Binding和Output Binding。简单来说就是什么作为Input，什么作为Output.常见的选项有Queue，和各种数据库，比如Blog Storage（用来储存二进制文件），Cosomos Database。</p>
 <p>从Function的一些基础概念绕了出来，实现一下我想要的功能想必是不难，只要没坑。微软有一个Tutorial关于从建立数据库到查询数据库。我用的是Typescirpt，便选了JS那一套。官方推荐的是一个叫Tedious的第三方库，看着很简单，官网也很简陋。我也就照抄了官网上的一些代码片段，将它们拼了起来，运行竟然报错。我看了两遍，跟官网上的长的一样啊。果断问了一下，竟然是没有写Error的Callback函数。</p>
 <p>在等答案的过程中，我还去看了一眼微软官方的教程<a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-connect-query-nodejs" target="_blank" rel="noopener external nofollow noreferrer">Quickstart: Use Node.js to query an Azure SQL database</a>我简单跑了一跑，很好，没有什么问题。比那个Tedious官方的Get Started强上很多。我又在官方的基础上加了很多我自己的实现。比如数据库查询成功后的操作。一个天坑出现了，无论我怎么改我的代码，查询成功后的操作永远不执行。而且Debug过程中，即使程序没有抛出异常，每查询一次数据库，Debug都会退出一次。我再三检查，甚至打量起了从微软教程里扒来的代码。终于找到个罪魁祸首，就那一行代码。</p>
-<pre><code class="Javascript">var Connection = require(&#39;tedious&#39;).Connection;
-var Request = require(&#39;tedious&#39;).Request;
+<pre><code class="language-Javascript">var Connection = require('tedious').Connection;
+var Request = require('tedious').Request;
 
 // Create connection to database
 var config =
 {
-    userName: &#39;your_username&#39;, // update me
-    password: &#39;your_password&#39;, // update me
-    server: &#39;your_server.database.windows.net&#39;, // update me
+    userName: 'your_username', // update me
+    password: 'your_password', // update me
+    server: 'your_server.database.windows.net', // update me
     options:
     {
-        database: &#39;your_database&#39;, //update me
+        database: 'your_database', //update me
         encrypt: true
     }
 }
 var connection = new Connection(config);
 
 // Attempt to connect and execute queries if connection goes through
-connection.on(&#39;connect&#39;, function(err)
+connection.on('connect', function(err)
     {
         if (err)
         {
@@ -555,7 +553,7 @@ connection.on(&#39;connect&#39;, function(err)
 
 function queryDatabase()
 {
-    console.log(&#39;Reading rows from the Table...&#39;);
+    console.log('Reading rows from the Table...');
 
     // Read all rows from table
     var request = new Request(
@@ -563,25 +561,25 @@ function queryDatabase()
             + &quot;JOIN [SalesLT].[Product] p ON pc.productcategoryid = p.productcategoryid&quot;,
         function(err, rowCount, rows)
         {
-            console.log(rowCount + &#39; row(s) returned&#39;);
+            console.log(rowCount + ' row(s) returned');
             process.exit();
         }
     );
 
-    request.on(&#39;row&#39;, function(columns) {
+    request.on('row', function(columns) {
         columns.forEach(function(column) {
             console.log(&quot;%s\t%s&quot;, column.metadata.colName, column.value);
         });
     });
     connection.execSql(request);
-}</code></pre>
+}
+</code></pre>
 <p>那个process.exit()是几个意思？</p>
 <p>代码修葺中。。。。。</p>
 <p>发布函数很简单，直接在VsCode里操作插件就好了。但是上传一个函数，我得想三个到四个名字。一个Azure Function的名字，一个Resource Group的名字，一个Storage Group（我也不知道这个干嘛的）名字，还有一个Function App名字。起这些名字才是最纠结的时候。毕竟我都不知道这些名字都用在什么地方。</p>
 <p>最后一步是处理云端中函数的执行环境。打开Portal里的Kudu。在Debug Console里进入程序目录，执行<code>npm install</code>。网页的终端真的是卡的不要不要的。安装个NPM，连安装时候的Output都显示不出来。让我真的是摸不着脑袋，鬼知道有没有安装成功。</p>
 <p>简单来说使用经历不是那么喜人，算然VsCode的兼容很好，但很多时候都显得操作冗余。对于个人开发者来说，Azure价格要高一些，又显得较为麻烦，并不会是我的第一选择。再之，网上教程还不多，还有那个令人讨厌的Portal。一眼望去，满屏的滚动条，甚至两行的滚动条。</p>
-<!-- <center><img class="lazyload data-src="/static/images/azure2.png"></center> -->
-
+<!-- <center><img class="lazyload" data-src="/static/images/azure2.png"></center> -->
 <p>下次我肯定选LeanCloud或者Firebase。</p>
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -1096,11 +1094,11 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
 
                 </main>
             </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script async type="text/x-mathjax-config">
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config("");
 </script>
 
-<script async type="text/x-mathjax-config">
+<script type="text/x-mathjax-config">
   MathJax.Hub.Queue(function() {
     var all = MathJax.Hub.getAllJax(), i;
     for(i=0; i < all.length; i += 1) {
@@ -1109,7 +1107,7 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
   });
 </script>
 
-<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->

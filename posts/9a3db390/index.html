@@ -513,8 +513,9 @@
         <p>在微软开发者大会上，微软宣布了远程开发的插件。开发者再也不用面对着只有黑框框的Docker容器和SSH了。不用被迫使用Vim，在黑框框中编辑文件。不用为上传和下载文件进行烦恼，不用为端口映射而操劳。现在，借助远程开发这一系列的插件，我们可以将Vscode和我们的容器或者云服务相连。文件浏览，自动补全，还有窗口管理，方便的终端管理，远程Debug，一切都不是梦想。</p>
 <p>这个系列的插件还在最后的开发和调试之中，想要使用得用Vscode-insider也就是预览版。预览版和稳定版是两个完全不同的安装程序，他们有不同的安装目录，插件目录和配置文件。如果想要让他们统一，可以用软链。</p>
 <p>Windows上使用软链的命令是<code>mklink</code>。以下是把为vscode插件目录和配置文件进行软链的命令。</p>
-<pre><code class="CMD">mklink C:\Users\username\AppData\Roaming\Code - Insiders\User\settings.json C:\Users\username\AppData\Roaming\Code\User\settings.json
-mklink \D C:\Users\username\.vscode\extensions C:\Users\username\.vscode - Insiders\extensions</code></pre>
+<pre><code class="language-CMD">mklink C:\Users\username\AppData\Roaming\Code - Insiders\User\settings.json C:\Users\username\AppData\Roaming\Code\User\settings.json
+mklink \D C:\Users\username\.vscode\extensions C:\Users\username\.vscode - Insiders\extensions
+</code></pre>
 <p>这样就会自动生成软链，vscode和vscode insider共用一个配置文件和插件目录了。</p>
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -1029,11 +1030,11 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
 
                 </main>
             </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script async type="text/x-mathjax-config">
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config("");
 </script>
 
-<script async type="text/x-mathjax-config">
+<script type="text/x-mathjax-config">
   MathJax.Hub.Queue(function() {
     var all = MathJax.Hub.getAllJax(), i;
     for(i=0; i < all.length; i += 1) {
@@ -1042,7 +1043,7 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
   });
 </script>
 
-<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->

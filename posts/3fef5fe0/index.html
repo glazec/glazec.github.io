@@ -519,13 +519,15 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="Vscode使用"><a href="#Vscode使用" class="headerlink" title="Vscode使用"></a>Vscode使用</h2><p>最近从Pycharm IDE换成了Vscode。理由如下：</p>
+        <h2 id="Vscode使用"><a class="header-anchor" href="#Vscode使用"></a>Vscode使用</h2>
+<p>最近从Pycharm IDE换成了Vscode。理由如下：</p>
 <ul>
 <li>插件数量和种类</li>
 <li>主题</li>
 <li>重量</li>
 <li>支持更多的语言</li>
-<li>更多的使用场景<br>当然，我之前开发Android App的时候还是用的Android Studio。</li>
+<li>更多的使用场景<br>
+当然，我之前开发Android App的时候还是用的Android Studio。</li>
 </ul>
 <p>以前我写python比较多，所以用Pycharm。但是现在我什么语言都会去写一点点。这样不管什么东西，我都能够写一点。各种语言的基础语法还是很容易上手的。比如我最近就写了一些JS，HTML，CSS，TS。这是我使用编辑器的一个原因。那为什么我不去选择那些老牌编辑器呢，比如Vim和Emacs又或者Atom呢？</p>
 <p>Vim的快捷键我很喜欢。这样分不同的编辑模式，更加依赖于单键快捷键而不是组合键的想法很符合我的习惯。</p>
@@ -534,8 +536,11 @@
 <p>Vscode是微软新出的一个编辑器。这么一说微软现在旗下有两款编辑器？一款原来属于Github的Atom，还有Vscode。对于我来说，Vscode的优势在于对Windows平台优秀的支持以及现代化的插件。Vscode背靠微软，对微软的产品支持极佳。用户可以非常方便的部署Azure。可别忘了，现在Github也被微软收购了。Vscode对Github的支持也是很棒。比如Inline Diff，又或者在Command Platte进行Git的各种操作。</p>
 <p>大部分常用插件Vscode都有，只记得有一回我找不到想要的插件。那一次我使用Phaser库，但是写代码的时候没有自动补全。我便去找Phaser的插件，但是我并没有找到。</p>
 <p>要说它的缺点，那可能是快捷键了。它的快捷键不如老牌编辑器那么好用。虽然有插件，但是像Vim这样的快捷键，不通过原生支持，很难去展现它的精髓。毕竟大多编辑器都是以组合键为主。但也不必担心，大多数的操作都可以在Command Platte中实现。只要手不用离开键盘，都是好的快捷键实现。</p>
-<h2 id="插件开发"><a href="#插件开发" class="headerlink" title="插件开发"></a>插件开发</h2><p>我平时写Hexo博客习惯自己新建一个文件，因此文件头每次都要重写一遍，很麻烦。如果使用官方的命令行创建草稿，Tag和Category不会显示候选项。很容易写错Category的名字，比如除了Tech这个标签，还多了一个叫tech。这些问题都是我这个插件想要解决的。</p>
-<p>插件Github地址-&gt;<a href="https://github.com/glazec/hexo-post-head-generator" target="_blank" rel="noopener external nofollow noreferrer">传送门</a><br>Vscode插件地址-&gt;<a href="https://marketplace.visualstudio.com/items?itemName=glaze.hexo-post-head-generator" target="_blank" rel="noopener external nofollow noreferrer">传送门</a><br>现在还有一些小bug没修。</p>
+<h2 id="插件开发"><a class="header-anchor" href="#插件开发"></a>插件开发</h2>
+<p>我平时写Hexo博客习惯自己新建一个文件，因此文件头每次都要重写一遍，很麻烦。如果使用官方的命令行创建草稿，Tag和Category不会显示候选项。很容易写错Category的名字，比如除了Tech这个标签，还多了一个叫tech。这些问题都是我这个插件想要解决的。</p>
+<p>插件Github地址-&gt;<a href="https://github.com/glazec/hexo-post-head-generator" target="_blank" rel="noopener external nofollow noreferrer">传送门</a><br>
+Vscode插件地址-&gt;<a href="https://marketplace.visualstudio.com/items?itemName=glaze.hexo-post-head-generator" target="_blank" rel="noopener external nofollow noreferrer">传送门</a><br>
+现在还有一些小bug没修。</p>
 <p>就整个开发体验来说，一般。文档没有Android多，社区的资源也不多。但是我在查找Vscode插件开发的资料的时候，我看到的博客都在清一色地吹Vscode的API有多好用，有多清楚。</p>
 <p>的确官方API文档写的还算清楚，方法，类都列了出来。但问题是有些Class是不能直接创建的，比如一个代表Current Window的Class，你得用函数获得,不能自己创建。这些点在官网中都没体现出来。所以开发的时候，我就遇到不少坑，明明这个Class在官方API中提到过，我怎么不能把它实例化。</p>
 <p>之后，我一般都在API文档里找我需要的API后，去Github上参考一下别人是怎么调用这个API的。</p>
@@ -1055,11 +1060,11 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
 
                 </main>
             </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script async type="text/x-mathjax-config">
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config("");
 </script>
 
-<script async type="text/x-mathjax-config">
+<script type="text/x-mathjax-config">
   MathJax.Hub.Queue(function() {
     var all = MathJax.Hub.getAllJax(), i;
     for(i=0; i < all.length; i += 1) {
@@ -1068,7 +1073,7 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
   });
 </script>
 
-<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
