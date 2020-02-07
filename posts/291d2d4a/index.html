@@ -36,6 +36,8 @@
 
 
     <link rel="dns-prefetch" href="https://cdnjs.loli.net"/>
+    <link rel="dns-prefetch" href="https://fonts.loli.net"/>
+
 
 
 
@@ -106,7 +108,7 @@
 <!-- Other Styles -->
 <style>
   body, html {
-    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", Arial, sans-serif;
     overflow-x: hidden !important;
   }
   
@@ -209,7 +211,13 @@
 
 
 <!-- Import Font -->
-<!-- Import Roboto -->
+<!-- Import Noto serif -->
+<link async href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<style>
+font-family: 'Noto Serif SC', serif;
+</style>
+
+<!-- Import Roboto 
 
     <style>
         @font-face {
@@ -255,7 +263,7 @@
             src: local('Roboto MediumItalic'), local('Roboto-MediumItalic'), url('https://cdnjs.loli.net/ajax/libs/mdui/0.2.1/fonts/roboto/Roboto-MediumItalic.woff2') format('woff2'), url('https://cdnjs.loli.net/ajax/libs/mdui/0.2.1/fonts/roboto/Roboto-MediumItalic.woff') format('woff');
         }
     </style>
-
+-->
 
 <!-- Import Material Icons -->
 
@@ -517,7 +525,7 @@
                 
 
                 <!-- Post Content -->
-                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+                <div id="post-content" class="mdl-color-text--grey-800 mdl-card__supporting-text fade out">
     
         <p>做文本翻译是一件繁琐的事情，需要大量的时间和精力。我曾经做过几个礼拜的文本翻译。面对着长长的游戏文本和各种俗语，往往一两个小时也写不了多少。如果用机器进行翻译，虽然快速，但那个质量惨不忍睹。机翻生活在汉化的最低端，虽然快捷但是正确率地下，不少句子也十分拗口。当看见一个不是那么称心如意的汉化，往往有观众猜测它为机翻。</p>
 <p>之后随着机器学习的进步，机器翻译随之变成可能。记得搜狗同传作为同声翻译的辅助频繁出现在各个会场。那么有没有可能让字幕的制作在机器学习的帮助下变得快捷起来同时质量也没有那么差呢？</p>

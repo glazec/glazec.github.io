@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.inevitable.tech/"/>
-  <updated>2020-02-07T09:06:02.828Z</updated>
+  <updated>2020-02-07T23:20:14.878Z</updated>
   <id>https://www.inevitable.tech/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.inevitable.tech/posts/7a4bc632/"/>
     <id>https://www.inevitable.tech/posts/7a4bc632/</id>
     <published>2020-02-06T16:00:00.000Z</published>
-    <updated>2020-02-07T09:06:02.828Z</updated>
+    <updated>2020-02-07T23:20:14.878Z</updated>
     
     <summary type="html">
     
@@ -36,6 +36,8 @@
       <category term="博客优化" scheme="https://www.inevitable.tech/tags/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
     
       <category term="性能" scheme="https://www.inevitable.tech/tags/%E6%80%A7%E8%83%BD/"/>
+    
+      <category term="Hexo" scheme="https://www.inevitable.tech/tags/Hexo/"/>
     
   </entry>
   

@@ -36,6 +36,8 @@
 
 
     <link rel="dns-prefetch" href="https://cdnjs.loli.net"/>
+    <link rel="dns-prefetch" href="https://fonts.loli.net"/>
+
 
 
 
@@ -106,7 +108,7 @@
 <!-- Other Styles -->
 <style>
   body, html {
-    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", Arial, sans-serif;
     overflow-x: hidden !important;
   }
   
@@ -209,7 +211,13 @@
 
 
 <!-- Import Font -->
-<!-- Import Roboto -->
+<!-- Import Noto serif -->
+<link async href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<style>
+font-family: 'Noto Serif SC', serif;
+</style>
+
+<!-- Import Roboto 
 
     <style>
         @font-face {
@@ -255,7 +263,7 @@
             src: local('Roboto MediumItalic'), local('Roboto-MediumItalic'), url('https://cdnjs.loli.net/ajax/libs/mdui/0.2.1/fonts/roboto/Roboto-MediumItalic.woff2') format('woff2'), url('https://cdnjs.loli.net/ajax/libs/mdui/0.2.1/fonts/roboto/Roboto-MediumItalic.woff') format('woff');
         }
     </style>
-
+-->
 
 <!-- Import Material Icons -->
 
@@ -508,7 +516,7 @@
                 
 
                 <!-- Post Content -->
-                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+                <div id="post-content" class="mdl-color-text--grey-800 mdl-card__supporting-text fade out">
     
         <p>前段时间他问我PGP的事情。的确安卓上没有适合并且适用的PGP加密软件，那就自己写一个呗。于是我开始了我的第一个Android开发。</p>
 <p>我还特意没有选Java作为开发语言，我选择了kotlin。kotlin的可读性的确要比java强一些，除去它的各种令人头疼的特殊符号。虽然前几年Google宣布kotlin成为了Android开发的官方语言，但真的去仔细翻一翻官方文档，很多范例仍旧是Java的。那就只能看其他人写的类似程序片段，或者再github搜索相关api，看看其他人的做法。但是有些人的范例特别老，Api版本跟你不一样，这时候就要注意了。或者有的时候一个相同的功能有多种调用api实现的方法，虽然有的是错的或者有坑。</p>
