@@ -61,23 +61,27 @@
   </entry>
   
   <entry>
-    <title>基本穿搭 大山旬</title>
-    <link href="https://www.inevitable.tech/posts/f351a3b6/"/>
-    <id>https://www.inevitable.tech/posts/f351a3b6/</id>
+    <title>Hexo Cheatsheets Theme</title>
+    <link href="https://www.inevitable.tech/posts/59f1905d/"/>
+    <id>https://www.inevitable.tech/posts/59f1905d/</id>
     <published>2019-12-02T16:00:00.000Z</published>
-    <updated>2020-02-01T06:43:06.615Z</updated>
+    <updated>2020-02-07T01:59:57.792Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;很基本的穿搭。&lt;/p&gt;
+      &lt;p&gt;哪个男孩不想拥有属于自己的屠龙宝典呢？&lt;/p&gt;
     
     </summary>
     
     
-      <category term="Book" scheme="https://www.inevitable.tech/categories/Book/"/>
+      <category term="开发" scheme="https://www.inevitable.tech/categories/%E5%BC%80%E5%8F%91/"/>
     
     
-      <category term="Book" scheme="https://www.inevitable.tech/tags/Book/"/>
+      <category term="开发" scheme="https://www.inevitable.tech/tags/%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="前端" scheme="https://www.inevitable.tech/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Hexo" scheme="https://www.inevitable.tech/tags/Hexo/"/>
     
   </entry>
   
