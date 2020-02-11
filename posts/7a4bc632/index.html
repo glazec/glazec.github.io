@@ -310,7 +310,7 @@ font-family: 'Noto Serif SC', serif;
 
     
         <meta property="article:published_time" content="Fri Feb 07 2020 00:00:00 GMT+0800">
-        <meta property="article:modified_time" content="Fri Feb 07 2020 21:50:49 GMT-0800">
+        <meta property="article:modified_time" content="Tue Feb 11 2020 15:52:57 GMT-0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -564,7 +564,8 @@ DoubleClick by Google 发现，如果页面加载时间超过 3 秒，53% 的移
 <p>图片无处不在：头像，题图又或者是博客中的图片。一个图片动辄几百kb，极大的拖累了网站的加载速度。</p>
 <h4 id="图片压缩"><a class="header-anchor" href="#图片压缩"></a>图片压缩</h4>
 <p><a href="https://developers.google.com/speed/webp#webp_converter_download" target="_blank" rel="noopener external nofollow noreferrer">Webp</a>是Google近年来推出的无损图片格式。Webp比PNG小26%。大部分主流浏览器也支持Webp格式。如果将JPG图片压缩成Webp，并且接受80%的图像质量，文件大小可以减少60%。</p>
-<p>Webp唯一的补足就是编码和解码的速度要慢上不少。虽然解码速度慢了，但是文件体积减少了。Webp节省下来的图片下载时间完全大于多花在解码上的时间。</p>
+<p>Webp其一的补足就是编码和解码的速度要慢上不少。虽然解码速度慢了，但是文件体积减少了。Webp节省下来的图片下载时间完全大于多花在解码上的时间。</p>
+<p>另一个补足便是它做不到全平台的支持。Safari不支持Webp。因此我们可以考虑给safari用户特供PNG图片。</p>
 <p>我使用的是<a href="https://zhitu.isux.us/" target="_blank" rel="noopener external nofollow noreferrer">腾讯智图</a>。大部分时候图片品质的差距很难看出来。因此为了性能，我普遍选择30的图片品质。</p>
 <h4 id="图片懒加载"><a class="header-anchor" href="#图片懒加载"></a>图片懒加载</h4>
 <p>不加载用户看不到的图片。等那些图片进入用户的视线再加载。</p>
