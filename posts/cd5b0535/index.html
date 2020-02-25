@@ -337,15 +337,8 @@ font-family: 'Noto Serif SC', serif;
     
     
 
-<!-- webPushNotification -->
-    
-        <script async>
-        (function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BKOlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLVbjpCw8x2GmFmi1ZcLTz0ni6OnX5MAwoM58');
-        </script>
-    
-
-    <!-- instant.page -->
-    <script async src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module"></script>
+    <!-- instant page -->
+    <script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
 
     <!-- lazyLoad -->
     <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js" async></script>
@@ -428,7 +421,7 @@ font-family: 'Noto Serif SC', serif;
             <script type="text/ls-javascript" id="post-thumbnail-script">
     var randomNum = Math.floor(Math.random() * 18 + 1);
 
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.webp');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
 </script>
 
@@ -683,7 +676,7 @@ font-family: 'Noto Serif SC', serif;
 
     <!-- Next Nav -->
     
-        <a href="/posts/59f1905d/" id="post_nav-older" class="next-content">
+        <a href="/posts/f351a3b6/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
