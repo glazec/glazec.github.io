@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html style="display: none;" lang="zh">
     <head>
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta charset="utf-8">
     <!--
         © Material Theme
         https://github.com/viosey/hexo-theme-material
@@ -310,7 +310,7 @@ font-family: 'Noto Serif SC', serif;
 
     
         <meta property="article:published_time" content="Tue Feb 25 2020 10:00:00 GMT+0800">
-        <meta property="article:modified_time" content="Tue Feb 25 2020 21:16:04 GMT-0800">
+        <meta property="article:modified_time" content="Tue Feb 25 2020 22:11:43 GMT-0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -346,12 +346,12 @@ font-family: 'Noto Serif SC', serif;
     <!-- Custom Head -->
     
 
-<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 
     
         <body id="scheme-Paradox" class="lazy">
-            <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
                 
 
                 <!-- Main Container -->
@@ -529,26 +529,27 @@ font-family: 'Noto Serif SC', serif;
                 <div id="post-content" class="mdl-color-text--grey-800 mdl-card__supporting-text fade out">
     
         <h2 id="Intro"><a class="header-anchor" href="#Intro"></a>Intro</h2>
-<p><a href="https://www.inevitable.tech/posts/98ae9e55/">上一篇文章</a>我们讲到了Web push notification的好处,以及如何为我们的网站添加Web push notification.</p>
+<p><strong>注意，<a href=""></a>是更加泛用的自动推送通知的方法。</strong></p>
+<p><a href="https://www.inevitable.tech/posts/98ae9e55/">上一篇文章</a>我们讲到了 Web push notification 的好处,以及如何为我们的网站添加 Web push notification.</p>
 <p>这一篇文章将关于如何自动推送新文章。即站长只要一更新博客，读者就会自动接受到通知。</p>
-<p>以下方法具有一定局限性。如果你跟我的博客配置一样，那么你可以直接套用。如果不一样，那么你可以学习一下我的思路，或者可以开一个Issue。我会尽力解决兼容性的问题。</p>
+<p>以下方法具有一定局限性。如果你跟我的博客配置一样，那么你可以直接套用。如果不一样，那么你可以学习一下我的思路，或者可以开一个 Issue。我会尽力解决兼容性的问题。</p>
 <p>关于我的博客配置：</p>
 <ol>
-<li>我的博客网站源码放在<a href="https://github.com/glazec/glazec.github.io" target="_blank" rel="noopener external nofollow noreferrer">Github</a>上。因此可以使用Github Action。</li>
-<li>我的博客托管在<a href="https://www.netlifyl.com" target="_blank" rel="noopener external nofollow noreferrer">Netlify</a>上面。因此可以方便的比较网站源码的区别。刚刚推送到Github上的网站源码和托管在Netlify的进行比较。在比较之后再触发Netlify的Build。</li>
-<li>我的Hexo博客URL的构成是https://www.inevitable.tech/posts/98ae9e55/，<code>98ae9e55</code>是使用了<code>hexo-abbrlink</code>这个插件。这关系到之后<code>newPost.json</code>中id的构造。</li>
+<li>我的博客网站源码放在<a href="https://github.com/glazec/glazec.github.io" target="_blank" rel="noopener external nofollow noreferrer">Github</a>上。因此可以使用 Github Action。</li>
+<li>我的博客托管在<a href="https://www.netlifyl.com" target="_blank" rel="noopener external nofollow noreferrer">Netlify</a>上面。因此可以方便的比较网站源码的区别。刚刚推送到 Github 上的网站源码和托管在 Netlify 的进行比较。在比较之后再触发 Netlify 的 Build。</li>
+<li>我的 Hexo 博客 URL 的构成是https://www.inevitable.tech/posts/98ae9e55/，<code>98ae9e55</code>是使用了<code>hexo-abbrlink</code>这个插件。这关系到之后<code>newPost.json</code>中id的构造。</li>
 </ol>
 <h2 id="hexo-detect-new-post"><a class="header-anchor" href="#hexo-detect-new-post"></a>hexo-detect-new-post</h2>
 <p>使用<a href="https://github.com/glazec/hexo-detect-new-post/issues" target="_blank" rel="noopener external nofollow noreferrer">hexo-detect-new-post</a>生成<code>newPost.json</code>。<code>newPost.json</code>中含有最新文章的信息。通过对比<code>newPost.json</code>，我们就可以知道有没有更新新的文章。</p>
 <p><code>newPost.json</code>是这样的格式:</p>
 <pre><code class="language-json">{
-&quot;title&quot;:&quot;静态博客优化&quot;,
-&quot;id&quot;:&quot;7a4bc632&quot;,
-&quot;date_published&quot;:&quot;2020-02-07T00:00:00.000Z&quot;,
-&quot;summary&quot;:&quot;新的一年从优化博客开始。这一次从内容，性能这两方面对博客进行优化。&quot;,
-&quot;url&quot;:&quot;https:\\www.inevitable.tech\\posts\\7a4bc632&quot;,
-&quot;tags&quot;:[&quot;博客优化&quot;,&quot;性能&quot;,&quot;Hexo&quot;],
-&quot;categories&quot;:[&quot;开发&quot;]
+  &quot;title&quot;: &quot;静态博客优化&quot;,
+  &quot;id&quot;: &quot;7a4bc632&quot;,
+  &quot;date_published&quot;: &quot;2020-02-07T00:00:00.000Z&quot;,
+  &quot;summary&quot;: &quot;新的一年从优化博客开始。这一次从内容，性能这两方面对博客进行优化。&quot;,
+  &quot;url&quot;: &quot;https:\\www.inevitable.tech\\posts\\7a4bc632&quot;,
+  &quot;tags&quot;: [&quot;博客优化&quot;, &quot;性能&quot;, &quot;Hexo&quot;],
+  &quot;categories&quot;: [&quot;开发&quot;]
 }
 </code></pre>
 <p>我的每篇文章开头是这个样子：</p>
@@ -563,20 +564,21 @@ categories:
 abbrlink: 7a4bc632
 date: 2020-02-07 00:00:00
 ---
+
 新的一年从优化博客开始。这一次从内容，性能这两方面对博客进行优化。
 
 &lt;!-- more --&gt;
 
 Here the main content starts.
 </code></pre>
-<p>Title，Date，Tags，Categories都是直接源自文章的头部。Summary是文章的excerpt部分。Id为文章的abbrlink。Url是直接进行拼接得出的。</p>
+<p>Title，Date，Tags，Categories 都是直接源自文章的头部。Summary 是文章的 excerpt 部分。Id 为文章的 abbrlink。Url 是直接进行拼接得出的。</p>
 <h2 id="web-push-notification-Action"><a class="header-anchor" href="#web-push-notification-Action"></a>web-push-notification Action</h2>
 <p>想要能够自动检测出文章的更新，除了<a href="https://github.com/glazec/hexo-detect-new-post/issues" target="_blank" rel="noopener external nofollow noreferrer">hexo-detect-new-post</a>这个还不够。我们还需要进行比较。</p>
-<p>我们要比较的是Github上的<code>newPost.json</code>与托管在Netlify上的<code>newPost.json</code>。</p>
-<p>首先我们要关闭Netlify的Auto Build,并且打开Build Hook。这样只有通过Url触发，Netlify才会进行新的一次构建。</p>
-<p>关闭Netlify的Auto Build只需要关闭Github App的权限。取消Netlify Github App读取对应Repo的权限。Build Hook则在Setting&gt;Build&amp;Deploy&gt;Build Hooks中打开。</p>
-<p>接下来我们只需要安装<a href="https://github.com/glazec/web-push-notification" target="_blank" rel="noopener external nofollow noreferrer">这个Action</a>就行了。这个Action会被push触发。接着它会对比<code>newPost.json</code>,并且触发Netlify Build Hook。如果有文章更新则访问Webpushr的API进行通知推送。</p>
-<p>安装<a href="https://github.com/glazec/web-push-notification" target="_blank" rel="noopener external nofollow noreferrer">这个Action</a>很简单。只需要在hexo根目录下的<code>source/</code>中新建 <code>.github/workflows/main.yml</code>。<code>main.yml</code>中写入</p>
+<p>我们要比较的是 Github 上的<code>newPost.json</code>与托管在 Netlify 上的<code>newPost.json</code>。</p>
+<p>首先我们要关闭 Netlify 的 Auto Build,并且打开 Build Hook。这样只有通过 Url 触发，Netlify 才会进行新的一次构建。</p>
+<p>关闭 Netlify 的 Auto Build 只需要关闭 Github App 的权限。取消 Netlify Github App 读取对应 Repo 的权限。Build Hook 则在 Setting&gt;Build&amp;Deploy&gt;Build Hooks 中打开。</p>
+<p>接下来我们只需要安装<a href="https://github.com/glazec/web-push-notification" target="_blank" rel="noopener external nofollow noreferrer">这个 Action</a>就行了。这个 Action 会被 push 触发。接着它会对比<code>newPost.json</code>,并且触发 Netlify Build Hook。如果有文章更新则访问 Webpushr 的 API 进行通知推送。</p>
+<p>安装<a href="https://github.com/glazec/web-push-notification" target="_blank" rel="noopener external nofollow noreferrer">这个 Action</a>很简单。只需要在 hexo 根目录下的<code>source/</code>中新建 <code>.github/workflows/main.yml</code>。<code>main.yml</code>中写入</p>
 <pre><code class="language-.yml">name: web push notification
 
 on: [push]
@@ -598,22 +600,23 @@ jobs:
         newPostOnlineSite: ${{ secrets.newPostOnlineSite }}
         buildHook: ${{ secrets.buildHook }}
 </code></pre>
-<p>接着打开Hexo根目录下的<code>_config.yml</code>,找到<code>deploy</code>做如下更改。</p>
+<p>接着打开 Hexo 根目录下的<code>_config.yml</code>,找到<code>deploy</code>做如下更改。</p>
 <pre><code class="language-yml">deploy:
   ignore_hidden: false
 </code></pre>
-<p>将<code>ignore_hidden</code>改为<code>false</code>会把隐藏文件也推送到Github 仓库中。即我们的<code>.github</code>也会被推送上去。</p>
-<p>做好了这些就只差最后一步，设置Github Action中的环境变量。打开你的Github放置网站的仓库，前往Settings&gt;Secrets。添加<code> buildHook</code>,<code>newPostOnlineSite</code>,<code>newPostRepo</code>,<code>webpushrAuthToken</code>,<code>webpushrKey</code>。</p>
-<p><code>buildHook</code>是你的Netlify Build Hooks Url.</p>
+<p>将<code>ignore_hidden</code>改为<code>false</code>会把隐藏文件也推送到 Github 仓库中。即我们的<code>.github</code>也会被推送上去。</p>
+<p>做好了这些就只差最后一步，设置 Github Action 中的环境变量。打开你的 Github 放置网站的仓库，前往 Settings&gt;Secrets。添加<code>buildHook</code>,<code>newPostOnlineSite</code>,<code>newPostRepo</code>,<code>webpushrAuthToken</code>,<code>webpushrKey</code>。</p>
+<p><code>buildHook</code>是你的 Netlify Build Hooks Url.</p>
 <p><code>newPostOnlineSite</code>是你网站上<code>newPost.json</code>的地址。比如我的就是<code>https://www.inevitable.tech/newPost.json</code>。</p>
-<p><code>newPostRepo</code>则为放置网站源码的Github库中，<code>newPost.json</code>的地址。比如我的是<code>https://raw.githubusercontent.com/glazec/glazec.github.io/master/newPost.json</code>。</p>
-<p><code>webpushrAuthToken</code>,<code>webpushrKey</code>则用来调用webPushr API进行通知推送。可以在Integration&gt;Rest API Key中找到。</p>
-<p>有关如何具体设置Webpushr，请参考<a href="https://www.inevitable.tech/posts/98ae9e55/">上一篇文章</a>。</p>
+<p><code>newPostRepo</code>则为放置网站源码的 Github 库中，<code>newPost.json</code>的地址。比如我的是<code>https://raw.githubusercontent.com/glazec/glazec.github.io/master/newPost.json</code>。</p>
+<p><code>webpushrAuthToken</code>,<code>webpushrKey</code>则用来调用 webPushr API 进行通知推送。可以在 Integration&gt;Rest API Key 中找到。</p>
+<p>有关如何具体设置 Webpushr，请参考<a href="https://www.inevitable.tech/posts/98ae9e55/">上一篇文章</a>。</p>
 <h2 id="结语"><a class="header-anchor" href="#结语"></a>结语</h2>
 <p>这个自动推送通知处理好之后还是挺好用的。每次发布新文章，只要<code>hexo deploy</code>就完成了所有事情。用户也会收到通知。</p>
 <p>我的这个方法用到了很多工具，建立在使用这些工具之上。对于那些工具链和我不一样的人来说，不是那么的使用。</p>
-<p>那么接下来，我考虑将Github Action所做的事情本地化。也就是将<a href="https://github.com/glazec/web-push-notification" target="_blank" rel="noopener external nofollow noreferrer">这个Action</a>合并到<a href="https://github.com/glazec/hexo-detect-new-post/issues" target="_blank" rel="noopener external nofollow noreferrer">hexo-detect-new-post</a>，相信这样就可以对大部分人实用。</p>
-<p>再将<code>newPost.json</code>中的依赖减少一些。比如Id的生成使用SHA而不是<code>hexo-abbrlink</code>这个插件。</p>
+<p>那么接下来，我考虑将 Github Action 所做的事情本地化。也就是将<a href="https://github.com/glazec/web-push-notification" target="_blank" rel="noopener external nofollow noreferrer">这个 Action</a>合并到<a href="https://github.com/glazec/hexo-detect-new-post/issues" target="_blank" rel="noopener external nofollow noreferrer">hexo-detect-new-post</a>，相信这样就可以对大部分人实用。</p>
+<p>再将<code>newPost.json</code>中的依赖减少一些。比如 Id 的生成使用 SHA 而不是<code>hexo-abbrlink</code>这个插件。</p>
+<p><strong>我已经对流程进行了优化。现在有更加泛用的解决方案。请见<a href=""></a></strong></p>
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
                     <p><strong>
@@ -670,13 +673,21 @@ jobs:
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
+        <a href="/posts/98ae9e55/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/posts/98ae9e55/" id="post_nav-older" class="next-content">
+        <a href="/posts/7a4bc632/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -1118,24 +1129,7 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
 </script>
 
                 </main>
-            </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config("");
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
-        </body>
+            </div>
+        <script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = 'https://cdn.webpushr.com/app.min.js';fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BL7jCPDwUeL6hA3FIkUkU6hj9IeuwHFQkACKqQmSsvy3B-z_B1U7LBKjMXMKHtc2NFjcsGlOXsuQ7Zco_XfdjkQ');</script></body>
     
 </html>
