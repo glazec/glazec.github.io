@@ -56,7 +56,7 @@
     
     <title>
         
-            2018年度总结 | 
+            自动推送新博客的泛用实现方案 | 
         
         Inevitable
     </title>
@@ -66,8 +66,8 @@
     <link rel="icon" href="/img/favicon.min.jpg">
 
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="18年的尾巴，19年的头。">
-    <meta name="keywords" content="独立开发者,生活随想,年终小结">
+    <meta name="description" itemprop="description" content="这是一个适合大多数人的解决方案。它可以帮助你自动推送新博客给你的读者。有效提高网站的访问量。">
+    <meta name="keywords" content="独立开发者,hexo,push notifications,自动化,CI">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -282,7 +282,7 @@ font-family: 'Noto Serif SC', serif;
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Inevitable">
-    <meta name="msapplication-starturl" content="https://www.inevitable.tech/posts/17c7c3bb/">
+    <meta name="msapplication-starturl" content="https://www.inevitable.tech/posts/a1b574bb/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Inevitable">
@@ -301,16 +301,16 @@ font-family: 'Noto Serif SC', serif;
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://www.inevitable.tech/posts/17c7c3bb/">
+    <meta property="og:url" content="https://www.inevitable.tech/posts/a1b574bb/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="2018年度总结 | Inevitable">
+    <meta property="og:title" content="自动推送新博客的泛用实现方案 | Inevitable">
     <meta property="og:image" content="/img/favicon.min.jpg">
-    <meta property="og:description" content="18年的尾巴，19年的头。">
-    <meta property="og:article:tag" content="生活随想"> <meta property="og:article:tag" content="年终小结"> 
+    <meta property="og:description" content="这是一个适合大多数人的解决方案。它可以帮助你自动推送新博客给你的读者。有效提高网站的访问量。">
+    <meta property="og:article:tag" content="hexo"> <meta property="og:article:tag" content="push notifications"> <meta property="og:article:tag" content="自动化"> <meta property="og:article:tag" content="CI"> 
 
     
-        <meta property="article:published_time" content="Wed Jan 02 2019 00:00:00 GMT+0800">
-        <meta property="article:modified_time" content="Sun Feb 02 2020 18:04:32 GMT-0800">
+        <meta property="article:published_time" content="Tue Feb 25 2020 10:00:00 GMT+0800">
+        <meta property="article:modified_time" content="Fri Feb 28 2020 10:53:24 GMT-0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -318,7 +318,7 @@ font-family: 'Noto Serif SC', serif;
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://www.inevitable.tech/posts/17c7c3bb/index.html" />
+        <link rel="canonical" href="https://www.inevitable.tech/posts/a1b574bb/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -390,6 +390,15 @@ font-family: 'Noto Serif SC', serif;
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Intro"><span class="post-toc-number">1.</span> <span class="post-toc-text">Intro</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前情回顾"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">前情回顾</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#原理"><span class="post-toc-number">2.</span> <span class="post-toc-text">原理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#想法"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">想法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#实现"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#第一部分"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">第一部分</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#第二部分"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">第二部分</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装和使用"><span class="post-toc-number">3.</span> <span class="post-toc-text">安装和使用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#后记"><span class="post-toc-number">4.</span> <span class="post-toc-text">后记</span></a></li></ol>
+    </ul>
+    
 
 
 
@@ -419,7 +428,7 @@ font-family: 'Noto Serif SC', serif;
         
     
             <p class="article-headline-p">
-                2018年度总结
+                自动推送新博客的泛用实现方案
             </p>
         </div>
 
@@ -438,7 +447,7 @@ font-family: 'Noto Serif SC', serif;
     <!-- Author Name & Date -->
     <div>
         <strong>琉璃</strong>
-        <span>1月 02, 2019</span>
+        <span>2月 25, 2020</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -462,7 +471,7 @@ font-family: 'Noto Serif SC', serif;
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/%E5%B9%B4%E7%BB%88%E5%B0%8F%E7%BB%93/" rel="tag">年终小结</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E6%83%B3/" rel="tag">生活随想</a>
+        <a class="post_tag-link" href="/tags/CI/" rel="tag">CI</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/push-notifications/" rel="tag">push notifications</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" rel="tag">自动化</a>
     </ul>
     
 
@@ -479,7 +488,7 @@ font-family: 'Noto Serif SC', serif;
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=2018年度总结&url=https://www.inevitable.tech/posts/17c7c3bb/index.html&pic=https://www.inevitable.tech/img/favicon.min.jpg&searchPic=false&style=simple" rel="external nofollow noreferrer" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=自动推送新博客的泛用实现方案&url=https://www.inevitable.tech/posts/a1b574bb/index.html&pic=https://www.inevitable.tech/img/favicon.min.jpg&searchPic=false&style=simple" rel="external nofollow noreferrer" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -488,7 +497,7 @@ font-family: 'Noto Serif SC', serif;
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=2018年度总结&url=https://www.inevitable.tech/posts/17c7c3bb/index.html&via=琉璃" rel="external nofollow noreferrer" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=自动推送新博客的泛用实现方案&url=https://www.inevitable.tech/posts/a1b574bb/index.html&via=琉璃" rel="external nofollow noreferrer" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -519,14 +528,61 @@ font-family: 'Noto Serif SC', serif;
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-800 mdl-card__supporting-text fade out">
     
-        <p>大学第一个学期结束了，今年也结束了。因为有了其他更加优先的事情,我进入大学以后就没有怎么写过博客。现在放假了，倒是有了些时间来写文章。好久没有写文章，感觉写作都有些生疏了。</p>
-<p>大学的感受可以参照这一篇<a href="https://blog.inevitable.tech/2018/10/04/uWelcome/" target="_blank" rel="noopener external nofollow noreferrer">文章</a>第一个学期我有太多地方做的不足了。从和人打交道，参加社交活动，社团活动，到和教授的互动都是我的不足之处。减少与人的互动，也决定了信息接收的少。并且和人打交道也是很锻炼说话和情商的。下学期，我要提高与教授的互动。多去office hour看看，毕竟一个好的研究生可能就指望着他们呢。</p>
-<p>今年最喜欢的游戏倒是很明显，没有什么犹豫-想要传达给你的爱恋。具体的剧情可以看这一篇<a href="https://blog.inevitable.tech/2018/07/07/koikake/" target="_blank" rel="noopener external nofollow noreferrer">博客</a>除去这个游戏的故事和人设，作者新岛夕想表达的东西也很有意思。两个互相爱慕，但是却又不对彼此诚实的人最后会走到哪里。他们交流起来遮遮掩掩，但是互相又没有完全理解对方的能力。他们有时甚至会因为想要保护自己，而做出一些错误的决定或者得出错误的认知。如何做到坦诚的面对他人和面对自己，这或许是我得到的一点启发。最喜欢的音乐也是这个游戏的原声碟。音乐给我带来了悠扬，安静，亮晶晶的感觉。每首角色歌都有着那个角色的特点。OST-&gt;<a href="https://music.163.com/#/album?id=34609577" target="_blank" rel="noopener external nofollow noreferrer">传送门</a></p>
-<p>今年我第一次参加Hackthon。具体感受的话可以看<a href="https://blog.inevitable.tech/2018/07/28/hackshanghai/" target="_blank" rel="noopener external nofollow noreferrer">这里</a>。我也是有所收获，认识了一些新朋友。但对于现在逐渐养生的我，hakcthon可能就没有这么合适了。我的确想快速实现一个idea，我的确想结识一些新的伙伴。但是熬夜么。。我其实更想睡觉。这一次，我又报名了大学的hackthon。如果能进的话，我倒是也没有想好要不要去。</p>
-<p>今年年底读的书倒是不多，如果只算有实际用处的书的话，可能只有一本《重来》和现在正在看的一本-关于linux内核的书。战争史读起来真的不是那么有意思，而且我的pdf版本还没有图片。实体书又太大，不高兴带着。年底黑五打折的时候，我在NoStarchPress 上买了三本书，一本还在EA阶段，一本超级厚，一本厚度适中。都算是比较实用，我比较感兴趣的书。估计看完了这些书，我会有不少进步吧。《重来》倒是一本不错的书，虽然它讲述的是创业公司的点滴，但它也有助于读者成为一个像独角兽公司一样的人。有行动力，决策果断，弹性，灵活，有创意，有热情。里面每一篇都配有一幅插图，很形象的阐述着这一篇的主题。它是一篇文集，但是它与《黑客与画家》不同，它更注重与实际层面。当然了，不管它再怎么实际，读这种行动指南的时候，难免还会觉得有些宽泛。毕竟情况是多变的，原则到底在哪里，就要靠自己领悟了。</p>
-<p>今年年底我也是做了一个app，具体的想法可以点<a href="https://blog.inevitable.tech/2019/01/02/MessageEncrypt/" target="_blank" rel="noopener external nofollow noreferrer">这</a>。安卓开发也是挺神奇的，疯狂的调用各种令我一脸懵逼的api。最有意思的还是设计Icon，我自己手画了一个Icon。感觉我的Icon在手机APP一堆妖艳的Icon里显得格外清新脱俗。以后估计我的Icon设计风格就是这个样子的了。以一个动物为主，不同的设计就是画出不同动作，不同装扮的这只动物。</p>
-<p>经历了这样一次开发，我感觉比较适合的速度可能是一个学期写一个小的项目。暑假空闲些，可以一个月到一个半月写一个小项目。我看了看To Do List，上面有不少我喜欢的idea在等着我去实现。估计再过两个学期，我基础线代也学得差不多了。是一个我觉得比较适合上手深度学习项目的时候了。但我倒是没有什么比较好的idea。如果没有项目可写，我就准备写两篇渗透报告练练手。总之，不断进步，不要停下。</p>
-<p>和女朋友相处也是有不少的挑战，毕竟和女朋友在一起一点都不像和自己的舍友在一起一样。中间会发生争吵，拒绝会变得困难等等等等。具体的想法可以看<a href="https://blog.inevitable.tech/2018/07/28/hackshanghai/" target="_blank" rel="noopener external nofollow noreferrer">这儿</a>。</p>
+        <h2 id="Intro"><a class="header-anchor" href="#Intro"></a>Intro</h2>
+<h3 id="前情回顾"><a class="header-anchor" href="#前情回顾"></a>前情回顾</h3>
+<p>在<a href="https://www.inevitable.tech/posts/98ae9e55/">Hexo使用Web Push Notification 浏览器通知推送中，</a>我们讲到了 Web push notification 的好处,以及如何配置<a href="https://www.webpushr.com/" target="_blank" rel="noopener external nofollow noreferrer">Webpushr</a>。<br>
+在<a href="https://www.inevitable.tech/posts/afd56cf2/">Auto web push notification中，</a>我们讨论了自动推送通知的特殊解决方案。这个方案对于工具链有很多的局限性。网站源码必须在Github上，网站需要托管在Netilfy上，必须使用<code>hexo-abbrlink</code>这个插件。</p>
+<p>在本篇文章中，我将给出一个更加泛用的解决方案。这次不再有那么的前提条件。唯一的前提条件是你需要注册<a href="https://www.webpushr.com/" target="_blank" rel="noopener external nofollow noreferrer">Webpushr</a>,将你的网站加入到Webpushr中。你并不需要将Webpushr的SDK加入你的网站。这个插件会为你搞定一切。</p>
+<p>如果你想使用其他的通知推送服务，请提交<a href="https://github.com/glazec/hexo-web-push-notification/issues" target="_blank" rel="noopener external nofollow noreferrer">Issue</a>或者<a href="https://github.com/glazec/hexo-web-push-notification/pulls" target="_blank" rel="noopener external nofollow noreferrer">PR</a>。我们可以为其增加兼容性改进。</p>
+<h2 id="原理"><a class="header-anchor" href="#原理"></a>原理</h2>
+<h3 id="想法"><a class="header-anchor" href="#想法"></a>想法</h3>
+<p>这一次我们只需要安装<a href="https://github.com/glazec/hexo-web-push-notification" target="_blank" rel="noopener external nofollow noreferrer">hexo-web-push-notification</a>就可以解决所有问题。甚至SDK的集成也自动化了。</p>
+<p>自动集成SDK很简单。将SDK代码直接插入渲染好的HTML中即可。</p>
+<p>通知部分的想法与<a href="https://www.inevitable.tech/posts/afd56cf2/">Auto web push notification</a>一样。我们生成<code>newPost.json</code>。<code>newPost.json</code>包含了最新文章的信息。接着我们对比本地<code>newPost.json</code>与在线网站上的<code>newPost.json</code>。如果文章的ID有变化，那么我们就对读者进行通知推送。</p>
+<h3 id="实现"><a class="header-anchor" href="#实现"></a>实现</h3>
+<p>除开简单的SDK自动集成，插件主要分为两部分。第一部分生成<code>newPost.json</code>。第二部分处理通知推送。</p>
+<p>使用Hexo Event，我们让第一部分在<code>hexo generate</code>之后执行。第二部分在<code>hexo deploy</code>之前执行。这个时候网站还没有进行更新。</p>
+<h4 id="第一部分"><a class="header-anchor" href="#第一部分"></a>第一部分</h4>
+<p>第一部分所做的事情很简单。找到最新发布的文章，根据其信息生成<code>newPost.json</code>到本地<code>public/newPost.json</code>。以下是<code>newPost.json</code>的范例：</p>
+<pre><code class="language-json">{
+  &quot;title&quot;: &quot;Auto web push notification&quot;,
+  &quot;id&quot;: &quot;posts/afd56cf2/&quot;,
+  &quot;date_published&quot;: &quot;02/24/2020&quot;,
+  &quot;summary&quot;: &quot;如何自动通知读者有更新了？即只要正常更新博客，读者便可以在第一时间收到关于新文章的通知。&quot;,
+  &quot;url&quot;: &quot;https://www.inevitable.tech/posts/afd56cf2/&quot;,
+  &quot;tags&quot;: [&quot;hexo&quot;, &quot;push notifications&quot;, &quot;自动化&quot;, &quot;CI&quot;],
+  &quot;categories&quot;: [&quot;开发&quot;]
+}
+</code></pre>
+<p>这一次，id直接使用文章的路径。不管你怎么魔改hexo，文章的路径永远具有唯一性。因此这次的解决方案适用范围更加广泛。</p>
+<p>相比上一次的直接从源文件中读取数据进行处理。这一次的数据来自Hexo API，加强了适用性。不管你的源文件长成什么样，只要Hexo能读懂，这个插件就能正常工作。</p>
+<h4 id="第二部分"><a class="header-anchor" href="#第二部分"></a>第二部分</h4>
+<p>第二部分将本地<code>newPost.json</code>于网站上的<code>newPost.json</code>进行比对。如果文章ID不一样，那么便是作者进行了更新（没考虑过作者删除最新文章的可能性）。这个时候便触发通知推送。推送内容包含文章标题，链接以及节选。节选便是Summary部分。</p>
+<h2 id="安装和使用"><a class="header-anchor" href="#安装和使用"></a>安装和使用</h2>
+<p>想要自动推送通知，你得先得处理好<a href="https://www.webpushr.com/" target="_blank" rel="noopener external nofollow noreferrer">Webpushr</a>。你需要注册一个账号，加入你的网站，配置好Safari推送的证书，自定义请求通知弹窗的样式。具体可以参考<a href="https://www.inevitable.tech/posts/98ae9e55/">Hexo使用Web Push Notification 浏览器通知推送中，</a>。</p>
+<p>接下来的事情全交给<code>hexo-web-push-notification</code>。</p>
+<p>安装这个插件，只需要执行<code>npm i hexo-web-push-notification --save</code>。</p>
+<p>使用这个插件前记得添加以下配置到位于hexo根目录的<code>_config.yml</code>。</p>
+<pre><code class="language-yaml">webPushNotification:
+  webpushrKey: &quot;your webpushr rest api key&quot;
+  webpushrAuthToken: &quot;your webpushr authorize token&quot;
+  trackingCode: &quot;AEGlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLVbjpCw8x2GmFmi1ZcLTz0ni6OnX5MAwoM88&quot;
+</code></pre>
+<p><code>trackingCode</code>可能有点难找。打开webpushr，进入到配置网站的主页。打开Setup&gt;TrackingCode。<code>tracking code</code> 长这个样子：</p>
+<pre><code class="language-js">&lt;!-- start webpushr tracking code --&gt;
+&lt;script&gt;(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = &quot;https://cdn.webpushr.com/app.min.js&quot;;
+fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));
+webpushr('init','AEGlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLVbjpCw8x2GmFmi1ZcLTz0ni6OnX5MAwoM88');&lt;/script&gt;
+&lt;!-- end webpushr tracking code --&gt;
+</code></pre>
+<p>最后第二行的<code>AEGlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLVbjpCw8x2GmFmi1ZcLTz0ni6OnX5MAwoM88</code> 便是你的<code>trackingCode</code>。</p>
+<p>更多安装指南请参考<a href="https://github.com/glazec/hexo-web-push-notification" target="_blank" rel="noopener external nofollow noreferrer">README.md</a>。</p>
+<h2 id="后记"><a class="header-anchor" href="#后记"></a>后记</h2>
+<p>这是我第一次发型NPM包。我本来使用Github的包管理服务。但过程实在是有些麻烦。众所周知，发行包的第一步是<code>npm adduser</code>。如果是发行到NPM上，直接输入用户名和密码就行。但是如果是发行到Github上，密码得使用Personal Access Token。生成Personal Access Token有点小麻烦。</p>
+<p>包的名称似乎必须得是Scoped。也就是包的名称必须得是作者名字开头。</p>
+<p>成功发行到Github后，我遇到了不能下载的问题。使用<code>npm i</code>显示找不到我的包。可能运行<code>npm i</code>的时候，npm在NPM上面找包，而不是Github上面找包。</p>
+<p>鉴于以上并不是特别良好的体验，我想要删除这个包，将其在NPM上发行。看了一圈文档和别人的答案，删除包的唯一方法就是删除这个仓库。</p>
+<p>最后，还是NPM香。</p>
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
                     <p><strong>
@@ -534,7 +590,7 @@ font-family: 'Noto Serif SC', serif;
                             This blog is under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 3.0 Unported License</a>
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="https://www.inevitable.tech/posts/17c7c3bb/">https://www.inevitable.tech/posts/17c7c3bb/</a>
+                        <strong>本文链接：</strong><a href="https://www.inevitable.tech/posts/a1b574bb/">https://www.inevitable.tech/posts/a1b574bb/</a>
                     </p>
                 </blockquote>
         
@@ -583,7 +639,7 @@ font-family: 'Noto Serif SC', serif;
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/posts/19e49369/" id="post_nav-newer" class="prev-content">
+        <a href="/posts/afd56cf2/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -597,7 +653,7 @@ font-family: 'Noto Serif SC', serif;
 
     <!-- Next Nav -->
     
-        <a href="/posts/6dda0c12/" id="post_nav-older" class="next-content">
+        <a href="/posts/7a4bc632/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
