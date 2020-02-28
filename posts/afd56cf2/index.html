@@ -56,7 +56,7 @@
     
     <title>
         
-            Auto web push notification | 
+            自动推送新文章的特殊解决方案 | 
         
         Inevitable
     </title>
@@ -303,14 +303,14 @@ font-family: 'Noto Serif SC', serif;
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://www.inevitable.tech/posts/afd56cf2/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Auto web push notification | Inevitable">
+    <meta property="og:title" content="自动推送新文章的特殊解决方案 | Inevitable">
     <meta property="og:image" content="/img/favicon.min.jpg">
     <meta property="og:description" content="如何自动通知读者有更新了？即只要正常更新博客，读者便可以在第一时间收到关于新文章的通知。">
     <meta property="og:article:tag" content="hexo"> <meta property="og:article:tag" content="push notifications"> <meta property="og:article:tag" content="自动化"> <meta property="og:article:tag" content="CI"> 
 
     
         <meta property="article:published_time" content="Tue Feb 25 2020 10:00:00 GMT+0800">
-        <meta property="article:modified_time" content="Tue Feb 25 2020 22:11:43 GMT-0800">
+        <meta property="article:modified_time" content="Fri Feb 28 2020 10:59:59 GMT-0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -428,7 +428,7 @@ font-family: 'Noto Serif SC', serif;
         
     
             <p class="article-headline-p">
-                Auto web push notification
+                自动推送新文章的特殊解决方案
             </p>
         </div>
 
@@ -488,7 +488,7 @@ font-family: 'Noto Serif SC', serif;
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Auto web push notification&url=https://www.inevitable.tech/posts/afd56cf2/index.html&pic=https://www.inevitable.tech/img/favicon.min.jpg&searchPic=false&style=simple" rel="external nofollow noreferrer" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=自动推送新文章的特殊解决方案&url=https://www.inevitable.tech/posts/afd56cf2/index.html&pic=https://www.inevitable.tech/img/favicon.min.jpg&searchPic=false&style=simple" rel="external nofollow noreferrer" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -497,7 +497,7 @@ font-family: 'Noto Serif SC', serif;
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Auto web push notification&url=https://www.inevitable.tech/posts/afd56cf2/index.html&via=琉璃" rel="external nofollow noreferrer" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=自动推送新文章的特殊解决方案&url=https://www.inevitable.tech/posts/afd56cf2/index.html&via=琉璃" rel="external nofollow noreferrer" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -529,7 +529,7 @@ font-family: 'Noto Serif SC', serif;
                 <div id="post-content" class="mdl-color-text--grey-800 mdl-card__supporting-text fade out">
     
         <h2 id="Intro"><a class="header-anchor" href="#Intro"></a>Intro</h2>
-<p><strong>注意，<a href=""></a>是更加泛用的自动推送通知的方法。</strong></p>
+<p><strong>注意，<a href="https://www.inevitable.tech/posts/a1b574bb/">这一篇文章</a>是更加泛用的自动推送通知的方法。</strong></p>
 <p><a href="https://www.inevitable.tech/posts/98ae9e55/">上一篇文章</a>我们讲到了 Web push notification 的好处,以及如何为我们的网站添加 Web push notification.</p>
 <p>这一篇文章将关于如何自动推送新文章。即站长只要一更新博客，读者就会自动接受到通知。</p>
 <p>以下方法具有一定局限性。如果你跟我的博客配置一样，那么你可以直接套用。如果不一样，那么你可以学习一下我的思路，或者可以开一个 Issue。我会尽力解决兼容性的问题。</p>
@@ -616,7 +616,7 @@ jobs:
 <p>我的这个方法用到了很多工具，建立在使用这些工具之上。对于那些工具链和我不一样的人来说，不是那么的使用。</p>
 <p>那么接下来，我考虑将 Github Action 所做的事情本地化。也就是将<a href="https://github.com/glazec/web-push-notification" target="_blank" rel="noopener external nofollow noreferrer">这个 Action</a>合并到<a href="https://github.com/glazec/hexo-detect-new-post/issues" target="_blank" rel="noopener external nofollow noreferrer">hexo-detect-new-post</a>，相信这样就可以对大部分人实用。</p>
 <p>再将<code>newPost.json</code>中的依赖减少一些。比如 Id 的生成使用 SHA 而不是<code>hexo-abbrlink</code>这个插件。</p>
-<p><strong>我已经对流程进行了优化。现在有更加泛用的解决方案。请见<a href=""></a></strong></p>
+<p><strong>我已经对流程进行了优化。现在有更加泛用的解决方案。请见<a href="https://www.inevitable.tech/posts/a1b574bb/">这一篇文章</a></strong></p>
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
                     <p><strong>
@@ -687,7 +687,7 @@ jobs:
 
     <!-- Next Nav -->
     
-        <a href="/posts/a1b574bb/" id="post_nav-older" class="next-content">
+        <a href="/posts/7a4bc632/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

@@ -309,8 +309,8 @@ font-family: 'Noto Serif SC', serif;
     <meta property="og:article:tag" content="hexo"> <meta property="og:article:tag" content="push notifications"> <meta property="og:article:tag" content="自动化"> <meta property="og:article:tag" content="CI"> 
 
     
-        <meta property="article:published_time" content="Tue Feb 25 2020 10:00:00 GMT+0800">
-        <meta property="article:modified_time" content="Fri Feb 28 2020 10:53:24 GMT-0800">
+        <meta property="article:published_time" content="Fri Feb 28 2020 10:00:00 GMT+0800">
+        <meta property="article:modified_time" content="Fri Feb 28 2020 10:56:54 GMT-0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -447,7 +447,7 @@ font-family: 'Noto Serif SC', serif;
     <!-- Author Name & Date -->
     <div>
         <strong>琉璃</strong>
-        <span>2月 25, 2020</span>
+        <span>2月 28, 2020</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -530,8 +530,8 @@ font-family: 'Noto Serif SC', serif;
     
         <h2 id="Intro"><a class="header-anchor" href="#Intro"></a>Intro</h2>
 <h3 id="前情回顾"><a class="header-anchor" href="#前情回顾"></a>前情回顾</h3>
-<p>在<a href="https://www.inevitable.tech/posts/98ae9e55/">Hexo使用Web Push Notification 浏览器通知推送中，</a>我们讲到了 Web push notification 的好处,以及如何配置<a href="https://www.webpushr.com/" target="_blank" rel="noopener external nofollow noreferrer">Webpushr</a>。<br>
-在<a href="https://www.inevitable.tech/posts/afd56cf2/">Auto web push notification中，</a>我们讨论了自动推送通知的特殊解决方案。这个方案对于工具链有很多的局限性。网站源码必须在Github上，网站需要托管在Netilfy上，必须使用<code>hexo-abbrlink</code>这个插件。</p>
+<p>在<a href="https://www.inevitable.tech/posts/98ae9e55/">Hexo使用Web Push Notification 浏览器通知推送</a>中，我们讲到了 Web push notification 的好处,以及如何配置<a href="https://www.webpushr.com/" target="_blank" rel="noopener external nofollow noreferrer">Webpushr</a>。<br>
+在<a href="https://www.inevitable.tech/posts/afd56cf2/">Auto web push notification</a>中，我们讨论了自动推送通知的特殊解决方案。这个方案对于工具链有很多的局限性。网站源码必须在Github上，网站需要托管在Netilfy上，必须使用<code>hexo-abbrlink</code>这个插件。</p>
 <p>在本篇文章中，我将给出一个更加泛用的解决方案。这次不再有那么的前提条件。唯一的前提条件是你需要注册<a href="https://www.webpushr.com/" target="_blank" rel="noopener external nofollow noreferrer">Webpushr</a>,将你的网站加入到Webpushr中。你并不需要将Webpushr的SDK加入你的网站。这个插件会为你搞定一切。</p>
 <p>如果你想使用其他的通知推送服务，请提交<a href="https://github.com/glazec/hexo-web-push-notification/issues" target="_blank" rel="noopener external nofollow noreferrer">Issue</a>或者<a href="https://github.com/glazec/hexo-web-push-notification/pulls" target="_blank" rel="noopener external nofollow noreferrer">PR</a>。我们可以为其增加兼容性改进。</p>
 <h2 id="原理"><a class="header-anchor" href="#原理"></a>原理</h2>
@@ -639,21 +639,13 @@ webpushr('init','AEGlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLVbjpCw8x2Gm
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/posts/afd56cf2/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/posts/7a4bc632/" id="post_nav-older" class="next-content">
+        <a href="/posts/98ae9e55/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
