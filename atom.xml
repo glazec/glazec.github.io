@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.inevitable.tech/"/>
-  <updated>2020-02-28T18:56:54.669Z</updated>
+  <updated>2020-05-14T20:52:06.666Z</updated>
   <id>https://www.inevitable.tech/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CG日记0-第一个苹果</title>
+    <link href="https://www.inevitable.tech/posts/c30576f8/"/>
+    <id>https://www.inevitable.tech/posts/c30576f8/</id>
+    <published>2020-05-14T02:00:00.000Z</published>
+    <updated>2020-05-14T20:52:06.666Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;开始学习CG的前十个小时真是处处劝退。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Arts" scheme="https://www.inevitable.tech/categories/Arts/"/>
+    
+    
+      <category term="CG" scheme="https://www.inevitable.tech/tags/CG/"/>
+    
+  </entry>
   
   <entry>
     <title>自动推送新博客的泛用实现方案</title>
@@ -65,33 +86,6 @@
       <category term="push notifications" scheme="https://www.inevitable.tech/tags/push-notifications/"/>
     
       <category term="服务器推送技术" scheme="https://www.inevitable.tech/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E9%80%81%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>自动推送新文章的特殊解决方案</title>
-    <link href="https://www.inevitable.tech/posts/afd56cf2/"/>
-    <id>https://www.inevitable.tech/posts/afd56cf2/</id>
-    <published>2020-02-25T02:00:00.000Z</published>
-    <updated>2020-02-28T18:59:59.048Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;如何自动通知读者有更新了？即只要正常更新博客，读者便可以在第一时间收到关于新文章的通知。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="开发" scheme="https://www.inevitable.tech/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="hexo" scheme="https://www.inevitable.tech/tags/hexo/"/>
-    
-      <category term="push notifications" scheme="https://www.inevitable.tech/tags/push-notifications/"/>
-    
-      <category term="自动化" scheme="https://www.inevitable.tech/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
-    
-      <category term="CI" scheme="https://www.inevitable.tech/tags/CI/"/>
     
   </entry>
   
