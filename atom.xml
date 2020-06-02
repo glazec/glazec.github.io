@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.inevitable.tech/"/>
-  <updated>2020-05-20T21:43:20.597Z</updated>
+  <updated>2020-06-02T21:50:24.624Z</updated>
   <id>https://www.inevitable.tech/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CG日记2-城市</title>
+    <link href="https://www.inevitable.tech/posts/578b8b94/"/>
+    <id>https://www.inevitable.tech/posts/578b8b94/</id>
+    <published>2020-06-02T02:00:00.000Z</published>
+    <updated>2020-06-02T21:50:24.624Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;累计使用 30 个小时！&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Arts" scheme="https://www.inevitable.tech/categories/Arts/"/>
+    
+    
+      <category term="CG" scheme="https://www.inevitable.tech/tags/CG/"/>
+    
+  </entry>
   
   <entry>
     <title>天气之子</title>
@@ -57,33 +78,6 @@
     
     
       <category term="CG" scheme="https://www.inevitable.tech/tags/CG/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>自动推送新博客的泛用实现方案</title>
-    <link href="https://www.inevitable.tech/posts/a1b574bb/"/>
-    <id>https://www.inevitable.tech/posts/a1b574bb/</id>
-    <published>2020-02-28T02:00:00.000Z</published>
-    <updated>2020-02-28T18:56:54.669Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这是一个适合大多数人的解决方案。它可以帮助你自动推送新博客给你的读者。有效提高网站的访问量。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="开发" scheme="https://www.inevitable.tech/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="hexo" scheme="https://www.inevitable.tech/tags/hexo/"/>
-    
-      <category term="push notifications" scheme="https://www.inevitable.tech/tags/push-notifications/"/>
-    
-      <category term="自动化" scheme="https://www.inevitable.tech/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
-    
-      <category term="CI" scheme="https://www.inevitable.tech/tags/CI/"/>
     
   </entry>
   
