@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.inevitable.tech/"/>
-  <updated>2020-08-24T06:14:46.392Z</updated>
+  <updated>2020-08-24T07:21:14.978Z</updated>
   <id>https://www.inevitable.tech/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>自建 Blender Render Farm</title>
+    <link href="https://www.inevitable.tech/posts/7a296127/"/>
+    <id>https://www.inevitable.tech/posts/7a296127/</id>
+    <published>2020-08-23T16:00:00.000Z</published>
+    <updated>2020-08-24T07:21:14.978Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;暂时没打算买新显卡，那渲染慢怎么办？云渲染！&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Technology" scheme="https://www.inevitable.tech/categories/Technology/"/>
+    
+    
+      <category term="Blender" scheme="https://www.inevitable.tech/tags/Blender/"/>
+    
+      <category term="Render Farm" scheme="https://www.inevitable.tech/tags/Render-Farm/"/>
+    
+      <category term="渲染农场" scheme="https://www.inevitable.tech/tags/%E6%B8%B2%E6%9F%93%E5%86%9C%E5%9C%BA/"/>
+    
+      <category term="云渲染" scheme="https://www.inevitable.tech/tags/%E4%BA%91%E6%B8%B2%E6%9F%93/"/>
+    
+  </entry>
+  
+  <entry>
     <title>初入数值分析，如何写好代码</title>
     <link href="https://www.inevitable.tech/posts/e6738e32/"/>
     <id>https://www.inevitable.tech/posts/e6738e32/</id>
     <published>2020-08-22T16:00:00.000Z</published>
-    <updated>2020-08-24T06:14:46.392Z</updated>
+    <updated>2020-08-24T06:27:33.819Z</updated>
     
     <summary type="html">
     
@@ -63,29 +90,6 @@
       <category term="Remarkable" scheme="https://www.inevitable.tech/tags/Remarkable/"/>
     
       <category term="插画" scheme="https://www.inevitable.tech/tags/%E6%8F%92%E7%94%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2020 年第 31 周</title>
-    <link href="https://www.inevitable.tech/posts/ae1215a8/"/>
-    <id>https://www.inevitable.tech/posts/ae1215a8/</id>
-    <published>2020-08-08T16:00:00.000Z</published>
-    <updated>2020-08-17T05:36:17.761Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这周数学作业计算量真大。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="周报" scheme="https://www.inevitable.tech/categories/%E5%91%A8%E6%8A%A5/"/>
-    
-    
-      <category term="Remarkable" scheme="https://www.inevitable.tech/tags/Remarkable/"/>
-    
-      <category term="DPT-RP1" scheme="https://www.inevitable.tech/tags/DPT-RP1/"/>
     
   </entry>
   
