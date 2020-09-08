@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.inevitable.tech/"/>
-  <updated>2020-08-24T07:21:23.188Z</updated>
+  <updated>2020-09-08T06:47:04.431Z</updated>
   <id>https://www.inevitable.tech/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2020 年第 35 周</title>
+    <link href="https://www.inevitable.tech/posts/5b92b368/"/>
+    <id>https://www.inevitable.tech/posts/5b92b368/</id>
+    <published>2020-09-05T16:00:00.000Z</published>
+    <updated>2020-09-08T06:47:04.431Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;八月底了，是时候考 GRE 了。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="周报" scheme="https://www.inevitable.tech/categories/%E5%91%A8%E6%8A%A5/"/>
+    
+    
+      <category term="群星" scheme="https://www.inevitable.tech/tags/%E7%BE%A4%E6%98%9F/"/>
+    
+      <category term="歌曲" scheme="https://www.inevitable.tech/tags/%E6%AD%8C%E6%9B%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>自建 Blender Render Farm</title>
@@ -48,7 +71,7 @@
     <link href="https://www.inevitable.tech/posts/d4d246c8/"/>
     <id>https://www.inevitable.tech/posts/d4d246c8/</id>
     <published>2020-08-23T16:00:00.000Z</published>
-    <updated>2020-08-25T02:15:35.762Z</updated>
+    <updated>2020-09-07T23:20:25.153Z</updated>
     
     <summary type="html">
     
@@ -65,31 +88,6 @@
       <category term="Remarkable" scheme="https://www.inevitable.tech/tags/Remarkable/"/>
     
       <category term="插画" scheme="https://www.inevitable.tech/tags/%E6%8F%92%E7%94%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>初入数值分析，如何写好代码</title>
-    <link href="https://www.inevitable.tech/posts/e6738e32/"/>
-    <id>https://www.inevitable.tech/posts/e6738e32/</id>
-    <published>2020-08-22T16:00:00.000Z</published>
-    <updated>2020-08-24T06:27:33.819Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;写一些关于数学的代码，和开发程序是两种不同的感觉。接下来是一些我个人常用的 Tips。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Technology" scheme="https://www.inevitable.tech/categories/Technology/"/>
-    
-    
-      <category term="数学" scheme="https://www.inevitable.tech/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-      <category term="数值分析" scheme="https://www.inevitable.tech/tags/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/"/>
-    
-      <category term="Numerical Analysis" scheme="https://www.inevitable.tech/tags/Numerical-Analysis/"/>
     
   </entry>
   
