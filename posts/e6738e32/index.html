@@ -308,7 +308,7 @@ font-family: 'Noto Serif SC', serif;
 
     
         <meta property="article:published_time" content="Sun Aug 23 2020 00:00:00 GMT+0800">
-        <meta property="article:modified_time" content="Mon Sep 14 2020 15:54:24 GMT-0700">
+        <meta property="article:modified_time" content="Mon Sep 14 2020 15:54:59 GMT-0700">
     
 
     <!-- The Twitter Card protocol -->
@@ -611,7 +611,7 @@ ax.xaxis.set_tick_params(labelsize=15)
 ax.yaxis.set_tick_params(labelsize=15)
 </code></pre>
 <h1>伪代码翻译</h1>
-<p>数组的索引从0开始，但是很多伪代码是从1开始。为了方便翻译，我们可以在所有数组的开头插入一个0，这样数组的有效数据便从索引1开始。这样伪代码和实际代码之间的索引便不会错了。以下为例子。</p>
+<p>数组的索引从 0 开始，但是很多伪代码是从 1 开始。为了方便翻译，我们可以在所有数组的开头插入一个 0，这样数组的有效数据便从索引 1 开始。这样伪代码和实际代码之间的索引便不会错了。以下为例子。</p>
 <center><img class="lazyload" data-src="/static/images/numerical_analysis_code1.png" height="80%" width="80%"></center>
 <pre><code class="language-python">import numpy as np
 def sor(a,b,XO,omega,TOL,N):
