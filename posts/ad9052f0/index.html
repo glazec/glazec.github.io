@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon256.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon256.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="59ThkXhI_2jGcF6EsQmUQacPyHPoqWEElgS18VR7eM8">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.loli.net/css?family=EB Garamond:300,300italic,400,400italic,700,700italic|Long Cang:300,300italic,400,400italic,700,700italic|Noto Serif SC:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.inevitable.tech","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="跨链是今年的热门话题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IBC">
+<meta property="og:url" content="https://www.inevitable.tech/posts/ad9052f0/index.html">
+<meta property="og:site_name" content="Inevitable">
+<meta property="og:description" content="跨链是今年的热门话题">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-04-02T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-04-24T23:36:29.847Z">
+<meta property="article:author" content="琉璃">
+<meta property="article:tag" content="区块链">
+<meta property="article:tag" content="跨链">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://www.inevitable.tech/posts/ad9052f0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>IBC | Inevitable</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Inevitable" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Inevitable</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">文字所表现出来的美丽、恐惧。。还有率真之类的东西，我觉得在其他事物中还是很难寻得的。</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.inevitable.tech/posts/ad9052f0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="琉璃">
+      <meta itemprop="description" content="有些时候就算拼尽全力想要表达什么，也什么都表达不到。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Inevitable">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          IBC
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-03 00:00:00" itemprop="dateCreated datePublished" datetime="2021-04-03T00:00:00+08:00">2021-04-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-25 07:36:29" itemprop="dateModified" datetime="2021-04-25T07:36:29+08:00">2021-04-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" itemprop="url" rel="index"><span itemprop="name">区块链</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/posts/ad9052f0/" class="post-meta-item leancloud_visitors" data-flag-title="IBC" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/ad9052f0/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/ad9052f0/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>跨链是今年的热门话题</p>
+<a id="more"></a>
+<h3 id="为什么需要-ibc-inter-blockchain-communication">❓ 为什么需要 IBC ( Inter-Blockchain Communication )</h3>
+<p>每个区块链都是一个独立，自治的系统。它们不依赖外部信息，独立地生产区块，验证区块。起初开发者们都在以太坊上用智能合约创造自己的 DApp。这些 DApp 可以互相调用。随着需求的扩展，以太坊逐渐不能满足这些复杂的需求。常见的问题有性能瓶颈， EVM 无法满足需求，无法完全自治。因此开发者开始尝试为自己的 DApp 定制一条区块链。当这些 DApp 都建立在各自定制化的链上时，互相交流便困难了起来。区块链自治的特性成了最大的绊脚石。如何安全有效区去中心化的让消息跨链传输困扰了开发者很久。</p>
+<h3 id="ibc-是什么">👀 IBC 是什么</h3>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://ibcprotocol.org/">IBC（inter-blockchain communication protocol）</a>是 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://cosmos.network/">Cosmos</a> 推出的通用跨链信息传输协议。在保证各个链自治，处理交易速度的同时，IBC 让信息和资产跨链更加的去中心化，安全和便捷。200+ 的服务和应用，超过 800 亿美金的资产采用了 IBC。IBC 就像区块链世界的 TCP/IP 协议，让区块链网络变得可能。</p>
+<p>在 IBC 的帮助下，采用不同共识机制，网络的区块链得以互相交流，只要他们的共识机制满足 Fast Finality，即所有交易都会被快速打包，并且无法撤销，更改。</p>
+<p>比特币和以太坊并不满足 Fast Finality，因此 Cosmos 为他们定制化了跨链方案：两条支持 Fast Finality 的定制区块链和 IBC。这两条定制链分别跟踪比特币和以太坊的状态。由于这两条定制链兼容 IBC，并且拥有比特币，以太坊的最新状态，跨链问题就此解决。</p>
+<h3 id="ibc举个栗子">🌰 IBC：举个栗子</h3>
+<p>接下来我们用<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.youtube.com/watch?v=NmytpuD33lY&amp;ab_channel=Cosmos">一个例子</a>来解释一下 IBC 是如何运行的。假设我们有两个使用 IBC 的区块链，地球和 火星。我们希望从地球向火星发送一条 ”Hello World“。我们首先需要运行一个 Relayer 来进行消息的传递。Relayer 会持续检查链的状态，并在另一条链上创建包含对应消息的交易。在使用 IBC 的情况下，地球上会跑一个火星的轻量化客户端，这样地球就可以验证火星的状态，确保 Relayer 传递的信息是具有有效性和准确性。同样，火星也会跑一个地球的客户端。</p>
+<p>与 TCP/IP 相同，两条链会先进行握手来进行身份认证，为安全的传输消息做准备。接下来我们只要在地球创建对应的 “Hello World” 消息，Relayer 会将其传输到火星上。IBC 确保数据传输的安全性。接下来便是 onAck，onTimedout 等事件的触发。</p>
+<p>需要注意的是 IBC 只负责数据安全的传输。对于数据的序列化则需要建立在区块链上的应用进行处理。</p>
+<h3 id="cosmos-ibc">🌌 Cosmos IBC</h3>
+<p>IBC 是一种协议，目前 IBC 已经在 Cosmos SDK 中实现，未来将支持 Kepler，Substrate，Tendermint，Codechain。</p>
+<h2 id="cosmos-通过-ibc-进一步壮大了-cosmos-sdk-的影响力跨链定制区块链开发的玩家可不止-cosmos-一家polkadot-也有着自己的解决方案有机会的话我们会向你们介绍-polkadot-的奇妙之处">Cosmos 通过 IBC 进一步壮大了 Cosmos SDK 的影响力。跨链，定制区块链开发的玩家可不止 Cosmos 一家，<a target="_blank" rel="noopener external nofollow noreferrer" href="https://polkadot.network/">Polkadot</a> 也有着自己的解决方案。有机会的话我们会向你们介绍 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://polkadot.network/">Polkadot</a> 的奇妙之处。</h2>
+<p>❤ 如果你喜欢这篇文章，不妨订阅 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://unblock256.substack.com/">un.block</a>。</p>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\posts\f384a423\" rel="bookmark">区块链项目分发代币常见方式</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\posts\761ba4bc\" rel="bookmark">RAI</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\posts\1b3c8930\" rel="bookmark">ForceDAO</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\posts\495f572d\" rel="bookmark">快速搭建主网分叉链（fork mainnet）</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\posts\745d9d04\" rel="bookmark">稳定币简析</a></div>
+    </li>
+  </ul>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>琉璃
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.inevitable.tech/posts/ad9052f0/" title="IBC">https://www.inevitable.tech/posts/ad9052f0/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/glazecl" rel="external nofollow noreferrer">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" rel="tag"># 区块链</a>
+              <a href="/tags/%E8%B7%A8%E9%93%BE/" rel="tag"># 跨链</a>
+          </div>
+
+        
+  <div class="post-widgets">
+    <div class="wp_rating">
+      <div id="wpac-rating"></div>
+    </div>
+  </div>
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/495f572d/" rel="prev" title="快速搭建主网分叉链（fork mainnet）">
+      <i class="fa fa-chevron-left"></i> 快速搭建主网分叉链（fork mainnet）
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/1b3c8930/" rel="next" title="ForceDAO">
+      ForceDAO <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81-ibc-inter-blockchain-communication"><span class="nav-number">1.</span> <span class="nav-text">❓ 为什么需要 IBC ( Inter-Blockchain Communication )</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ibc-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">2.</span> <span class="nav-text">👀 IBC 是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ibc%E4%B8%BE%E4%B8%AA%E6%A0%97%E5%AD%90"><span class="nav-number">3.</span> <span class="nav-text">🌰 IBC：举个栗子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cosmos-ibc"><span class="nav-number">4.</span> <span class="nav-text">🌌 Cosmos IBC</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cosmos-%E9%80%9A%E8%BF%87-ibc-%E8%BF%9B%E4%B8%80%E6%AD%A5%E5%A3%AE%E5%A4%A7%E4%BA%86-cosmos-sdk-%E7%9A%84%E5%BD%B1%E5%93%8D%E5%8A%9B%E8%B7%A8%E9%93%BE%E5%AE%9A%E5%88%B6%E5%8C%BA%E5%9D%97%E9%93%BE%E5%BC%80%E5%8F%91%E7%9A%84%E7%8E%A9%E5%AE%B6%E5%8F%AF%E4%B8%8D%E6%AD%A2-cosmos-%E4%B8%80%E5%AE%B6polkadot-%E4%B9%9F%E6%9C%89%E7%9D%80%E8%87%AA%E5%B7%B1%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E6%9C%89%E6%9C%BA%E4%BC%9A%E7%9A%84%E8%AF%9D%E6%88%91%E4%BB%AC%E4%BC%9A%E5%90%91%E4%BD%A0%E4%BB%AC%E4%BB%8B%E7%BB%8D-polkadot-%E7%9A%84%E5%A5%87%E5%A6%99%E4%B9%8B%E5%A4%84"><span class="nav-number"></span> <span class="nav-text">Cosmos 通过 IBC 进一步壮大了 Cosmos SDK 的影响力。跨链，定制区块链开发的玩家可不止 Cosmos 一家，Polkadot 也有着自己的解决方案。有机会的话我们会向你们介绍 Polkadot 的奇妙之处。</span></a></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">琉璃</p>
+  <div class="site-description" itemprop="description">有些时候就算拼尽全力想要表达什么，也什么都表达不到。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">93</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">99</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/glazec" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;glazec" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:i@inevitable.tech" title="E-Mail → mailto:i@inevitable.tech" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/glazecl" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;glazecl" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://t.me/glazecl" title="Telegram → https:&#x2F;&#x2F;t.me&#x2F;glazecl" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-telegram fa-fw"></i>Telegram</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener external nofollow noreferrer" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">琉璃</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+  <script>
+  if (CONFIG.page.isPost) {
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id    : 28798,
+      el    : 'wpac-rating',
+      color : 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  }
+  </script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://www.inevitable.tech/posts/ad9052f0/',]
+      });
+      });
+  </script>
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : true,
+      appId      : '4h5SYcsd7q5SV1HJXHe43Vsu-MdYXbMMI',
+      appKey     : 'gecurcq4AfQgDFik3siEf0Jx',
+      placeholder: "你好吗？我很好。",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+<script>(function (w, d, s, id) {
+            if (typeof (w.webpushr) !== 'undefined') return; w.webpushr = w.webpushr || function () { (w.webpushr.q = w.webpushr.q || []).push(arguments) }; var js, fjs = d.getElementsByTagName(s)[0]; js = d.createElement(s); js.id = id; js.async = 1; js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window, document, 'script', 'webpushr-jssdk'));webpushr('setup', { 'key': 'BKOlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLVbjpCw8x2GmFmi1ZcLTz0ni6OnX5MAwoM58' });</script></body>
+</html>
