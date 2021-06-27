@@ -179,6 +179,103 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.inevitable.tech/posts/7dd50f2f/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="琉璃">
+      <meta itemprop="description" content="有些时候就算拼尽全力想要表达什么，也什么都表达不到。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Inevitable">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/7dd50f2f/" class="post-title-link" itemprop="url">Polkadot：今年最有潜力的公链</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-11-24 00:00:00" itemprop="dateCreated datePublished" datetime="2020-11-24T00:00:00+08:00">2020-11-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-06 05:50:11" itemprop="dateModified" datetime="2021-01-06T05:50:11+08:00">2021-01-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" itemprop="url" rel="index"><span itemprop="name">区块链</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/posts/7dd50f2f/" class="post-meta-item leancloud_visitors" data-flag-title="Polkadot：今年最有潜力的公链" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/7dd50f2f/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/7dd50f2f/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>我最近才知道有<a target="_blank" rel="noopener external nofollow noreferrer" href="https://polkadot.network/">Polkadot</a>这么一条公链。它的市值排名第八。我知道的的确有点晚了。它的创始人是以太坊的联合创始人。它有 Web3 基金会的支持。如果说在以太坊上开发的是智能合约，Polkadot 上开发的就是区块链。可以自定义的区块链给了开发者更多的自由，我们可以改变它的 Runtime，改变它的共识算法等等。官方也发行了开发工具 Substrate 帮助开发者快速构建自己想要的区块链。Polkadot 这条公链便是基于 Substrate 框架。在 Polkadot 创始人的一次演讲中，他为了展示 Substrate 的易用性，现场 Coding Demo 特意拿出刚刚从苹果店买的 Macbook Pro。现场开箱并使用 Substrate 开发了一条区块链。</p>
+<p>说了这么多开发者关心的问题，Polkadot 到底解决了什么问题呢？ 在我看来 Polkadot 解决了并发的问题。因为其独特的 Relay Network, Polkadot 可以并行的处理所有挂在其上面的公链的交易。跨链在 Polkadot 的设计下也变得简单了。数据，资产都可以在不同的链上进行转化。如果用过 Flamingo 等跨链资产工具的人应该知道这些工具有多难用。每次跨链都得调用很多的合约，交不少的手续费。另一个有意思的特性是区块链的升级。这应该算是 Substrate 的特性。由于其将 Runtime 编译成 WASM 放在区块中，区块链的升级不再会导致硬分叉。传统区块链升级需要矿工们升级节点软件版本。如果有些矿工不愿意升级或者忘记升级，这条区块链就会变成两条，也就是硬分叉。</p>
+<p>对于挂在 Polkadot 上的链，官方称其为 Parachain。这些 Parachain 既可以是公开的，也可以是私有的。既然 Polkadot 是基于 Substrate 开发的，Parachain 也需要基于 Substrate 开发，那么我们可不可以挂一条 Polkadot 到 Polkadot 上呢？这的确是可行的，我们可以无限套娃。目前官方给出的正在开发的 Parachain 有兼容 EVM 的智能合约区块链，文件存储区块链，身份验证区块链，隐私区块链，金融区块链，IOT 区块链，预言机（Chainlink）等等。这些项目有的看的云里雾里，有的只是把现有的应用拷贝到 Polkadot 上。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://www.inevitable.tech/posts/b3172510/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1093,108 +1190,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.inevitable.tech/posts/e9b26f78/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="琉璃">
-      <meta itemprop="description" content="有些时候就算拼尽全力想要表达什么，也什么都表达不到。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Inevitable">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/e9b26f78/" class="post-title-link" itemprop="url">2020 年第 32 周</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-08-16 00:00:00" itemprop="dateCreated datePublished" datetime="2020-08-16T00:00:00+08:00">2020-08-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-02 14:11:59" itemprop="dateModified" datetime="2021-01-02T14:11:59+08:00">2021-01-02</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%91%A8%E6%8A%A5/" itemprop="url" rel="index"><span itemprop="name">周报</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/posts/e9b26f78/" class="post-meta-item leancloud_visitors" data-flag-title="2020 年第 32 周" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/posts/e9b26f78/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/posts/e9b26f78/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Differential Geometry 逐渐变难，下周得多花点时间在上面。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/e9b26f78/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1264,18 +1259,18 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">93</span>
+          <span class="site-state-item-count">94</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">99</span>
+        <span class="site-state-item-count">100</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
